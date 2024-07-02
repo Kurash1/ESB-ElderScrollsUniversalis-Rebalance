@@ -28,12 +28,22 @@ new custom_text_box expedition_desc = {
 	}
 	name = "[This.GetExpeditionDesc]"
 }
-new custom_text_box expedition_progress_text = {
+new custom_icon expedition_progress_text = {
     potential = {
 		has_province_flag = expedition_target
+		has_province_modifier = expedition_camp
 	}
 	name = "[This.expedition_percentage.GetValue]%"
+	tooltip = "[This.expedition_percentage.GetValue]%"
+	frame_variable = expedition_percentage
 }
+new custom_icon expedition_progress_text_frame = {
+    potential = {
+		has_province_flag = expedition_target
+		has_province_modifier = expedition_camp
+	}
+}
+
 new named_effect remove_expedition_modifiers = {
 	
 }

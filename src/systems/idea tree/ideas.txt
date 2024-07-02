@@ -61,13 +61,6 @@ new effect add_to_tree = {
 			trigger = args:group:trigger
 			effect = {
 				add_idea_group = args:group:id
-				add_idea = `{args:group:id}_1`
-				add_idea = `{args:group:id}_2`
-				add_idea = `{args:group:id}_3`
-				add_idea = `{args:group:id}_4`
-				add_idea = `{args:group:id}_5`
-				add_idea = `{args:group:id}_6`
-				add_idea = `{args:group:id}_7`
 				
 				qq_tooltip_idea = args:group:ideas:1
 				qq_tooltip_idea = args:group:ideas:2
@@ -360,7 +353,7 @@ new named_effect create_idea_tree = {
 	add_to_tree = { group = religious_ideas x = 6 y = 8 }
 	
 	#
-	# Tactic Ideas
+	# Strategic Ideas
 	#
 	add_to_tree = { group = guerilla_ideas x = 8 y = 6 }
 	draw_line = { 9 7 8 6 }

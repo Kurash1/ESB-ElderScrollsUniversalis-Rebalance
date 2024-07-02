@@ -1,5 +1,5 @@
 new named_int SPELL_TOP = 120
-new named_int SPELL_START_LEFT = 100
+new named_int SPELL_START_LEFT = 75
 new named_int SPELL_LEFT = 10
 new named_int SPELL_RIGHT = 285
 
@@ -38,176 +38,6 @@ new named_effect calculate_spell_costs = {
 	&development &= total_development
 }
 force_compile = calculate_spell_costs
-
-new country_event cast_spell.1 = {
-	title = "Cast a Spell"
-	major = yes
-	
-	immediate = {
-		hidden_effect = {
-			variables:spell_cost_modifier_var:calculate
-			
-			foreach $ in spells [$:type == "diplomatic"] {
-				new script_variable `{$:id}_spell_cost` = {
-					name = "{$:name} Cost"
-				}
-				&`{$:id}_spell_cost` := $:cost
-				&`{$:id}_spell_cost` *= spell_cost_modifier_var
-				when [$:scaled == yes] {
-					&development &= {
-						value = total_development
-						who = event_target:spell_target
-					}
-					&`{$:id}_spell_cost` *= development
-					&`{$:id}_spell_cost` *= 0.01
-				}
-			}
-			
-			&development &= total_development
-		}
-	}
-	options = {
-		name = "Back"
-		effect = { }
-	}
-}
-new named_effect populate_diplomatic_spells = {
-	arc_call_1
-	foreach $ in spells [$:type == "diplomatic"] {
-		events:cast_spell.1:options += {
-			{
-				name = "{$:name} [{$:id}_spell_cost.GetValue]£magicka_icon£"
-				highlight = yes
-				trigger = {
-					&magicka >= `{$:id}_spell_cost`
-					$:trigger
-				}
-				effect = {
-					&magicka -= `{$:id}_spell_cost`
-						
-					$:on_cast
-				}
-				ai_will_do = {
-					factor = 0
-				}
-			}
-		}
-		events:cast_spell.1:options += {
-			{
-				name = "{$:name} [{$:id}_spell_cost.GetValue]£magicka_icon£"
-				highlight = yes
-				trigger = {
-					NOT = {
-						&magicka >= `{$:id}_spell_cost`
-						$:trigger
-					}
-				}
-				effect = {
-					new_custom_tooltip = "We cannot cast the spell for the following reasons:"
-				}
-				ai_will_do = {
-					factor = 0
-				}
-			}
-		}
-	}
-	events:cast_spell.1:options += { {
-		name = "Back"
-	} }
-	arc_call_2
-}
-new country_event cast_spell.2 = {
-	title = "Cast a Spell"
-	major = yes
-	
-	immediate = {
-		hidden_effect = {
-			variables:spell_cost_modifier_var:calculate
-			
-			foreach $ in spells [$:type == "province"] {
-				new script_variable `{$:id}_spell_cost` = {
-					name = "{$:name} Cost"
-				}
-				&`{$:id}_spell_cost` := $:cost
-				&`{$:id}_spell_cost` *= spell_cost_modifier_var
-				when [$:scaled == yes] {
-					&development &= {
-						value = development
-						who = event_target:spell_target
-					}
-					&`{$:id}_spell_cost` *= development
-					&`{$:id}_spell_cost` *= 0.1
-				}
-			}
-			
-			&development &= total_development
-		}
-	}
-	options = {
-		name = "Back"
-		effect = { }
-	}
-}
-new named_effect populate_province_spells = {
-	arc_call_1
-	foreach $ in spells [$:type == "province"] {
-		events:cast_spell.2:options += {
-			{
-				name = "{$:name} [{$:id}_spell_cost.GetValue]£magicka_icon£"
-				highlight = yes
-				trigger = {
-					&magicka >= `{$:id}_spell_cost`
-					$:trigger
-				}
-				effect = {
-					&magicka -= `{$:id}_spell_cost`
-						
-					$:on_cast
-				}
-				ai_will_do = {
-					factor = 0
-				}
-			}
-		}
-		events:cast_spell.1:options += {
-			{
-				name = "{$:name} [{$:id}_spell_cost.GetValue]£magicka_icon£"
-				highlight = yes
-				trigger = {
-					NOT = {
-						&magicka >= `{$:id}_spell_cost`
-						$:trigger
-					}
-				}
-				effect = {
-					new_custom_tooltip = "We cannot cast the spell for the following reasons:"
-				}
-				ai_will_do = {
-					factor = 0
-				}
-			}
-		}
-	}
-	events:cast_spell.2:options += { {
-		name = "Back"
-	} }
-	arc_call_2
-}
-
-new diplomatic_action cast_spell = {
-	name = "£magicka_icon£ Cast Spell £magicka_icon£"
-	title = "£magicka_icon£ Cast Spell £magicka_icon£"
-	category = influence
-	potential = {
-		ai = no
-	}
-	on_accept = {
-		FROM = {
-			save_event_target_as = spell_target
-		}
-		country_event = cast_spell.1
-	}
-}
 
 new class spell = {
 	list = spells
@@ -434,25 +264,25 @@ new effect create_next_spell_page = {
 	args = bool
 	transpile = {
 		when [current_spell_side == yes] {
-			spell_pages += 1
-			spell_menu_node += {
-				windowType = {
-					name = `"spells_page_{spell_pages}"`
-					position = { x = 0 y = 0 }
-					scripted = yes
-				}
-			}
-			new custom_window `spells_page_{spell_pages}` = {
-				potential =* {
-					&open_spell_page == *spell_pages*
-				}
-			}
-			current_spell_position_y := SPELL_START_LEFT
-			current_spell_side := no
-			run_effect = {
-				delete = current_spell_page
-			}
-			new named_ui_node current_spell_page = spell_menu_node:last
+			#spell_pages += 1
+			#spell_menu_node += {
+			#	windowType = {
+			#		name = `"spells_page_{spell_pages}"`
+			#		position = { x = 0 y = 0 }
+			#		scripted = yes
+			#	}
+			#}
+			#new custom_window `spells_page_{spell_pages}` = {
+			#	potential =* {
+			#		&open_spell_page == *spell_pages*
+			#	}
+			#}
+			#current_spell_position_y := SPELL_START_LEFT
+			#current_spell_side := no
+			#run_effect = {
+			#	delete = current_spell_page
+			#}
+			#new named_ui_node current_spell_page = spell_menu_node:last
 		}
 		when_not {
 			current_spell_position_y := 0

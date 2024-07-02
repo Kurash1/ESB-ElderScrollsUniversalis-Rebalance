@@ -373,67 +373,6 @@ new idea_group destruction_ideas = {
 #		naval_attrition = -0.15
 #	}
 #}
-new idea_group conjuration_ideas = {
-	name = "Conjuration"
-	category = MIL
-	trigger = {
-		full_idea_group = war_magic_ideas
-	}
-	ideas = {
-		{
-			name = "Bound Weapons"
-			desc = " By using purely magical weapons conjured by our best mages regular soldiers can have access to legendary weapons."
-			modifier = {
-				shock_damage = 5%
-			}
-		}
-		{
-			name = "Soul Trapping"
-			desc = "By training our mages in the art of soul trapping we can increase our overall finances and the capacity to field even more conjurers. "
-			modifier = {
-				global_tax_modifier = 10%
-			}
-		}
-		{
-			name = "Daedric Conjuring"
-			desc = "Summoning daedra is a very dangerous venture thus only the very best may attempt it, regardless the conjured beings are far more powerful than the regular soldier. "
-			modifier = {
-				discipline = 5%
-			}
-		}
-		{
-			name = "Summon Shaft"
-			desc = "Even the most novice of conjurers can summon minor familiars but sending hordes of those meagre summons we can artificially boost our martial numbers."
-			modifier = {
-				global_manpower_modifier = 15%
-			}
-		}
-		{
-			name = "Conjurers Army"
-			desc = "By allowing conjurers to join the front lines we can  make it so that every conjurer counts as twice the soldier."
-			modifier = {
-				land_forcelimit_modifier = 10%
-			}
-		}
-		{
-			name = "Master Conjuration"
-			desc = "Repeatedly resummoning things without running out of Magicka is a thing only the very elite of conjurers is capable of. "
-			modifier = {
-				manpower_recovery_speed = 15%
-			}
-		}
-		{
-			name = "Animated Sentries"
-			desc = "Simple familiars while harmless can be excellent scouts."
-			modifier = {
-				fort_maintenance_modifier = -20%
-			}
-		}
-	}
-	bonus = {
-		manpower_recovery_speed = 15%
-	}
-}
 #new idea_group summoning_ideas = {
 #	name = "Summoning"
 #	category = MIL

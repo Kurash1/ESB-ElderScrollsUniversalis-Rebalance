@@ -10,14 +10,17 @@ new idea_group alteration_ideas = {
 	ideas = {
 		{
 			name = "Alteration Magic"
-			desc = "Unlocks §YShield§! Spell
+			desc = "Alteration is one of the six schools of magic. Spells in this school change the world around the caster so normal physical truths no longer hold. It is sometimes confused with Illusion magic, as both schools seek to change normal truths. Illusion magic, however, is not bound by the laws of nature but Alteration magic is. The power of Alteration comes from the fact that the nature of its changes applies to all, whereas Illusion magic affects only the caster and the target."
+			modifier = {
+				spells_known = 6
+			}
+			effect = {
+				new_custom_tooltip = "Unlocks §YShield§! Spell
 Unlocks §YOakflesh§! Spell
 Unlocks §YOpen§! Spell
 Unlocks §YBurden§! Spell
 Unlocks §YEquilibrium§! Spell
 Unlocks §YSea Stride§! Spell"
-			modifier = {
-				spells_known = 6
 			}
 		}
 		{

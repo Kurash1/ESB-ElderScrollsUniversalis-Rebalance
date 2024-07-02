@@ -14,10 +14,10 @@ new unit knights = {
 	}
 }
 new mercenary_company knightly_order = {
-	name = "Knightly Order"
+	name = "§JKnightly Order§!"
 	desc = ""
 	regiments_per_development = 0.04
-	cavalry_weight = 0.25
+	cavalry_weight = 0.50
 	artillery_weight = 0
 	cost_modifier = 0.8
 	modifier = {

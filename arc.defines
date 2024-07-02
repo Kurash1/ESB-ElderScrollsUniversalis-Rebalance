@@ -40,4 +40,4 @@ load_order = {
 	src/achievements.txt
 	src/history/*
 }
-headers = ""
+headers = "/replace NAND with NOT->AND"

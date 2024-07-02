@@ -570,6 +570,13 @@ guiTypes = {
 			moveable = 0
 			Orientation = "UPPER_LEFT"
 
+			guiButtonType = {
+				name = cast_spell_province
+				position = { x = 447 y = 52 }
+				quadTextureSprite = "GFX_actions_button"
+				scripted = yes
+			}
+
 			### Core
 
 
@@ -2886,19 +2893,22 @@ guiTypes = {
 				maxWidth = 215
 				format = left
 			}
-			instantTextBoxType = {
+			iconType = {
 				name = "expedition_progress_text"
-				position = { x = 352 y = 295 }
-				textureFile = ""
-				font = "vic_22"
+				position = { x = 353 y = 252 }
+				spriteType = "GFX_default_progressbar"
 				scripted = yes
-				maxWidth = 74
-				maxHeight = 32
-				format = center
+			}
+			iconType = {
+				name = "expedition_progress_text_frame"
+				spriteType = "GFX_progress_bar_frame"
+				position = { x = 338 y = 250 }
+				scripted = yes
+				Orientation = "UPPER_LEFT"
 			}
 			guiButtonType = {
 				name = "start_expedition"
-				position = { x = 337 y = 330 }
+				position = { x = 337 y = 280 }
 				quadTextureSprite = "gfx_stats_button"
 				buttonText = ""
 				buttonFont = "vic_18"
@@ -2907,7 +2917,7 @@ guiTypes = {
 			
 			guiButtonType = {
 				name = "expedition_mod_cash"
-				position = { x = 335 y = 400 }
+				position = { x = 335 y = 350 }
 				quadTextureSprite = "GFX_expedition_cash_button"
 				buttonText = ""
 				buttonFont = "vic_18"
@@ -2915,7 +2925,7 @@ guiTypes = {
 			}
 			guiButtonType = {
 				name = "expedition_mod_camp"
-				position = { x = 390 y = 400 }
+				position = { x = 390 y = 350 }
 				quadTextureSprite = "GFX_expedition_camp_button"
 				buttonText = ""
 				buttonFont = "vic_18"
@@ -2923,7 +2933,7 @@ guiTypes = {
 			}
 			guiButtonType = {
 				name = "expedition_mod_explore"
-				position = { x = 335 y = 455 }
+				position = { x = 335 y = 405 }
 				quadTextureSprite = "GFX_expedition_explore_button"
 				buttonText = ""
 				buttonFont = "vic_18"
@@ -2931,7 +2941,7 @@ guiTypes = {
 			}
 			guiButtonType = {
 				name = "expedition_mod_merc"
-				position = { x = 390 y = 455 }
+				position = { x = 390 y = 405 }
 				quadTextureSprite = "GFX_expedition_merc_button"
 				buttonText = ""
 				buttonFont = "vic_18"
@@ -2939,7 +2949,7 @@ guiTypes = {
 			}
 			guiButtonType = {
 				name = "expedition_mod_mage"
-				position = { x = 335 y = 510 }
+				position = { x = 335 y = 460 }
 				quadTextureSprite = "GFX_expedition_mages_button"
 				buttonText = ""
 				buttonFont = "vic_18"
@@ -2947,7 +2957,7 @@ guiTypes = {
 			}
 			guiButtonType = {
 				name = "expedition_mod_new_btn_2"
-				position = { x = 390 y = 510 }
+				position = { x = 390 y = 460 }
 				quadTextureSprite = "GFX_expedition_unknown_button"
 				buttonText = ""
 				buttonFont = "vic_18"

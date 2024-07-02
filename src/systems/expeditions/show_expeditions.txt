@@ -1,0 +1,21 @@
+new decision show_expeditions = {
+	name = "Show Expeditions"
+	major = yes
+	provinces_to_highlight = {
+		has_province_flag = expedition_target
+	}
+	allow = {
+		custom_trigger_tooltip = {
+			new_tooltip = "This decision highlights all Expeditions on the map."
+			always = no
+		}
+		foreach $ in provinces {
+			if [$ = { has_province_flag = expedition_target }] {
+				owns = $
+			}
+		}
+	}
+	effect = {
+		new_custom_tooltip = "This decision highlights all Expeditions on the map."
+	}
+}

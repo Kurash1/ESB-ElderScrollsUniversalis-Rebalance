@@ -55,7 +55,7 @@ on_actions:on_monthly_pulse += {
 		reload_expedition_progress
 		
 		random = {
-			chance = 4
+			chance = 10
 			
 			random_list = {
 				1 = {
