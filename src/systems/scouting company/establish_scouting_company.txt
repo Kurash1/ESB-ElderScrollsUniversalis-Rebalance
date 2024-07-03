@@ -5,9 +5,9 @@ new decision establish_scouting_company = {
 		NOT = { has_country_flag = init_survey }
 	}
 	allow = {
-		land_forcelimit = 25
-		treasury = 100
-		manpower = 1
+		#land_forcelimit = 25
+		#treasury = 100
+		#manpower = 1
 	}
 	effect = {
 		set_country_flag = init_survey

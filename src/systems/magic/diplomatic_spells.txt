@@ -1,10 +1,20 @@
 new country_event cast_spell.1 = {
-	title = "Cast a Spell"
-	major = yes
+	title = "Cast a Spell on [spell_target.GetName]"
+	desc = "Magicka: [magicka.GetValue]/[max_magicka_var.GetValue]£magicka_icon£
+Spell Cost Modifier: [spell_cost_modifier_percent.GetValue]%
+Development Modifier: [target_development.GetValue]%"
+	picture = court_mage_eventPicture
 	
 	immediate = {
 		hidden_effect = {
 			variables:spell_cost_modifier_var:calculate
+			variables:spell_cost_modifier_percent:calculate
+			
+			&target_development &= {
+				value = total_development
+				who = event_target:spell_target
+			}
+			&target_development *= 0.01
 			
 			foreach $ in spells [$:type == "diplomatic"] {
 				new script_variable `{$:id}_spell_cost` = {
@@ -13,16 +23,11 @@ new country_event cast_spell.1 = {
 				&`{$:id}_spell_cost` := $:cost
 				&`{$:id}_spell_cost` *= spell_cost_modifier_var
 				when [$:scaled == yes] {
-					&development &= {
-						value = total_development
-						who = event_target:spell_target
-					}
-					&`{$:id}_spell_cost` *= development
-					&`{$:id}_spell_cost` *= 0.01
+					&`{$:id}_spell_cost` *= target_development
 				}
 			}
 			
-			&development &= total_development
+			&target_development *= 100
 		}
 	}
 	options = {

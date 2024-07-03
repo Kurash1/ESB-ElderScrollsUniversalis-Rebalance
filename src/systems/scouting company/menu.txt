@@ -27,47 +27,6 @@ scouting_company_menu_node += {
 	}
 	
 	instantTextBoxType = {
-		name = "survey_fund_title"
-		position = { x = 20 y = 119 }
-		textureFile = ""
-		font = "vic_22"
-		scripted = yes
-		maxWidth = 287
-		maxHeight = 32
-		format = left
-	}
-	instantTextBoxType = {
-		name = "survey_fund_value"
-		position = { x = 48 y = 145 }
-		textureFile = ""
-		font = "vic_22"
-		scripted = yes
-		maxWidth = 287
-		maxHeight = 32
-		format = left
-	}
-	guiButtonType = {
-		name = "survey_fund_add_button_1"
-		position = { x = 24 y = 173 }
-		quadTextureSprite = "GFX_icon_gold_strip"
-		scripted = yes
-	}
-	guiButtonType = {
-		name = "survey_fund_add_button_2"
-		position = { x = 56 y = 173 }
-		quadTextureSprite = "GFX_icon_gold_strip"
-		scripted = yes
-	}
-	guiButtonType = {
-		name = "survey_fund_add_button_3"
-		position = { x = 88 y = 173 }
-		quadTextureSprite = "GFX_icon_gold_strip"
-		scripted = yes
-	}
-	
-	
-	
-	instantTextBoxType = {
 		name = "survey_manpower_title"
 		position = { x = 20 y = 202 }
 		textureFile = ""
@@ -86,53 +45,6 @@ scouting_company_menu_node += {
 		maxWidth = 287
 		maxHeight = 32
 		format = left
-	}
-	instantTextBoxType = {
-		name = "survey_manpower_recruit_rate"
-		position = { x = 44 y = 283 }
-		textureFile = ""
-		font = "vic_18"
-		scripted = yes
-		maxWidth = 41
-		maxHeight = 17
-		format = center
-	}
-	
-	guiButtonType = {
-		name = "survey_manpower_recruit_remove_3"
-		position = { x = 14 y = 266 }
-		quadTextureSprite = "GFX_survey_minus"
-		scripted = yes
-	}
-	guiButtonType = {
-		name = "survey_manpower_recruit_remove_2"
-		position = { x = 31 y = 266 }
-		quadTextureSprite = "GFX_survey_minus"
-		scripted = yes
-	}
-	guiButtonType = {
-		name = "survey_manpower_recruit_remove_1"
-		position = { x = 48 y = 266 }
-		quadTextureSprite = "GFX_survey_minus"
-		scripted = yes
-	}
-	guiButtonType = {
-		name = "survey_manpower_recruit_add_1"
-		position = { x = 65 y = 266 }
-		quadTextureSprite = "GFX_survey_plus"
-		scripted = yes
-	}
-	guiButtonType = {
-		name = "survey_manpower_recruit_add_2"
-		position = { x = 82 y = 266 }
-		quadTextureSprite = "GFX_survey_plus"
-		scripted = yes
-	}
-	guiButtonType = {
-		name = "survey_manpower_recruit_add_3"
-		position = { x = 99 y = 266 }
-		quadTextureSprite = "GFX_survey_plus"
-		scripted = yes
 	}
 	
 	
@@ -312,65 +224,23 @@ scouting_company_menu_node += {
 		format = left
 	}
 	
-	instantTextBoxType = {
-		name = "custom_mechanic_survey_policy_text"
-		position = { x = 244 y = 317 }
-		textureFile = ""
-		font = "vic_18"
-		scripted = yes
-		maxWidth = 300
-		maxHeight = 29
-		format = center
-	}
-	iconType = {
-		name = "survey_policy_icon_1"
-		spriteType = "GFX_recruitment_policy_icon"
-		position = { x = 308 y = 339 }
-		scripted = yes
-	}
 	guiButtonType = {
-		name = "survey_policy_button_1"
-		position = { x = 304 y = 335 }
-		quadTextureSprite = "GFX_policy_button"
-		scripted = yes
-	}
-	
-	iconType = {
-		name = "survey_policy_icon_2"
-		spriteType = "GFX_economic_policy_icon"
-		position = { x = 388 y = 339 }
-		scripted = yes
-	}
-	guiButtonType = {
-		name = "survey_policy_button_2"
-		position = { x = 384 y = 335 }
-		quadTextureSprite = "GFX_policy_button"
-		scripted = yes
-	}
-	
-	iconType = {
-		name = "survey_policy_icon_3"
+		name = "survey_passive_activity_button"
 		spriteType = "GFX_field_policy_icon"
-		position = { x = 468 y = 339 }
+		position = { x = (368-56+155) y = (239-34+15) }
 		scripted = yes
 	}
-	guiButtonType = {
-		name = "survey_policy_button_3"
-		position = { x = 464 y = 335 }
-		quadTextureSprite = "GFX_policy_button"
-		scripted = yes
-	}
-
+	
 	iconType = {
 		name = "survey_leader_gender_icon"
 		spriteType = "GFX_gender_icon"
-		position = { x = (300 + 16) y = (128 + 118) }
+		position = { x = (300 + 16) y = (128 + 118 - 123) }
 		Orientation = "UPPER_LEFT"
 		scripted = yes
 	}
 	instantTextBoxType = {
 		name = "survey_leader_name"
-		position = { x = (300 + 35) y = (128 + 118) }
+		position = { x = (300 + 35) y = (128 + 118 - 123) }
 		textureFile = ""
 		font = "vic_18"
 		scripted = yes
@@ -381,7 +251,7 @@ scouting_company_menu_node += {
 	}
 	instantTextBoxType = {
 		name = "survey_has_no_leader"
-		position = { x = (300 + 16) y = (128 + 118) }
+		position = { x = (300 + 16) y = (128 + 118 - 123) }
 		textureFile = ""
 		font = "vic_18"
 		scripted = yes
@@ -392,7 +262,7 @@ scouting_company_menu_node += {
 	}
 	instantTextBoxType = {
 		name = "survey_leader_adm_value"
-		position = { x = (300 + 28) y = (128 + 148) }
+		position = { x = (300 + 28) y = (128 + 148 - 123) }
 		textureFile = ""
 		font = "vic_18"
 		borderSize = { x = 4 y = 4 }
@@ -405,13 +275,13 @@ scouting_company_menu_node += {
 	iconType = {
 		name = "survey_leader_adm_icon"
 		spriteType = "GFX_icon_powers_administrative"
-		position = { x = (300 + 14) y = (128 + 146) }
+		position = { x = (300 + 14) y = (128 + 146 - 123) }
 		Orientation = "UPPER_LEFT"
 		scripted = yes
 	}
 	instantTextBoxType = {
 		name = "survey_leader_dip_value"
-		position = { x = (300 + 78) y = (128 + 148) }
+		position = { x = (300 + 78) y = (128 + 148 - 123) }
 		textureFile = ""
 		font = "vic_18"
 		borderSize = {x = 4 y = 4}	
@@ -424,13 +294,13 @@ scouting_company_menu_node += {
 	iconType = {
 		name = "survey_leader_dip_icon"
 		spriteType = "GFX_icon_powers_diplomatic"
-		position = { x = (300 + 64) y = (128 + 146) }
+		position = { x = (300 + 64) y = (128 + 146 - 123) }
 		Orientation = "UPPER_LEFT"
 		scripted = yes
 	}
 	instantTextBoxType = {
 		name = "survey_leader_mil_value"
-		position = { x = (300 + 128) y = (128 + 148) }
+		position = { x = (300 + 128) y = (128 + 148 - 123) }
 		textureFile = ""
 		font = "vic_18"
 		borderSize = {x = 4 y = 4}	
@@ -443,77 +313,31 @@ scouting_company_menu_node += {
 	iconType = {
 		name = "survey_leader_mil_icon"
 		spriteType = "GFX_icon_powers_military"
-		position = { x = (300 + 114) y = (128 + 146) }
+		position = { x = (300 + 114) y = (128 + 146 - 123) }
 		Orientation = "UPPER_LEFT"
 		scripted = yes
 	}
-	
-	instantTextBoxType = {
-		name = "survey_idea_army_text"
-		position = { x = (300 + 128 - 118) y = (128 + 148 - 155 - 6) }
-		textureFile = ""
-		font = "vic_18"
-		borderSize = {x = 4 y = 4}	
-		text = "?"
-		maxWidth = 40
-		maxHeight = 14
-		format = centre
-		scripted = yes
-	}
-	instantTextBoxType = {
-		name = "survey_idea_company_text"
-		position = { x = (300 + 128 - 118 + 60) y = (128 + 148 - 155 - 6) }
-		textureFile = ""
-		font = "vic_18"
-		borderSize = {x = 4 y = 4}	
-		text = "?"
-		maxWidth = 40
-		maxHeight = 14
-		format = centre
-		scripted = yes
-	}
-	instantTextBoxType = {
-		name = "survey_idea_nation_text"
-		position = { x = (300 + 128 - 118 + 120) y = (128 + 148 - 155 - 6) }
-		textureFile = ""
-		font = "vic_18"
-		borderSize = {x = 4 y = 4}	
-		text = "?"
-		maxWidth = 40
-		maxHeight = 14
-		format = centre
-		scripted = yes
-	}
-	instantTextBoxType = {
-		name = "survey_idea_survey_text"
-		position = { x = (300 + 128 - 118 + 180) y = (128 + 148 - 155 - 6) }
-		textureFile = ""
-		font = "vic_18"
-		borderSize = {x = 4 y = 4}	
-		text = "?"
-		maxWidth = 40
-		maxHeight = 14
-		format = centre
-		scripted = yes
-	}
-	
+	#iconType = {
+	#	name = "survey_leader_personality"
+	#	quadTextureSprite = "GFX_no_personality_chart"
+	#	position = { x = (300 + 12 + 150) y = (128 + 146 - 123 + 30) }
+	#}
 	iconType = {
-		name = "survey_percent_overlay"
-		spriteType = "GFX_survey_percent_overlay"
-		position = { x = (300 + 114 - 185) y = (128 + 146 + 40) }
-		Orientation = "UPPER_LEFT"
-		scripted = yes
+		name = "survey_leader_personality"
+		quadTextureSprite = "GFX_no_personality_chart_overlay"
+		position = { x = (300 + 12 + 135) y = (128 + 146 - 133) }
 	}
-	
-	instantTextBoxType = {
-		name = "custom_mechanic_survey_experience_value"
-		position = { x = (244 - 153) y = (317 - 14) }
-		textureFile = ""
-		font = "vic_18"
-		scripted = yes
-		maxWidth = 52
-		maxHeight = 22
-		format = center
+	iconType = {
+		name = "survey_leader_trait"
+		quadTextureSprite = "GFX_no_personality_chart_overlay"
+		position = { x = (300 + 12 + 135 + 45) y = (128 + 146 - 133) }
+	}
+	guiButtonType = {
+		name = "survey_leader_button"
+		quadTextureSprite= "GFX_button_type_246"
+		position = { x = (300 + 12 - 10) y = (128 + 146 - 123 + 35) }
+		buttonText = "Find new Scout-Master"
+		buttonFont = "vic_18"
 	}
 }
 
@@ -531,18 +355,6 @@ new custom_text_box survey_progress_amount = {
 new custom_icon survey_percent_overlay = { }
 new custom_text_box custom_mechanic_survey_experience_value = {
 	name = "[This.scouting_company_experience_visible.GetValue]"
-}
-new custom_text_box survey_idea_army_text = {
-	name = "Army"
-}
-new custom_text_box survey_idea_company_text = {
-	name = "Company"
-}
-new custom_text_box survey_idea_nation_text = {
-	name = "Nation"
-}
-new custom_text_box survey_idea_survey_text = {
-	name = "Survey"
 }
 new customizable_localization GetActiveSurvey = {
 }
@@ -590,9 +402,6 @@ new custom_button open_survey_screen = {
 			
 			survey_calculate_recruits
 			survey_calculate_losses
-			
-			survey_calculate_income
-			survey_calculate_expenses
 		}
 	}
 }

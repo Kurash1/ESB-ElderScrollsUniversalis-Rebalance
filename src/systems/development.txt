@@ -1,6 +1,9 @@
 new script_variable development = {
 	name = "Development"
 }
+new script_variable target_development = {
+	name = "Target Development"
+}
 
 #on_actions:on_startup += {
 #	if [tag = black_mountain] { #debug country

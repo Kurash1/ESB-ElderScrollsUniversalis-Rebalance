@@ -75,7 +75,7 @@ new class survey_passive_activity = {
 			}
 		}
 		
-		custom_icons:survey_policy_icon_3:frames += {
+		custom_buttons:survey_passive_activity_button:frames += {
 			{
 				frame = this:icon
 				trigger = {
