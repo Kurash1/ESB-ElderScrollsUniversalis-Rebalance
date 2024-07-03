@@ -95,9 +95,8 @@ new province snowpoint = {
 		culture = winterholdian
 		hre = yes
 		history_trade_goods = wood
-	
-		is_city = yes
-		history_owner = hill_hammer
+		
+		history_owner = ice_sword
 	}
 }
 new province frostflow = {
@@ -365,7 +364,7 @@ new province kastav = {
 		history_trade_goods = potions
 	
 		is_city = yes
-		history_owner = snow_veil
+		history_owner = bear_warriors
 	}
 }
 new province matette = {

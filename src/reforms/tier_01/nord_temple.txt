@@ -1,0 +1,34 @@
+governments:theocracy:reform_levels:1 += new tier_1_nord_temple = {
+	name = "Nord Temple"
+	desc = "When the nords crossed the seas to skyrim their first houses were on the rivers, but their first major settlements were on the mountains. Defensible locations, mountain temples that would protect the men from the elven threat still living on the lands. These temples continued to prosper in the protection of their mountains, and began to influence neighboring settlements. Finally forming a loose governance structure with a single temple at the peak."
+	icon = "fort"
+	allow_normal_conversion = yes
+	potential = {
+		has_reform = tier_1_nord_temple
+	}
+	trigger = {
+		has_reform = tier_1_nord_temple
+	}
+	modifiers = {
+		defensiveness = 15%
+		governing_capacity = -100
+		global_autonomy = 0.05
+	}
+	effect = {
+		add_country_modifier = {
+			name = organized_churches
+			duration = -1
+		}
+		new_custom_tooltip = "Additionally all Tax buildings gain the following bonus:
+	{modifier_to_string = {
+		local_unrest = -2
+		local_missionary_strength = 0.025
+	}}"
+	}
+	removed_effect = {
+		remove_country_modifier = organized_churches
+	}
+	ai = {
+		factor = 1
+	}
+}

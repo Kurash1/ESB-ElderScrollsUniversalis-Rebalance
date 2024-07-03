@@ -52,29 +52,5 @@ new custom_transpile mil_technology = {
 		technology = { year = 9999 combat_width = 5 }
 		technology = { year = 9999 }
 		technology = { year = 9999 }
-		technology = { year = 9999 }
-		technology = { year = 9999 }
-		technology = { year = 9999 }
-		technology = { year = 9999 }
-		technology = { year = 9999 }
-		technology = { year = 9999 }
-		technology = { year = 9999 }
-		technology = { year = 9999 }
-		technology = { year = 9999 }
-		technology = { year = 9999 }
-		technology = { year = 9999 }
-		technology = { year = 9999 }
-		technology = { year = 9999 }
-		technology = { year = 9999 }
-		technology = { year = 9999 }
-		technology = { year = 9999 }
-		technology = { year = 9999 }
-		technology = { year = 9999 }
-		technology = { year = 9999 }
-		technology = { year = 9999 }
-		technology = { year = 9999 }
-		technology = { year = 9999 }
-		technology = { year = 9999 }
-		technology = { year = 9999 }
 	}
 }

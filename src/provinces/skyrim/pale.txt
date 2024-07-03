@@ -93,7 +93,7 @@ new province frozen_outpost = {
 		history_trade_goods = wood
 	
 		is_city = yes
-		history_owner = dawn_star
+		history_owner = frozen_sentinels
 	}
 }
 new province njadhilde = {
@@ -1529,7 +1529,7 @@ new province fellhammer = {
 	history = {
 		center_of_trade = 1
 		religion = nordic_pantheon
-		culture = winterholdian
+		culture = palean
 		hre = yes
 		history_trade_goods = c_metals
 		history_owner = hill_hammer
@@ -1553,7 +1553,7 @@ new province wayward_pass = {
 	}
 	history = {
 		religion = nordic_pantheon
-		culture = winterholdian
+		culture = palean
 		hre = yes
 		history_trade_goods = stone
 		history_owner = hill_hammer
@@ -1577,7 +1577,7 @@ new province hoddard = {
 	}
 	history = {
 		religion = nordic_pantheon
-		culture = winterholdian
+		culture = palean
 		hre = yes
 		history_trade_goods = wood
 		history_owner = dunstad

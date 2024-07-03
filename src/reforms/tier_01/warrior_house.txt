@@ -1,9 +1,10 @@
-governments:monarchy:reform_levels:1 += new tier_1_warrior_house = {
+governments:republic:reform_levels:1 += new tier_1_warrior_house = {
 	name = "Warrior House"
 	desc = ""
 	icon = "crusading_orders_icon"
 	allow_normal_conversion = yes
 	force_general_leader = yes
+	free_city = yes
 	potential = {
 		has_reform = tier_1_warrior_house
 	}
@@ -17,5 +18,27 @@ governments:monarchy:reform_levels:1 += new tier_1_warrior_house = {
 	}
 	ai = {
 		factor = 1
+	}
+}
+new named_effect generate_warrior_house_companies = {
+	foreach $country in countries [
+		exists = $country:starting_reform
+		$country:starting_reform:id == tier_1_warrior_house
+	] {
+		new mercenary_company `{$country:tag}_warrior_house` = {
+			name = "{$country:name} Company"
+			regiments_per_development = 0.05
+			cost_modifier = 1.0
+			home_province = $country:capital
+			cavalry_weight = 0
+			artillery_weight = 0
+			trigger = {
+				is_part_of_hre = yes
+				exists = $country
+			}
+			modifier = {
+				land_morale = 10%
+			}
+		}
 	}
 }

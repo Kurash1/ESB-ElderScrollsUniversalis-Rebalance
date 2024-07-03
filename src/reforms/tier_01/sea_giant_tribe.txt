@@ -1,0 +1,20 @@
+governments:tribal:reform_levels:1 += new tier_1_sea_giant_tribe = {
+	name = "Sea Giant Tribe"
+	desc = ""
+	icon = "hero"
+	allow_normal_conversion = yes
+	potential = {
+		has_reform = tier_1_sea_giant_tribe
+	}
+	trigger = {
+		has_reform = tier_1_sea_giant_tribe
+	}
+	modifiers = {
+		naval_forcelimit_modifier = 10%
+		naval_morale = 15%
+	}
+	ai = {
+		factor = 1
+	}
+
+}

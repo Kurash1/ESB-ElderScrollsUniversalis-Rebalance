@@ -1781,9 +1781,8 @@ new province morvunskar = {
 		culture = eastmarcher
 		hre = yes
 		history_trade_goods = arms
-	
-		is_city = yes
-		history_owner = windhelm
+		
+		history_owner = red_house
 		fort_16th = yes
 		2500.1.1 = {
 			quick_province_modifier = {

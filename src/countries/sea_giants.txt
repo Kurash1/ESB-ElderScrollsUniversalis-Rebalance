@@ -13,7 +13,8 @@ new inheritable sea_giant_country = {
 			}
 		}
 	}
-	starting_reform = tier_1_nord_clan
+	government = tribal
+	starting_reform = tier_1_sea_giant_tribe
 	capital = black_mountain
 }
 new country bikseth = {

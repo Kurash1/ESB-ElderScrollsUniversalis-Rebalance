@@ -122,129 +122,129 @@ new idea_group quality_ideas = {
 		discipline = 0.05
 	}
 }
-new idea_group fire_ideas = {
-	name = "Fire"
-	category = MIL
-	trigger = {
-		full_idea_group = quality_ideas
-	}
-	ideas = {
-		{
-			name = "Concentrated Volleys"
-			desc = "An unprepared charging enemy might regret that decision."
-			modifier = {
-				shock_damage_received = -0.1
-			}
-		}
-		{
-			name = "Siege Ballista"
-			desc = "Our ballista are versatile when it comes to sieges or battles."
-			modifier = {
-				artillery_levels_available_vs_fort = 1
-			}
-		}
-		{
-			name = "Quick Reloading"
-			desc = "Training, training, training. Our ballista crews will be better than our rivals."
-			modifier = {
-				artillery_power = 0.1
-			}
-		}
-		{
-			name = "Wait 'til the last second"
-			desc = "Our men will hold their fire until the very last moment to inflict maximum damage to the enemy."
-			modifier = {
-				fire_damage = 0.1
-			}
-		}
-		{
-			name = "Defensive Fire"
-			desc = "Our fortresses are well equipped for a lasting defensive fire."
-			modifier = {
-				defensiveness = 0.25
-			}
-		}
-		{
-			name = "Concentrated Fire Support"
-			desc = "Through concentrated fire support we will be able to support our front regiments even better."
-			modifier = {
-				backrow_artillery_damage = 0.25
-			}
-		}
-		{
-			name = "Long Range Generals"
-			desc = "Our generals' education will be focused on long-range combat."
-			modifier = {
-				leader_land_fire = 1
-			}
-		}
-	}
-	bonus = {
-		fire_damage_received = -0.1
-	}
-}
-new idea_group shock_ideas = {
-	name = "Shock"
-	category = MIL
-	trigger = {
-		full_idea_group = quality_ideas
-	}
-	ideas = {
-		{
-			name = "Overlapping Attack"
-			desc = "When we charge the enemy, our cavalry can assault the whole frontline or just focus down a single unit. We can also react to opportunities to charge the enemy with great surprise."
-			modifier = {
-				cavalry_power = 0.15
-				cavalry_shock = 1
-			}
-		}
-		{
-			name = "Sudden Assault"
-			desc = "We will attack the enemy when he does not expect it and win because of that."
-			modifier = {
-				fire_damage_received = -0.1
-			}
-		}
-		{
-			name = "Cavalry Focus"
-			desc = "Cavalry is very important when it comes to surprising an enemy and quickly defeating him."
-			modifier = {
-				cavalry_cost = -0.25
-			}
-		}
-		{
-			name = "Wedge Formation"
-			desc = "Our cavalry wedges are feared by all our enemies."
-			modifier = {
-				cav_to_inf_ratio = 0.5
-			}
-		}
-		{
-			name = "Staggering Attack"
-			desc = "Our attacks will be delivered with such force that the enemy should waver and break."
-			modifier = {
-				shock_damage = 0.1
-			}
-		}
-		{
-			name = "Dragoon Cavalry"
-			desc = "Our Dragoon Cavalry can quickly ride into battle, hurt the enemy and then pull back. When necessary, we can also fight directly from horseback, significantly improving our long-range combat options."
-			modifier = {
-				cavalry_power = 0.15
-			}
-		}
-		{
-			name = "Shock Generals"
-			desc = "Our priority in educating generals is the teachings of close combat."
-			modifier = {
-				leader_land_shock = 1
-			}
-		}
-	}
-	bonus = {
-		shock_damage_received = -0.1
-	}
-}
+#new idea_group fire_ideas = {
+#	name = "Fire"
+#	category = MIL
+#	trigger = {
+#		full_idea_group = quality_ideas
+#	}
+#	ideas = {
+#		{
+#			name = "Concentrated Volleys"
+#			desc = "An unprepared charging enemy might regret that decision."
+#			modifier = {
+#				shock_damage_received = -0.1
+#			}
+#		}
+#		{
+#			name = "Siege Ballista"
+#			desc = "Our ballista are versatile when it comes to sieges or battles."
+#			modifier = {
+#				artillery_levels_available_vs_fort = 1
+#			}
+#		}
+#		{
+#			name = "Quick Reloading"
+#			desc = "Training, training, training. Our ballista crews will be better than our rivals."
+#			modifier = {
+#				artillery_power = 0.1
+#			}
+#		}
+#		{
+#			name = "Wait 'til the last second"
+#			desc = "Our men will hold their fire until the very last moment to inflict maximum damage to the enemy."
+#			modifier = {
+#				fire_damage = 0.1
+#			}
+#		}
+#		{
+#			name = "Defensive Fire"
+#			desc = "Our fortresses are well equipped for a lasting defensive fire."
+#			modifier = {
+#				defensiveness = 0.25
+#			}
+#		}
+#		{
+#			name = "Concentrated Fire Support"
+#			desc = "Through concentrated fire support we will be able to support our front regiments even better."
+#			modifier = {
+#				backrow_artillery_damage = 0.25
+#			}
+#		}
+#		{
+#			name = "Long Range Generals"
+#			desc = "Our generals' education will be focused on long-range combat."
+#			modifier = {
+#				leader_land_fire = 1
+#			}
+#		}
+#	}
+#	bonus = {
+#		fire_damage_received = -0.1
+#	}
+#}
+#new idea_group shock_ideas = {
+#	name = "Shock"
+#	category = MIL
+#	trigger = {
+#		full_idea_group = quality_ideas
+#	}
+#	ideas = {
+#		{
+#			name = "Overlapping Attack"
+#			desc = "When we charge the enemy, our cavalry can assault the whole frontline or just focus down a single unit. We can also react to opportunities to charge the enemy with great surprise."
+#			modifier = {
+#				cavalry_power = 0.15
+#				cavalry_shock = 1
+#			}
+#		}
+#		{
+#			name = "Sudden Assault"
+#			desc = "We will attack the enemy when he does not expect it and win because of that."
+#			modifier = {
+#				fire_damage_received = -0.1
+#			}
+#		}
+#		{
+#			name = "Cavalry Focus"
+#			desc = "Cavalry is very important when it comes to surprising an enemy and quickly defeating him."
+#			modifier = {
+#				cavalry_cost = -0.25
+#			}
+#		}
+#		{
+#			name = "Wedge Formation"
+#			desc = "Our cavalry wedges are feared by all our enemies."
+#			modifier = {
+#				cav_to_inf_ratio = 0.5
+#			}
+#		}
+#		{
+#			name = "Staggering Attack"
+#			desc = "Our attacks will be delivered with such force that the enemy should waver and break."
+#			modifier = {
+#				shock_damage = 0.1
+#			}
+#		}
+#		{
+#			name = "Dragoon Cavalry"
+#			desc = "Our Dragoon Cavalry can quickly ride into battle, hurt the enemy and then pull back. When necessary, we can also fight directly from horseback, significantly improving our long-range combat options."
+#			modifier = {
+#				cavalry_power = 0.15
+#			}
+#		}
+#		{
+#			name = "Shock Generals"
+#			desc = "Our priority in educating generals is the teachings of close combat."
+#			modifier = {
+#				leader_land_shock = 1
+#			}
+#		}
+#	}
+#	bonus = {
+#		shock_damage_received = -0.1
+#	}
+#}
 new idea_group professionalism_ideas = {
 	name = "Professionalism"
 	category = MIL

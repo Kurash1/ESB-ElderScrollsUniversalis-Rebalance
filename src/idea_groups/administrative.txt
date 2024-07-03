@@ -217,7 +217,7 @@ new idea_group theocracy_ideas = {
 			name = "Religious Supremacy"
 			desc = "We will prove the supremacy of our religion. We will have it easier converting others because they have to accept our superiority."
 			modifier = {
-				global_missionary_strength = 0.03
+				global_missionary_strength = 0.01
 			}
 		}
 		{
@@ -225,14 +225,14 @@ new idea_group theocracy_ideas = {
 			desc = "Church Law will support us in all our undertakings."
 			modifier = {
 				devotion = 1
+				tax_line = 1
 			}
 		}
 		{
-			name = "Bless The Cannons"
-			desc = "Blessing our cannons will motivate people to donate money for us to afford even more of them."
+			name = "Flesh Is Weak"
+			desc = "The flesh is weak, the soul is not. Our armies have learned to fight as if they shared the same soul, and thus their morale shall never be broken."
 			modifier = {
-				artillery_cost = -0.25
-				artillery_power = 0.15
+				morale_damage_received = -0.1
 			}
 		}
 		{
@@ -251,6 +251,7 @@ new idea_group theocracy_ideas = {
 		}
 	}
 	bonus = {
+		global_unrest = -2
 		monthly_fanaticism_power = 1.0
 	}
 }
@@ -375,10 +376,11 @@ new idea_group republican_ideas = {
 			}
 		}
 		{
-			name = "Elven History"
-			desc = "By studying Elven history, we can learn from their state maintenance and their ability to quickly conquer and maintain new lands."
+			name = "Free History"
+			desc = "Giving our cities self-governance in matters of trade will allow us to open new, profitable trade routes."
 			modifier = {
-				idea_cost = -0.025
+				caravan_power = 0.25
+				development_cost = -0.05
 			}
 		}
 	}

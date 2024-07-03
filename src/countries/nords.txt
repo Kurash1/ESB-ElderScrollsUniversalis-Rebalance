@@ -418,7 +418,7 @@ new country dragon_bridge = {
 	inherit = nordic_country
 	primary_culture = haafingarian
 	tag = DRB
-	starting_reform = tier_1_warrior_house
+	starting_reform = tier_1_thanedom
 	name = "Dragon Bridge"
 	adj = "Dragon Bridgean"
 	color = {
@@ -1223,7 +1223,8 @@ new country rannveig = {
 	inherit = nordic_country
 	primary_culture = hjaalmarcher
 	tag = RAN
-	starting_reform = tier_1_thanedom
+	government = theocracy
+	starting_reform = tier_1_nord_temple
 	name = "Rannveig"
 	adj = "Rannveig's"
 	color = {
@@ -1235,7 +1236,8 @@ new country shearpoint = {
 	inherit = nordic_country
 	primary_culture = palean
 	tag = SHR
-	starting_reform = tier_1_thanedom
+	government = theocracy
+	starting_reform = tier_1_nord_temple
 	name = "Shearpoint"
 	adj = "Shearpointish"
 	color = {
@@ -1395,7 +1397,8 @@ new country anthor = {
 	inherit = nordic_country
 	primary_culture = winterholdian
 	tag = ANT
-	starting_reform = tier_1_thanedom
+	government = theocracy
+	starting_reform = tier_1_nord_temple
 	name = "Anthor"
 	adj = "Anthor"
 	color = {
@@ -1833,3 +1836,82 @@ new relation vassal = {
 #	start_date = 2568.1.1
 #	end_date = 9999.1.1
 #}
+
+new country ice_sword = {
+	inherit = nordic_country
+	primary_culture = winterholdian
+	government = republic
+	starting_reform = tier_1_warrior_house
+	tag = IWO
+	name = "Ice Sword"
+	adj = "Icy"
+	color = {
+		134 204 206
+	}
+	capital = snowpoint
+}
+new country frozen_sentinels = {
+	inherit = nordic_country
+	primary_culture = palean
+	government = republic
+	starting_reform = tier_1_warrior_house
+	tag = FSE
+	name = "Frozen Sentinels"
+	adj = "Frozen"
+	color = {
+		35 120 206
+	}
+	capital = frozen_outpost
+}
+new country lone_dragons = {
+	inherit = nordic_country
+	primary_culture = whiterunish
+	government = republic
+	starting_reform = tier_1_warrior_house
+	tag = LGU
+	name = "Lone Dragons"
+	adj = "Draconic"
+	color = {
+		119 53 62
+	}
+	capital = dragonpoint
+}
+new country red_house = {
+	inherit = nordic_country
+	primary_culture = eastmarcher
+	government = republic
+	starting_reform = tier_1_warrior_house
+	tag = REH
+	name = "Red House"
+	adj = "Red"
+	color = {
+		255 0 0
+	}
+	capital = morvunskar
+}
+new country sons_of_stuhn = {
+	inherit = nordic_country
+	primary_culture = whiterunish
+	government = republic
+	starting_reform = tier_1_warrior_house
+	tag = SOF
+	name = "Sons of Stuhn"
+	adj = "Child"
+	color = {
+		255 139 86
+	}
+	capital = valtheim
+}
+new country bear_warriors = {
+	inherit = nordic_country
+	primary_culture = winterholdian
+	government = republic
+	starting_reform = tier_1_warrior_house
+	tag = BWA
+	name = "Bear Warriors"
+	adj = "Bear"
+	color = {
+		86 47 29
+	}
+	capital = kastav
+}

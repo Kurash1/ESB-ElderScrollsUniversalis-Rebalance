@@ -657,7 +657,7 @@ new province dragonpoint = {
 		history_trade_goods = fish
 	
 		is_city = yes
-		history_owner = storm_fist
+		history_owner = lone_dragons
 	}
 }
 new province redorans_retreat = {
@@ -1344,6 +1344,7 @@ new province bandit_way = {
 			quick_province_modifier = {
 				name = "Sponsored Fortifications"
 				desc = "An old contract with the high king means that the high kingdom pays the majority of the maintenance for these fortifications."
+				permanent = no
 				modifier = {
 					local_fort_maintenance_modifier = -0.8
 				}
@@ -1414,6 +1415,7 @@ new province south_brittleshin = {
 			quick_province_modifier = {
 				name = "Sponsored Fortifications"
 				desc = "An old contract with the high king means that the high kingdom pays the majority of the maintenance for these fortifications."
+				permanent = no
 				modifier = {
 					local_fort_maintenance_modifier = -0.8
 				}
@@ -1526,6 +1528,7 @@ new province riverwood = {
 			quick_province_modifier = {
 				name = "Sponsored Fortifications"
 				desc = "An old contract with the high king means that the high kingdom pays the majority of the maintenance for these fortifications."
+				permanent = no
 				modifier = {
 					local_fort_maintenance_modifier = -0.8
 				}
@@ -1713,9 +1716,8 @@ new province valtheim = {
 		culture = whiterunish
 		hre = yes
 		history_trade_goods = c_metals
-	
-		is_city = yes
-		history_owner = hrothgar
+		
+		history_owner = sons_of_stuhn
 		add_core = valtheim
 	}
 }

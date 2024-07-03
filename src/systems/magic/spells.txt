@@ -196,7 +196,7 @@ This spell has a base cost of §Y{this:cost}§!. This cost is further modified b
 			custom_buttons:last:trigger := {
 				custom_trigger_tooltip = {
 					new_tooltip = "This is not a §YCountry§! or §YRitual§! type spell, and thus cannot be cast from this menu."
-					always = yes
+					always = no
 				}
 			}
 		}

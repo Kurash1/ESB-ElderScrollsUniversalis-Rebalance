@@ -23,6 +23,41 @@ new effect qq_tooltip_idea = {
 		tooltip = {
 			args:effect
 		}
+		add_idea = args:id
+	}
+}
+new named_trigger has_all_idea_group = {
+	foreach $idea_group in idea_groups [$idea_group:category != national] {
+		has_idea_group = $idea_group:id
+	}
+}
+new named_trigger has_free_idea_group_slot = {
+	custom_trigger_tooltip = {
+		new_tooltip = "Has a free Idea Group slot"
+		NOT = {
+			if [adm_tech = 27] {
+				calc_true_if = {
+					amount = 28
+					has_all_idea_group
+				}
+			}
+			
+			for $i as 8 to 1 {
+				else_if [adm_tech = ($i * 3 - 2)] {
+					calc_true_if = {
+						amount = ($i * 3 + 1)
+						has_all_idea_group
+					}
+				}
+			}
+			
+			else {
+				calc_true_if = {
+					amount = 4
+					has_all_idea_group
+				}
+			}
+		}
 	}
 }
 new effect add_to_tree = {
@@ -54,11 +89,40 @@ new effect add_to_tree = {
 				quadTextureSprite = `"GFX_idea_{args:group:id}"`
 				scripted = yes
 			}
+			guiButtonType = {
+				name = `custom_mechanic_idea_tree_{args:group:id}_yes`
+				position = { x = (IDEA_LEFT + args:x * 78) y = (IDEA_TOP + args:y * 78) }
+				quadTextureSprite = "GFX_idea_glow_overlay"
+				scripted = yes
+			}
+		}
+		new custom_button `custom_mechanic_idea_tree_{args:group:id}_yes` = {
+			tooltip = "You have enabled {args:group:name} Ideas"
+			potential = {
+				has_idea_group = args:group:id
+			}
+			effect = {
+				tooltip = {
+					qq_tooltip_idea = args:group:ideas:1
+					qq_tooltip_idea = args:group:ideas:2
+					qq_tooltip_idea = args:group:ideas:3
+					qq_tooltip_idea = args:group:ideas:4
+					qq_tooltip_idea = args:group:ideas:5
+					qq_tooltip_idea = args:group:ideas:6
+					qq_tooltip_idea = args:group:ideas:7
+					new_custom_tooltip = "§YBonus§!:
+		{modifier_to_string = args:group:bonus}"
+				}
+				
+			}
 		}
 		new custom_button `custom_mechanic_idea_tree_{args:group:id}` = {
 			tooltip = "£{args:group:category:to_lower}£ {args:group:name} Ideas"
 			potential = args:potential
-			trigger = args:group:trigger
+			trigger = {
+				has_free_idea_group_slot
+				args:group:trigger
+			}
 			effect = {
 				add_idea_group = args:group:id
 				
