@@ -62,7 +62,13 @@ new named_effect populate_province_spells = {
 					}
 				}
 				effect = {
-					new_custom_tooltip = "We cannot cast the spell for the following reasons:"
+					new_custom_tooltip = "We cannot cast the spell due to not fulfilling the conditions, but here is what it would do:"
+					
+					tooltip = {
+						&magicka -= `{$:id}_spell_cost`
+						
+						$:on_cast
+					}
 				}
 				ai_will_do = {
 					factor = 0
