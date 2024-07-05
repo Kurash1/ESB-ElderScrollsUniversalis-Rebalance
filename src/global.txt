@@ -1,3 +1,5 @@
+new define NDefines.NAI.AI_FORT_PER_DEV_RATIO = 25
+
 new named_effect free_merc_company_list = {
 	
 }

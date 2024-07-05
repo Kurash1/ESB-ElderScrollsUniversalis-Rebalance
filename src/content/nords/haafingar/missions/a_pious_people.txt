@@ -26,6 +26,7 @@ mission_trees:solitude += {
 		local_unrest = -2
 		local_missionary_strength = 0.025
 	}}"
+				permanent = no
 				modifier = {
 					tax_line = 1
 				}
@@ -49,12 +50,24 @@ mission_trees:solitude += {
 				}
 			}
 			
+			on_actions:on_province_owner_change += {
+				if [has_building_line = tax
+				owner = { 
+					has_country_modifier = organized_churches
+				}] {
+					add_province_modifier = {
+						name = organized_churches_province
+						duration = -1
+					}
+				}
+			}
+			
 			foreach $building in building_lines:tax:buildings {
 				$building:on_built += {
 					if [owner = { 
 						has_country_modifier = organized_churches
 					}] {
-						add_permanent_province_modifier = {
+						add_province_modifier = {
 							name = organized_churches_province
 							duration = -1
 						}

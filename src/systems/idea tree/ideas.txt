@@ -35,9 +35,9 @@ new named_trigger has_free_idea_group_slot = {
 	custom_trigger_tooltip = {
 		new_tooltip = "Has a free Idea Group slot"
 		NOT = {
-			if [adm_tech = 27] {
+			if [adm_tech = 25] {
 				calc_true_if = {
-					amount = 28
+					amount = 27
 					has_all_idea_group
 				}
 			}
@@ -45,7 +45,7 @@ new named_trigger has_free_idea_group_slot = {
 			for $i as 8 to 1 {
 				else_if [adm_tech = ($i * 3 - 2)] {
 					calc_true_if = {
-						amount = ($i * 3 + 1)
+						amount = ($i * 3)
 						has_all_idea_group
 					}
 				}
@@ -53,7 +53,7 @@ new named_trigger has_free_idea_group_slot = {
 			
 			else {
 				calc_true_if = {
-					amount = 4
+					amount = 3
 					has_all_idea_group
 				}
 			}
