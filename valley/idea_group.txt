@@ -24,6 +24,8 @@ new class idea_group = {
 	simple_transpile = {
 		write_file "common/ideas/arc.txt" = {
 			foreach $ in idea_groups:priority_sorted {
+				new localisation `{$}` = `{$:name} Ideas`
+				new localisation `{$}_bonus` = `{$:name} Ambitions`
 				$ = {
 					when [$:category == national] {
 						new localisation `{$}_start` = `{$:name} Traditions`
