@@ -1,11 +1,35 @@
-new named_int IDEA_TOP = 146
+new named_int IDEA_TOP = 47
 new named_int IDEA_LEFT = 10
 
-interface_files:countrytechnologyview:countrytechnologyview += {
+interface_files:countryideasview:countryideasview += {
 	windowType = {
 		name = "idea_tree_menu"
-		position = { x = 0 y = 0 }
+		position = { x = 550 y = 150 }
 		scripted = yes
+		
+		iconType = {
+			name = "background"
+			spriteType = "GFX_idea_tree_pop_out"
+			position = { x = 0 y = 0 }
+		}
+	}
+	
+	guiButtonType = {
+		name = "toggle_idea_tree"
+		spriteType = "GFX_idea_tree_pop_button"
+		position = { x = 550 y = 150 }
+		scripted = yes
+	}
+}
+new custom_button toggle_idea_tree = {
+	tooltip = "Toggle Idea Tree"
+	effect = {
+		if [has_country_flag = show_idea_tree] {
+			clr_country_flag = show_idea_tree
+		}
+		else {
+			set_country_flag = show_idea_tree
+		}
 	}
 }
 new custom_window idea_tree_menu = {
@@ -13,7 +37,7 @@ new custom_window idea_tree_menu = {
 		has_country_flag = show_idea_tree
 	}
 }
-new named_ui_node idea_tree_node = interface_files:countrytechnologyview:countrytechnologyview:idea_tree_menu
+new named_ui_node idea_tree_node = interface_files:countryideasview:countryideasview:idea_tree_menu
 
 new effect qq_tooltip_idea = {
 	args = unknown

@@ -1,0 +1,42 @@
+new named_trigger not_special_tag = {
+	NOT = {
+		tag = REB
+		tag = NAT
+		tag = PIR
+	}
+}
+new effect pick_random_country = {
+	args = {
+		event_target = string
+		trigger = named_trigger
+		weight = named_effect
+	}
+	transpile = {
+		1 = {
+			&weight := 0
+			
+			every_country [
+				not_special_tag
+				args:trigger
+			] {
+				&weight := 1
+				args:weight
+				if [&weight > 1400] = { &weight := 1400 }
+				PREV->&weight += PREV
+			}
+			
+			&weight ?= weight
+			
+			every_country [
+				PREV->&weight >= 0
+				not_special_tag
+				args:trigger
+			] {
+				PREV->&weight -= PREV
+				if [PREV->&weight <= 0] {
+					save_event_target_as = args:event_target
+				}
+			}
+		}
+	}
+}

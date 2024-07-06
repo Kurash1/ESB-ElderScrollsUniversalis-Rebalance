@@ -38,7 +38,24 @@ new class idea_group = {
 						category = $:category
 					}
 					
-					trigger = { $:trigger }
+					trigger = {
+						when [$:category == national] {
+							if [
+								OR = {
+									NOT = { has_global_flag = on_action_set_up_global_flag }
+									ai = yes
+								}
+							] {
+								$:trigger
+							}
+							else {
+								has_country_flag = `ni_{$}`
+							}
+						}
+						when_not {
+							$:trigger
+						}
+					}
 					
 					foreach idea in $:ideas {
 						idea:transpile = $ #I don't feel like fixing this

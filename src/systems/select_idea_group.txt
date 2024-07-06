@@ -1,0 +1,45 @@
+interface_files:countryideasview:countryideasview += {
+	guiButtonType = {
+		name = "select_national_ideas"
+		position = { x = 475 y = 170 }
+		quadTextureSprite = "GFX_grant_monopoly_icon"
+		scripted = yes
+	}
+}
+new custom_button select_national_ideas = {
+	tooltip = "Select National Ideas"
+	effect = {
+		country_event = idea_groups.100
+	}
+}
+new country_event idea_groups.100 = {
+	title = "Select National Ideas"
+	desc = "This event allows you to switch out your national ideas with any other national ideas your country qualifies for."
+	picture = great_court_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		foreach $ in idea_groups [$:category == national] {
+			clr_country_flag = `ni_{$}`
+		}
+	}
+	options = {
+	}
+}
+new named_effect populate_idea_groups = {
+	foreach $ in idea_groups [$:category == national] {
+		events:idea_groups.100:options += {
+			{
+				name = "{$:name} Ideas"
+				trigger = {
+					$:trigger
+				}
+				effect = {
+					set_country_flag = `ni_{$}`
+					swap_free_idea_group = yes
+					
+					preview_national_ideas = $
+				}
+			}
+		}
+	}
+}
