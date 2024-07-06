@@ -15,18 +15,10 @@ governments:theocracy:reform_levels:1 += new tier_1_nord_temple = {
 		global_autonomy = 0.05
 	}
 	effect = {
-		add_country_modifier = {
-			name = organized_churches
-			duration = -1
-		}
-		new_custom_tooltip = "Additionally all Tax buildings gain the following bonus:
-	{modifier_to_string = {
-		local_unrest = -2
-		local_missionary_strength = 0.025
-	}}"
+		add_owned_province_modifier = organized_churches
 	}
 	removed_effect = {
-		remove_country_modifier = organized_churches
+		remove_owned_province_modifier = organized_churches
 	}
 	ai = {
 		factor = 1

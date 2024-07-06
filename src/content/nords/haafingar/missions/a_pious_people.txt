@@ -1,3 +1,15 @@
+new owned_province_modifier organized_churches =  {
+	name = "Organized Church"
+	country = {
+		tax_line = 1
+	}
+	trigger_tooltip = "with a Tax building"
+	building_line = tax
+	province = {
+		local_unrest = -2
+		local_missionary_strength = 0.03
+	}
+}
 mission_trees:solitude += {
 	a_pious_people = {
 		name = "Pious People of Solitude"
@@ -18,65 +30,7 @@ mission_trees:solitude += {
 				province = solitude
 			}
 			
-			quick_country_modifier = {
-				id = organized_churches
-				name = "Organized Church"
-				desc = "Additionally all Tax buildings gain the following bonus:
-	{modifier_to_string = {
-		local_unrest = -2
-		local_missionary_strength = 0.025
-	}}"
-				permanent = no
-				modifier = {
-					tax_line = 1
-				}
-			}
-			new_custom_tooltip = "Additionally all Tax buildings gain the following bonus:
-	{modifier_to_string = {
-		local_unrest = -2
-		local_missionary_strength = 0.025
-	}}"
-			
-			hidden_effect = {
-				every_owned_province [has_building_line = tax] {
-					quick_province_modifier = {
-						id = organized_churches_province
-						name = "Organized Church"
-						modifier = {
-							local_unrest = -2
-							local_missionary_strength = 0.025
-						}
-					}
-				}
-			}
-			
-			on_actions:on_province_owner_change += {
-				if [has_building_line = tax
-				owner = { 
-					has_country_modifier = organized_churches
-				}] {
-					add_province_modifier = {
-						name = organized_churches_province
-						duration = -1
-					}
-				}
-			}
-			
-			foreach $building in building_lines:tax:buildings {
-				$building:on_built += {
-					if [owner = { 
-						has_country_modifier = organized_churches
-					}] {
-						add_province_modifier = {
-							name = organized_churches_province
-							duration = -1
-						}
-					}
-				}
-				$building:on_destroyed += {
-					remove_province_modifier = organized_churches_province
-				}
-			}
+			add_owned_province_modifier = organized_churches
 		}
 	}
 }

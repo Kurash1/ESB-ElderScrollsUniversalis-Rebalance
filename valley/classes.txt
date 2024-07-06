@@ -132,6 +132,9 @@ new class named_int = {
 new class named_bool = {
 	args = bool
 }
+new class named_string = {
+	args = string
+}
 new class named_ui_node = {
 	args = ui_node
 }

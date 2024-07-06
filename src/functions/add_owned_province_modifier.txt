@@ -1,0 +1,146 @@
+new class owned_province_modifier = {
+	list = owned_province_modifiers
+	id = `{this:id}`
+	default = {
+		desc = ""
+		trigger_tooltip = ""
+		trigger = { }
+	}
+	args = {
+		name = string
+		desc = string
+		
+		country = named_modifier?
+		trigger_tooltip = string
+		trigger = named_trigger
+		province = named_modifier
+		
+		building_line = building_line?
+		tradegoods = list<tradegood>?
+	}
+	on_create = {
+		when [exists = this:country] {
+			new event_modifier `{this:id}` = {
+				name = `{this:name}`
+				desc = "{this:desc}All owned provinces {this:trigger_tooltip} gain the following bonus:
+		{modifier_to_string = this:province}"
+				modifier = this:country
+			}
+		}
+		
+		
+		new event_modifier `{this:id}_province` = {
+			name = `{this:name}`
+			modifier = this:province
+		}
+		
+		when [exists = this:building_line] {
+			foreach $building in this:building_line:buildings {
+				$building:on_built +=! {
+					if [
+						this:trigger
+						when [exists = this:country] {
+							owner->has_country_modifier = `{this:id}`
+						}
+						when_not {
+							owner->has_country_flag = `{this:id}`
+						}
+					] {
+						tooltip = {
+							add_province_modifier = {
+								name = `{this:id}_province`
+								duration = -1
+							}
+						}
+						add_province_modifier = {
+							name = `{this:id}_province`
+							hidden = yes
+							duration = -1
+						}
+					}
+				}
+				$building:on_destroyed +=! {
+					remove_province_modifier = `{this:id}_province`
+				}
+			}
+		}
+		when [exists = this:tradegoods] {
+			on_actions:on_trade_good_changed +=! {
+				remove_province_modifier = `{this:id}_province`
+			
+				foreach $tradegood in this:tradegoods {
+					if [
+						trade_goods = $tradegood
+						when [exists = this:country] {
+							owner->has_country_modifier = `{this:id}`
+						}
+						when_not {
+							owner->has_country_flag = `{this:id}`
+						}
+					] {
+						add_province_modifier = {
+							name = `{this:id}_province`
+							hidden = yes
+							duration = -1
+						}
+					}
+				}
+			}
+		}
+	}
+}
+new effect add_owned_province_modifier = {
+	args = owned_province_modifier
+	transpile = {
+		when [exists = args:country] {
+			add_country_modifier = {
+				name = `{args:id}`
+				duration = -1
+			}
+		}
+		when_not {
+			set_country_flag = `{args:id}`
+		}
+		new_custom_tooltip = "All owned provinces {args:trigger_tooltip} gain the following bonus:
+	{modifier_to_string = args:province}"
+	
+		hidden_effect = {
+			every_owned_province [
+				args:trigger
+				when [exists = args:building_line] {
+					has_building_line = args:building_line
+				}
+				when [exists = args:tradegoods] {
+					OR = {
+						foreach $tradegood in args:tradegoods {
+							trade_goods = $tradegood
+						}
+					}
+				}
+			] {
+				add_province_modifier = {
+					name = `{args:id}_province`
+					hidden = yes
+					duration = -1
+				}
+			}
+		}
+	}
+}
+new effect remove_owned_province_modifier = {
+	args = owned_province_modifier
+	transpile = {
+		when [exists = args:country] {
+			remove_country_modifier = `{args:id}`
+		}
+		when_not {
+			clr_country_flag = `{args:id}`
+		}
+		
+		hidden_effect = {
+			every_owned_province = {
+				remove_province_modifier = `{args:id}_province`
+			}
+		}
+	}
+}

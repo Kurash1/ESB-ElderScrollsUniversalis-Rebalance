@@ -1,3 +1,11 @@
+new owned_province_modifier agricultural_ideas_crop_rotation =  {
+	name = "Crop Rotation"
+	trigger_tooltip = "producing Grain"
+	tradegoods = grain
+	province = {
+		trade_goods_size_modifier = 15%
+	}
+}
 new idea_group agricultural_ideas = {
 	name = "Agricultural"
 	category = ADM
@@ -10,6 +18,12 @@ new idea_group agricultural_ideas = {
 			desc = "Rotating through different crops protects our fields from being infertile."
 			modifier = {
 				goods_line = 1
+			}
+			effect = {
+				add_owned_province_modifier = agricultural_ideas_crop_rotation
+			}
+			removed_effect = {
+				remove_owned_province_modifier = agricultural_ideas_crop_rotation
 			}
 		}
 		{
