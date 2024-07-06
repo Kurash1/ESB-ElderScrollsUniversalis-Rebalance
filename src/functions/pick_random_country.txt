@@ -5,35 +5,60 @@ new named_trigger not_special_tag = {
 		tag = PIR
 	}
 }
+new script_variable weight = {
+	name = "Weight"
+}
+new named_bool PICK_RANDOM_COUNTRY_LOGGING = yes
 new effect pick_random_country = {
+	default = {
+		event_target = choice
+		trigger = { }
+		weight = { &weight := 1 }
+	}
 	args = {
 		event_target = string
 		trigger = named_trigger
 		weight = named_effect
+		tooltip = string?
 	}
 	transpile = {
-		1 = {
-			&weight := 0
-			
-			every_country [
-				not_special_tag
-				args:trigger
-			] {
-				&weight := 1
-				args:weight
-				if [&weight > 1400] = { &weight := 1400 }
-				PREV->&weight += PREV
+		when [exists = args:tooltip] {		
+			new_custom_tooltip = "Picks a random country that {args:tooltip}"
+		}
+		hidden_effect = {
+			1 = {
+				when [PICK_RANDOM_COUNTRY_LOGGING] `log = "Initalizing 'pick_random_country' effect"`
+				&weight := 0
+				
+				every_country [
+					not_special_tag
+					args:trigger
+				] {
+					when [PICK_RANDOM_COUNTRY_LOGGING] `log = "Adding [This.GetName] to list"`
+					
+					args:weight
+					if [&weight > 1400] { &weight := 1400 }
+					PREV->&weight += PREV
+				}
+				
+				&weight ?= weight
+				when [PICK_RANDOM_COUNTRY_LOGGING] `log = "Random number is [weight.GetValue]"`
+				
+				every_country [
+					PREV->&weight >= 0
+					not_special_tag
+					args:trigger
+				] {
+					PREV->&weight -= PREV
+					when [PICK_RANDOM_COUNTRY_LOGGING] `log = "Checking for [This.GetName], weight is [This.weight.GetValue], current sum is [Prev.weight.GetValue]"`
+					if [PREV->&weight <= 0] {
+						save_event_target_as = args:event_target
+						when [PICK_RANDOM_COUNTRY_LOGGING] `log = "Target found, [This.GetName]"`
+					}
+				}
 			}
-			
-			&weight ?= weight
-			
-			every_country [
-				PREV->&weight >= 0
-				not_special_tag
-				args:trigger
-			] {
-				PREV->&weight -= PREV
-				if [PREV->&weight <= 0] {
+			tooltip = {
+				BLA = {
 					save_event_target_as = args:event_target
 				}
 			}

@@ -9,15 +9,16 @@ NOW built, this bastion on the blasted and buffeted bedrock, Solitude soared and
 SO take up swords, sworn sons and dauntless daughters, And rally around the reign of the wolf-crowned king! Should our blood be spilled in battle, we can be blessed to know, That we shall doff our helms in the hallowed home, Sovngarde, Having slew the serpents strangling our Skyrim. Now rest, my cunning kindred, rest and keen-dream, Of the war that we will win on the morrow's dawn, And the ones that we will win for every morrow due us."
 	picture = haafingar_eventPicture
 	is_triggered_only = yes
-	immediate = { #for debugging, so we can rerun this event.
-		clr_country_flag = has_ni_haafingar 
-		clr_country_flag = has_ni_solitude
+	immediate = {
+		foreach $ in idea_groups [$:category == national] {
+			clr_country_flag = `ni_{$}`
+		}
 	}
 	options = {
 		{
 			name = "We are the Children of Haafingar"
 			effect = {
-				set_country_flag = has_ni_haafingar
+				set_country_flag = ni_haafingar_ideas
 				form_hold = haafingar
 				
 				preview_national_ideas = haafingar_ideas
@@ -26,7 +27,7 @@ SO take up swords, sworn sons and dauntless daughters, And rally around the reig
 		{
 			name = "We are the Children of Solitude"
 			effect = {
-				set_country_flag = has_ni_solitude
+				set_country_flag = ni_solitude_ideas
 				form_hold = haafingar
 				
 				preview_national_ideas = solitude_ideas
@@ -35,6 +36,7 @@ SO take up swords, sworn sons and dauntless daughters, And rally around the reig
 		{
 			name = "We are the Children of Skyrim"
 			effect = {
+				set_country_flag = ni_nordic_ideas
 				form_hold = haafingar
 				
 				preview_national_ideas = nordic_ideas

@@ -1,6 +1,6 @@
 new country black_mountain = {
 	tag = BLA
-	name = "Black Mountain"
+	name = "That Country"
 	adj = "Black"
 	color = {
 		0 0 0
