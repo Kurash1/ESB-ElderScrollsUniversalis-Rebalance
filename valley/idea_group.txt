@@ -1,0 +1,51 @@
+new class idea_group = {
+	id = `{this:id}` #doesn't work due to complex reasons, don't ask.
+	list = idea_groups
+	default = {
+		priority = 100
+		start = { }
+		trigger = { }
+		ai_will_do = { }
+	}
+	args = {
+		name = string
+		category = string
+		
+		priority = int
+		
+		start = named_modifier
+		bonus = named_modifier
+		
+		ideas = idea_list
+		
+		trigger = named_trigger
+		ai_will_do = named_trigger
+	}
+	simple_transpile = {
+		write_file "common/ideas/arc.txt" = {
+			foreach $ in idea_groups:priority_sorted {
+				$ = {
+					when [$:category == national] {
+						new localisation `{$}_start` = `{$:name} Traditions`
+						free = yes
+						start = {
+							$:start
+						}
+					}
+					when_not {
+						category = $:category
+					}
+					
+					trigger = { $:trigger }
+					
+					foreach idea in $:ideas {
+						idea:transpile = $ #I don't feel like fixing this
+					}
+					
+					bonus = { $:bonus }
+					ai_will_do = { $:ai_will_do }
+				}
+			}
+		}
+	}
+}
