@@ -1,0 +1,98 @@
+new unit advanced_cannons = {
+	name = "Advanced Cannons"
+	desc = ""
+	type = artillery
+	maneuver = 3
+	offensive_morale = 4
+	defensive_morale = 1
+	offensive_fire = 8
+	defensive_fire = 1
+	offensive_shock = 0
+	defensive_shock = 1
+	trigger = {
+		full_idea_group = siegecraft_ideas
+	}
+}
+new unit arquebusier = {
+	name = "Arquebusier"
+	desc = ""
+	type = infantry
+	maneuver = 1
+	offensive_morale = 3
+	defensive_morale = 2
+	offensive_fire = 4
+	defensive_fire = 2
+	offensive_shock = 2
+	defensive_shock = 2
+	trigger = {
+		full_idea_group = siegecraft_ideas
+	}
+}
+
+new idea_group siegecraft_ideas = {
+	name = "Siegecraft"
+	category = MIL
+	trigger = {
+		full_idea_group = engineering_ideas
+	}
+	ideas = {
+		{
+			name = "Hollow projectiles"
+			desc = "Even more deadly as they can be filled to the brim with iron scrap and/or gunpowder."
+			modifier = {
+				artillery_fire = 1
+			}
+		}
+		{
+			name = "Coordination of fire"
+			desc = "All cannons are to fire at the same time for maximum effect."
+			modifier = {
+				artillery_level_modifier = 25%
+			}
+		}
+		{
+			name = "Mobile Mounts"
+			desc = "More mobile mounts dragged by horses bring cannons into better positions rather quickly."
+			modifier = {
+				artillery_levels_available_vs_fort = 2
+			}
+		}
+		{
+			name = "Mortars"
+			desc = "We do not need to be careful anymore about accidently shooting our own troops if we use mortars."
+			modifier = {
+				backrow_artillery_damage = 20%
+			}
+		}
+		{
+			name = "Siege Generals"
+			desc = "Our Generals dislike defensive warfare and open field battles. They say sieges win wars."
+			modifier = {
+				leader_siege = 1
+			}
+		}
+		{
+			name = "The Arquebus"
+			desc = "It's a cannon that can be wielded by our common soldiers."
+			modifier = {
+				infantry_fire = 0.5
+			}
+			effect = {
+				new_custom_tooltip = "Unlocks §YArquebusier§! Unit"
+			}
+		}
+		{
+			name = "Advanced Cannons"
+			desc = "The culmination of our efforts at using cannons in land warfare."
+			modifier = {
+				artillery_power = 15%
+			}
+			effect = {
+				new_custom_tooltip = "Unlocks §YAdvanced Cannon§! Unit"
+			}
+		}
+	}
+	bonus = {
+		siege_ability = 20%
+	}
+}

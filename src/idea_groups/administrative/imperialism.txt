@@ -46,6 +46,7 @@ new idea_group imperialism_ideas = {
 			desc = "The army of an empire needs to be big."
 			modifier = {
 				land_forcelimit_modifier = 0.1
+				land_morale_constant = 0.5
 			}
 		}
 		{

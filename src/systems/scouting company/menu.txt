@@ -227,7 +227,7 @@ scouting_company_menu_node += {
 	guiButtonType = {
 		name = "survey_passive_activity_button"
 		spriteType = "GFX_field_policy_icon"
-		position = { x = (368-56+155) y = (239-34+15) }
+		position = { x = (368-56+154) y = (239-34+16) }
 		scripted = yes
 	}
 	
@@ -317,11 +317,7 @@ scouting_company_menu_node += {
 		Orientation = "UPPER_LEFT"
 		scripted = yes
 	}
-	#iconType = {
-	#	name = "survey_leader_personality"
-	#	quadTextureSprite = "GFX_no_personality_chart"
-	#	position = { x = (300 + 12 + 150) y = (128 + 146 - 123 + 30) }
-	#}
+	
 	iconType = {
 		name = "survey_leader_personality"
 		quadTextureSprite = "GFX_no_personality_chart_overlay"
@@ -336,11 +332,28 @@ scouting_company_menu_node += {
 		name = "survey_leader_button"
 		quadTextureSprite= "GFX_button_type_246"
 		position = { x = (300 + 12 - 10) y = (128 + 146 - 123 + 35) }
-		buttonText = "Find new Scout-Master"
+		buttonText = "Fire Scout-Master"
 		buttonFont = "vic_18"
+		scripted = yes
 	}
 }
-
+new custom_button survey_leader_button = {
+	name = "Fire Scout-Master"
+	trigger = {
+		has_country_flag = survey_has_scout_master
+		prestige = 0
+	}
+	effect = {
+		add_prestige = -10
+		hidden_effect = {
+			&survey_leader_adm := 0
+			&survey_leader_dip := 0
+			&survey_leader_mil := 0
+			
+			clr_country_flag = survey_has_scout_master
+		}
+	}
+}
 new custom_icon custom_mechanic_survey_background = { }
 new custom_text_box survey_progress_amount = {
     potential = {
@@ -412,6 +425,51 @@ new custom_button close_survey_screen = {
 	}
 }
 on_actions:on_monthly_pulse += {
+	if [
+		NOT = {
+			has_country_flag = survey_has_scout_master
+		}
+	] {
+		hidden_effect = {
+			set_country_flag = survey_has_scout_master
+			random_list = {
+				1 = { set_country_flag = survey_leader_is_female }
+				1 = { clr_country_flag = survey_leader_is_female }
+			}
+			set_saved_name = {
+				key = survey_leader_name
+				type = advisor
+				scope = ROOT
+			}
+			random_list = {
+				1 = { &survey_leader_adm := 0 }
+				2 = { &survey_leader_adm := 1 }
+				3 = { &survey_leader_adm := 2 }
+				4 = { &survey_leader_adm := 3 }
+				3 = { &survey_leader_adm := 4 }
+				2 = { &survey_leader_adm := 5 }
+				1 = { &survey_leader_adm := 6 }
+			}
+			random_list = {
+				1 = { &survey_leader_dip := 0 }
+				2 = { &survey_leader_dip := 1 }
+				3 = { &survey_leader_dip := 2 }
+				4 = { &survey_leader_dip := 3 }
+				3 = { &survey_leader_dip := 4 }
+				2 = { &survey_leader_dip := 5 }
+				1 = { &survey_leader_dip := 6 }
+			}
+			random_list = {
+				1 = { &survey_leader_mil := 0 }
+				2 = { &survey_leader_mil := 1 }
+				3 = { &survey_leader_mil := 2 }
+				4 = { &survey_leader_mil := 3 }
+				3 = { &survey_leader_mil := 4 }
+				2 = { &survey_leader_mil := 5 }
+				1 = { &survey_leader_mil := 6 }
+			}
+		}
+	}
 	if [has_country_flag = init_survey] {
 		&survey_real_manpower := survey_manpower
 		&survey_real_manpower *= 1000

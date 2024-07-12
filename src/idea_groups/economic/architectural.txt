@@ -1,0 +1,63 @@
+new idea_group architectural_ideas = {
+	name = "Architectural"
+	category = ADM
+	trigger = {
+		full_idea_group = masonry_ideas
+	}
+	ideas = {
+		{
+			name = "Investments"
+			desc = "A deal with the banks allows us to take up lower loans for investments."
+			modifier = {
+				interest = -1
+			}
+		}
+		{
+			name = "Standardized building projects"
+			desc = "Standardizations in planning and constructiong allow us to reduce time for building significantly"
+			modifier = {
+				build_time = -10%
+				great_project_upgrade_time = -25%
+			}
+		}
+		{
+			name = "Project oversight"
+			desc = "Proper oversight by architects ought to keep the artisans from building wrong."
+			modifier = {
+				build_cost = -10%
+				great_project_upgrade_cost = -25%
+			}
+		}
+		{
+			name = "Repair Schemes"
+			desc = "Prearranged repair schematics help us rebuild our settlements in no time."
+			modifier = {
+				global_monthly_devastation = -0.1
+			}
+		}
+		{
+			name = "Prefabricated Bridge Parts"
+			desc = "Bridge parts are now prefabricated and can be put together in a modular fashion."
+			modifier = {
+				expand_infrastructure_cost_modifier = -50%
+			}
+		}
+		{
+			name = "Grid Based Quarters"
+			desc = "Build on a grid settlements take up less space with the same amount of buildings. "
+			modifier = {
+				global_allowed_num_of_buildings = 1
+			}
+		}
+		{
+			name = "Buildings of Public Welfare"
+			desc = "Populations need so many buildings the list is sheer endless but at least our architects seem to know which ones they need."
+			modifier = {
+				global_prosperity_growth = 0.1
+			}
+		}
+	}
+	bonus = {
+		development_cost = -10%
+	}
+}

@@ -189,26 +189,6 @@ mission_trees:solitude += {
 			stability = 1
 		}
 		effect = {
-			pick_random_country = {
-				scope = every_neighbor_country
-				trigger = {
-					NOT = { alliance_with = ROOT }
-					is_neighbor_of = ROOT
-				}
-				weight = {
-					&temp &= land_forcelimit
-					&weight := 1000
-					
-					&weight /= temp
-				}
-				tooltip = "you are not allied with, and is a neighbour of yours."
-			}
-			
-			declare_war_with_cb = {
-				who = event_target:choice
-				casus_belli = cb_annex
-			}
-			
 			set_country_flag = solitude_clan_privileges
 			new_custom_tooltip = "Unlocks §YRock-Hammer Castle Rights§! Privilege for Clans.
 Unlocks §YRock-Hammer Mining Rights§! Privilege for Clans.

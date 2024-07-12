@@ -168,12 +168,6 @@ new effect history_owner = {
 new effect cede_province = {
 	args = country_scope
 }
-new effect add_core = {
-	args = country_scope
-}
-new effect add_permanent_claim = {
-	args = country_scope
-}
 new modifier land_morale = {
 	args = float
 }

@@ -282,8 +282,8 @@ new tradegood ebony = {
 	}
 }
 new tradegood c_metals = {
-	name = "Mundane Metals"
-	desc = "Mundane Metals represents the common forms of metal that can be extracted across Nirn. The most common being iron but closely followed by corundum, lead, tin, and copper. It is through refining processes that c_metals and corundum could be combined into steel, a stronger and more durable metal but still mundane."
+	name = "Mundane Ores"
+	desc = "Mundane Metals represents the common forms of metal that can be extracted across Nirn. The most common being iron but closely followed by corundum, lead, tin, and copper. It is through refining processes that iron and corundum could be combined into steel, a stronger and more durable metal but still mundane."
 	color = {
 		204 153 51
 	}
@@ -310,7 +310,7 @@ new tradegood c_metals = {
 	}
 }
 new tradegood r_metals = {
-	name = "Rare Metals"
+	name = "Rare Ores"
 	desc = "Rare Metals represent the various minerals across Nirn that are uncommon or magical in nature. Most notably Moonstone, Mithril, Adamantium, Syrabane's Steel, or even Daedric Metal. It is rare metals that often are utilized for elite warriors or prestigious items, many artifacts across Nirn have long been composed of rare metals imbued with magical gems. "
 	color = {
 		34 191 149

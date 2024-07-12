@@ -1,0 +1,64 @@
+new idea_group hydrology_ideas = {
+	name = "Hydrology"
+	category = ADM
+	trigger = {
+		full_idea_group = engineering_ideas
+	}
+	ideas = {
+		{
+			name = "Canals"
+			desc = "A modern canal network allows us to bring more inland trade on water."
+			modifier = {
+				caravan_power = 20%
+			}
+		}
+		{
+			name = "Sluices"
+			desc = "Sluices are not only useful for commercial activity on rivers but also for flooding moats."
+			modifier = {
+				defensiveness = 25%
+			}
+		}
+		{
+			name = "Irrigation"
+			desc = "Even less fertile places now yield significantly bigger harvests."
+			modifier = {
+				global_trade_goods_size_modifier = 15%
+			}
+		}
+		{
+			name = "Inland Ports"
+			desc = "Deep canals and large inland ports allow high sea ships to anchor inland."
+			modifier = {
+				global_ship_trade_power = 25%
+				trade_line = 1
+			}
+		}
+		{
+			name = "Mill Powered Pumps"
+			desc = "Drying up marches and swamps became so easily. It is also useful for pumping moats dry."
+			modifier = {
+				development_cost_modifier = -5%
+				siege_ability = 10%
+			}
+		}
+		{
+			name = "Waterway Tolls"
+			desc = "We ought to collect a toll from any ship that uses our water ways. Safe our own ships of course."
+			modifier = {
+				global_tax_modifier = 20%
+			}
+		}
+		{
+			name = "Improved Water Mills"
+			desc = "The old type of water mill worked yes but it was crude and ineffective this new modells are far superior."
+			modifier = {
+				production_efficiency = 10%
+				goods_line = 1
+			}
+		}
+	}
+	bonus = {
+		reinforce_speed = 20%
+	}
+}

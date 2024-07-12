@@ -1,7 +1,7 @@
 new owned_province_modifier agricultural_ideas_crop_rotation =  {
 	name = "Crop Rotation"
-	trigger_tooltip = "producing Grain"
-	tradegoods = grain
+	trigger_tooltip = "producing Grain or Fruits"
+	tradegoods = { grain fruits }
 	province = {
 		trade_goods_size_modifier = 15%
 	}

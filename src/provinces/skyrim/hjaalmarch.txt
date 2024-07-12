@@ -102,12 +102,13 @@ new province morthal = {
 	terrain = marsh
 	area = morthal
 	name = "Morthal"
+	base_development = 10
 	color = {
 		220 248 102
 	}
 	history = {
 		center_of_trade = 1
-		history_owner = mort_hall
+		history_owner = morthal
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
@@ -139,7 +140,7 @@ new province morthal_mines = {
 		history_trade_goods = wood
 	
 		is_city = yes
-		history_owner = mort_hall
+		history_owner = morthal
 		272.1.1 = {
 			religion = nordic_pantheon
 			culture = hjaalmarcher
@@ -168,7 +169,7 @@ new province greenspring_hollow = {
 		hre = yes
 		history_trade_goods = stone
 	
-		is_city = no
+		add_claim = hjaal
 		history_owner = rannveig
 	}
 }
@@ -194,12 +195,8 @@ new province lone_hill = {
 		hre = yes
 		history_trade_goods = stone
 	
-		is_city = yes
+		add_claim = hjaal
 		history_owner = rannveig
-		57.1.1 = {
-			religion = nordic_pantheon
-			culture = hjaalmarcher
-		}
 	}
 }
 new province rannveigs_fast = {
@@ -225,7 +222,7 @@ new province rannveigs_fast = {
 		hre = yes
 		history_trade_goods = c_metals
 	
-		is_city = yes
+		add_claim = hjaal
 		history_owner = rannveig
 	}
 }
@@ -252,8 +249,6 @@ new province hjaals_tooth = {
 		culture = hjaalmarcher
 		hre = yes
 		history_trade_goods = fish
-	
-		is_city = yes
 	}
 }
 new province rugged_coast = {
@@ -305,7 +300,7 @@ new province robbers_gorge = {
 		hre = yes
 		history_trade_goods = fish
 	
-		is_city = yes
+		add_core = hjaal
 	}
 }
 new province fishermans_hangout = {
@@ -331,7 +326,7 @@ new province fishermans_hangout = {
 		hre = yes
 		history_trade_goods = fish
 	
-		is_city = yes
+		add_core = hjaal
 	}
 }
 new province chillwind_depths = {
@@ -570,7 +565,7 @@ new province bandits_rest = {
 		hre = yes
 		history_trade_goods = wood
 	
-		is_city = yes
+		add_core = hjaal
 	}
 }
 new province dead_mens_respite = {
@@ -596,7 +591,7 @@ new province dead_mens_respite = {
 		hre = yes
 		history_trade_goods = mag_goods
 	
-		is_city = yes
+		add_claim = hjaal
 	}
 }
 new province snowhawk = {
@@ -644,7 +639,7 @@ new province minedvild = {
 		192 143 123
 	}
 	history = {
-		history_owner = mort_hall
+		history_owner = morthal
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes
@@ -897,6 +892,7 @@ new province stonehills = {
 	terrain = forest
 	area = stonehills
 	name = "Stonehills"
+	base_development = 11
 	color = {
 		251 168 205
 	}
@@ -1034,9 +1030,7 @@ new province bromjunaar_approach = {
 		religion = nordic_pantheon
 		hre = yes
 		history_trade_goods = wood
-	
-		is_city = no
-		history_owner = mire_watch
+		history_owner = myrwatch
 	}
 }
 new province snowy_pines = {
@@ -1058,7 +1052,7 @@ new province snowy_pines = {
 	history = {
 		religion = nordic_pantheon
 		culture = hjaalmarcher
-		history_owner = mire_watch
+		history_owner = rannveig
 		hre = yes
 		history_trade_goods = wood
 	}
@@ -1085,7 +1079,7 @@ new province abundant_mines = {
 		hre = yes
 		history_trade_goods = c_metals
 	
-		is_city = yes
+		add_claim = hjaal
 		history_owner = rannveig
 	}
 }
@@ -1102,11 +1096,12 @@ new province myrwatch = {
 	terrain = forest
 	area = myrwatch
 	name = "Myrwatch"
+	base_development = 8
 	color = {
 		140 212 206
 	}
 	history = {
-		history_owner = mire_watch
+		history_owner = myrwatch
 		religion = nordic_pantheon
 		culture = hjaalmarcher
 		hre = yes

@@ -23,21 +23,21 @@ new idea_group haafingar_ideas = {
 			}
 		}
 		{
-			name = "The Just Red-Wolves"
-			desc = "The Red Wolf dynasty rules as just as is humanly possible. Just as Stuhn taught us too."
+			name = "Clan Origins"
+			desc = "The first major settlements of Haafingar were founded by many seperate atmoran clans."
 			modifier = {
 				global_unrest = -2
 			}
 		}
 		{
-			name = "The wolves of fertility"
+			name = "The Wolves of Fertility"
 			desc = "Mara is not only the goddess of love but also of agriculture and fertility."
 			modifier = {
 				global_trade_goods_size = 0.3
 			}
 		}
 		{
-			name = "University of the wise"
+			name = "University of the Wise"
 			desc = "Solitude possesses a university that harbours the wisest people of all of Skyrim. The mighty rune god Jhunal is certainly pleased by such an institution."
 			modifier = {
 				idea_cost = -0.025

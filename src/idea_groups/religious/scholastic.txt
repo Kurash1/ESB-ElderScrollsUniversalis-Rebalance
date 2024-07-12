@@ -1,0 +1,62 @@
+new idea_group scholastic_ideas = {
+	name = "Scholastic"
+	category = ADM
+	trigger = {
+		full_idea_group = religious_ideas
+	}
+	ideas = {
+		{
+			name = "Bold Thinkers"
+			desc = "Our country does not limit the thoughts our people may have."
+			modifier = {
+				idea_cost = -2.5%
+			}
+		}
+		{
+			name = "New ideas and inventions"
+			desc = "New ideas and inventions arise rapidly in our country we ought to utilise them."
+			modifier = {
+				possible_policy = 1
+			}
+		}
+		{
+			name = "Education of the monarch"
+			desc = "Our Monarch is educated in various forms of statecraft."
+			modifier = {
+				monarch_admin_power = 1
+			}
+		}
+		{
+			name = "State sponsored educations"
+			desc = "Our brightest minds need to be supported. In return we expect their service."
+			modifier = {
+				advisor_pool = 1
+				advisor_cost = -10%
+			}
+		}
+		{
+			name = "Bureaucratic Schools"
+			desc = "Educated bureaucrats help us govern our territory."
+			modifier = {
+				governing_capacity_modifier = 10%
+			}
+		}
+		{
+			name = "Universities"
+			desc = "If we bring our smartest people together at one place surely they can be even smarter together!"
+			modifier = {
+				production_line = 1
+			}
+		}
+		{
+			name = "Scientific governance"
+			desc = "Our leadership listens to reason and evidence rather than superstitition."
+			modifier = {
+				free_policy = 1
+			}
+		}
+	}
+	bonus = {
+		all_power_cost = -2.5%
+	}
+}

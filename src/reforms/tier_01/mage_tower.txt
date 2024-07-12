@@ -1,0 +1,95 @@
+new unit mage_unit = {
+	name = "Mages"
+	desc = ""
+	type = artillery
+	maneuver = 3
+	offensive_morale = 3
+	defensive_morale = 2
+	offensive_fire = 5
+	defensive_fire = 2
+	offensive_shock = 0
+	defensive_shock = 2
+	trigger = {
+		has_government_attribute = mages_unit
+	}
+}
+governments:republic:reform_levels:1 += new tier_1_mage_tower = {
+	name = "Mage Tower"
+	desc = ""
+	icon = "ancestral_guardian"
+	allow_normal_conversion = yes
+	custom_attributes = {
+		new localisation mechanic_mages_unit_yes = "Have access to §YMage§! Artillery Unit"
+		mages_unit = yes
+		special_election = yes
+	}
+	heir = no
+	election_on_death = yes
+	potential = {
+		has_reform = tier_1_mage_tower
+	}
+	trigger = {
+		has_reform = tier_1_mage_tower
+	}
+	modifiers = {
+		all_power_cost = -2.5%
+		free_adm_policy = 1
+		magicka_gain_modifier = 20%
+	}
+	ai = {
+		factor = 1
+	}
+}
+death_election_events += elections.5
+new country_event elections.5 = {
+	title = "Election!"
+	desc = "The unfortunate passing of $MONARCH$ forces us to hold an election of who will rule our country next. Our council has put forth their own candidates..."
+	picture = REPUBLICAN_DEBATES_eventPicture
+	
+	is_triggered_only = yes
+	trigger = {
+		has_reform = tier_1_mage_tower
+	}
+	
+	after = {
+		hidden_effect = {
+			add_ruler_personality = mage
+		}
+	}
+	
+	options = {
+		{
+			name = "The Wisest Candidate"
+			effect = {
+				define_ruler = {
+					hide_skills = yes
+					adm = 4
+					claim = 100
+				}
+			}
+			ai_chance = { factor = 20 }
+		}
+		{
+			name = "The Popular Candidate"
+			effect = {
+				define_ruler = {
+					hide_skills = yes
+					dip = 4
+					claim = 100
+				}
+			}
+			ai_chance = { factor = 20 }
+		}
+		{
+			name = "The Most Powerful Candidate"
+			effect = {
+				define_ruler = {
+					hide_skills = yes
+					mil = 4
+					claim = 100
+				}
+			}
+			ai_chance = { factor = 20 }
+		}
+	}
+}

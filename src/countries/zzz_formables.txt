@@ -37,8 +37,9 @@ new decision form_roscrea = {
 	effect = {
 		change_tag = roscrea
 		swap_free_idea_group = yes
-		change_government = monarchy
-		add_government_reform = tier_1_hold
+		
+		nordic_formation_effect
+		
 		regions:roscrea = {
 			add_permanent_claim = ROOT
 		}
@@ -83,8 +84,9 @@ new decision form_the_shatter = {
 	effect = {
 		change_tag = the_shatter
 		swap_free_idea_group = yes
-		change_government = monarchy
-		add_government_reform = tier_1_hold
+		
+		nordic_formation_effect
+		
 		regions:the_shatter = {
 			add_permanent_claim = ROOT
 		}
@@ -101,6 +103,19 @@ new country eastmarch = {
 	}
 	starting_reform = tier_1_hold
 	capital = windhelm
+}
+new named_effect nordic_formation_effect = {
+	if [
+		OR = {
+			has_reform = tier_1_nord_clan
+			has_reform = tier_1_thanedom
+			has_reform = tier_1_skjoralmor_clan
+			has_reform = tier_1_nord_temple
+		}
+	] {
+		change_government = monarchy
+		add_government_reform = tier_1_hold
+	}
 }
 new decision form_eastmarch = {
 	name = "Form Eastmarch"
@@ -129,8 +144,8 @@ new decision form_eastmarch = {
 	effect = {
 		form_hold = eastmarch
 		
-		change_government = monarchy
-		add_government_reform = tier_1_hold
+		nordic_formation_effect
+		
 		regions:eastmarch = {
 			add_permanent_claim = ROOT
 		}
@@ -168,8 +183,8 @@ new decision form_winterhold = {
 	effect = {
 		form_hold = winterhold
 		
-		change_government = monarchy
-		add_government_reform = tier_1_hold
+		nordic_formation_effect
+		
 		regions:winterhold = {
 			add_permanent_claim = ROOT
 		}
@@ -214,8 +229,8 @@ new decision form_pale = {
 	effect = {
 		form_hold = pale
 		
-		change_government = monarchy
-		add_government_reform = tier_1_hold
+		nordic_formation_effect
+		
 		regions:pale = {
 			add_permanent_claim = ROOT
 		}
@@ -263,8 +278,8 @@ new decision form_whiterun = {
 	effect = {
 		form_hold = whiterun
 		
-		change_government = monarchy
-		add_government_reform = tier_1_hold
+		nordic_formation_effect
+		
 		regions:whiterun = {
 			add_permanent_claim = ROOT
 		}
@@ -309,8 +324,8 @@ new decision form_hjaalmarch = {
 	effect = {
 		form_hold = hjaalmarch
 		
-		change_government = monarchy
-		add_government_reform = tier_1_hold
+		nordic_formation_effect
+		
 		regions:hjaalmarch = {
 			add_permanent_claim = ROOT
 		}
@@ -361,8 +376,8 @@ new decision form_haafingar = {
 	effect = {
 		form_hold = haafingar
 		
-		change_government = monarchy
-		add_government_reform = tier_1_hold
+		nordic_formation_effect
+		
 		regions:haafingar = {
 			add_permanent_claim = ROOT
 		}
@@ -405,7 +420,8 @@ new decision form_falkreath = {
 	effect = {
 		form_hold = falkreath
 		
-		add_government_reform = tier_1_hold
+		nordic_formation_effect
+		
 		regions:kreath = {
 			add_permanent_claim = ROOT
 		}
@@ -451,7 +467,8 @@ new decision form_wrothgar = {
 	effect = {
 		form_hold = wrothgar
 		
-		add_government_reform = tier_1_hold
+		nordic_formation_effect
+		
 		regions:wrothgar = {
 			add_permanent_claim = ROOT
 		}
@@ -659,7 +676,8 @@ new decision form_the_rift = {
 	effect = {
 		form_hold = rift
 		
-		add_government_reform = tier_1_hold
+		nordic_formation_effect
+		
 		regions:rift = {
 			add_permanent_claim = ROOT
 		}

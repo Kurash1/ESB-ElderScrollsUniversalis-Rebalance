@@ -20,10 +20,10 @@ new idea_group support_fleet_ideas = {
 			}
 		}
 		{
-			name = "Naval Artillery and landships"
-			desc = "We noticed that merely blockading coastal forts is not enough if they are well provisioned why not also join in the bombardement of said forts? Another idea we got was putting the same guns our ships have on the shores. Kinda an unsinkable ship in that case!"
+			name = "Repair Ships"
+			desc = "Although they look more like mobile floating docks those ships are perfectly capable of following our fleet and conduct repairs on the water. The system currently only works near own coasts since supplies for repairs still have to be aviable. However it is much better than having to anchor in port for it."
 			modifier = {
-				global_naval_barrage_cost = -50%
+				sea_repair = yes
 			}
 		}
 		{

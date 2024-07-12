@@ -25,6 +25,7 @@ new province adising = {
 		history_trade_goods = fish
 		
 		history_owner = rorikstead
+		add_core = hjaal
 	}
 }
 new province talking_stone = {
@@ -50,7 +51,7 @@ new province talking_stone = {
 		hre = yes
 		history_trade_goods = stone
 	
-		is_city = yes
+		add_core = hjaal
 	}
 }
 new province jolsta = {
@@ -75,6 +76,8 @@ new province jolsta = {
 		culture = whiterunish
 		hre = yes
 		history_trade_goods = stone
+		
+		add_core = hjaal
 	}
 }
 new area rorikstead = {
@@ -215,7 +218,7 @@ new province illdund = {
 		hre = yes
 		history_trade_goods = fish
 	
-		is_city = no
+		add_core = hjaal
 	}
 }
 new province swindlers_den = {
@@ -241,7 +244,7 @@ new province swindlers_den = {
 		hre = yes
 		history_trade_goods = fish
 	
-		is_city = no
+		add_claim = hjaal
 		history_owner = river_runner
 	}
 }
@@ -268,7 +271,7 @@ new province flatand = {
 		hre = yes
 		history_trade_goods = livestock
 	
-		is_city = yes
+		add_claim = hjaal
 	}
 }
 new area gjukar = {
@@ -656,7 +659,7 @@ new province dragonpoint = {
 		hre = yes
 		history_trade_goods = fish
 	
-		is_city = yes
+		add_claim = hjaal
 		history_owner = lone_dragons
 	}
 }
@@ -682,7 +685,7 @@ new province redorans_retreat = {
 		hre = yes
 		history_trade_goods = livestock
 	
-		is_city = yes
+		add_claim = hjaal
 		history_owner = storm_fist
 	}
 }
@@ -708,7 +711,7 @@ new province hamvirs_rest = {
 		hre = yes
 		history_trade_goods = c_metals
 	
-		is_city = no
+		add_claim = hjaal
 		history_owner = storm_fist
 	}
 }

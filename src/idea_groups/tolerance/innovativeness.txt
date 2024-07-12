@@ -1,0 +1,65 @@
+new idea_group innovativeness_ideas = {
+	name = "Innovative"
+	category = ADM
+	trigger = {
+		OR = {
+			full_idea_group = economic_ideas
+			full_idea_group = humanist_ideas
+		}
+	}
+	ideas = {
+		{
+			name = "Patron of the Arts"
+			desc = "Our quest towards a culturally cultivated society begins here. Our artistic wonders will go down in history as the most marvelous of this era."
+			modifier = {
+				prestige_decay = -0.01
+			}
+		}
+		{
+			name = "Empiricism"
+			desc = "With the search of knowledge also comes many false ideas. It is only with evidence and our experience of the world around us that we can prove or disprove that what is before us is in fact true."
+			modifier = {
+				all_power_cost = -2%
+			}
+		}
+		{
+			name = "Scientific Revolution"
+			desc = "We should strive towards a social and economic revolution marked by technological inventions and a transfer from an agricultural society into an industrial one."
+			modifier = {
+				idea_cost = -3%
+			}
+		}
+		{
+			name = "Dynamic Court"
+			desc = "A truly innovative court is one where any person may rise to shine. We must strive to make sure that old traditions, birth or wealth aren't a hindrance to the development of our court or a barrier to talented people wishing to seek their fortune in the service of our state."
+			modifier = {
+				advisor_pool = 1
+			}
+		}
+		{
+			name = "Print Culture"
+			desc = "It is by exchange of ideas that we advance as a society. The words of our generations greatest minds must be written down and shared with their peers."
+			modifier = {
+				production_line = 1
+			}
+		}
+		{
+			name = "Optimism"
+			desc = "Victory is not just won off the battlefield but also in the drawing rooms. Our advancement of reason makes our people able to shrug off the effects of temporary setbacks and prepare instead for our inevitable victory."
+			modifier = {
+				war_exhaustion = -0.05
+				monthly_splendor = 1
+			}
+		}
+		{
+			name = "Formalized Officer Corps"
+			desc = "Traditionally officers come from the nobility, but we don't have that many nobles leading to a shortage of officers. However, there are plenty of persons of the lower class in our armies. We should consider promoting some of them as professional officers."
+			modifier = {
+				free_policy = 1
+			}
+		}
+	}
+	bonus = {
+		advisor_cost = -0.2
+	}
+}

@@ -1,0 +1,66 @@
+new idea_group philosophical_ideas = {
+	name = "Philosophical"
+	category = ADM
+	trigger = {
+		full_idea_group = religious_ideas
+	}
+	ideas = {
+		{
+			name = "Unity in thought and faith"
+			desc = "Our people see themselves as a singular community of faithful."
+			modifier = {
+				religious_unity = 15%
+			}
+		}
+		{
+			name = "Acceptance of the cults"
+			desc = "They still worship the true divinity just in a different way"
+			modifier = {
+				tolerance_heretic = 2
+				tolerance_of_heretics_capacity = 2
+			}
+		}
+		{
+			name = "Enlightenment of the heathens"
+			desc = "We shall not murder them like some barbarians but show them the true and righteous way"
+			modifier = {
+				global_missionary_strength = 2%
+				native_assimilation = 25%
+			}
+		}
+		{
+			name = "Councils"
+			desc = "Religious councils are held to determine the right way forward in matters of faith."
+			modifier = {
+				relation_with_same_religion = 25
+				relation_with_heretics = 25
+				reverse_relation_with_same_religion = 25
+				reverse_relation_with_heretic_religion = 25
+			}
+		}
+		{
+			name = "Stoicism"
+			desc = "Our rulers see virtue as the single most important guideline in life as in ruling."
+			modifier = {
+				monarch_admin_power = 1
+			}
+		}
+		{
+			name = "State philsophers"
+			desc = "Our philsophers think long and hard about things such as state craft."
+			modifier = {
+				governing_capacity_modifier = 10%
+			}
+		}
+		{
+			name = "For the faith"
+			desc = "Our missionaries convert out of a deeply rooted belief in the one true faith rather than mere coin."
+			modifier = {
+				missionaries = 1
+			}
+		}
+	}
+	bonus = {
+		land_morale_constant = 0.1
+	}
+}

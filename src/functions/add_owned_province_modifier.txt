@@ -15,6 +15,7 @@ new class owned_province_modifier = {
 		trigger = named_trigger
 		province = named_modifier
 		
+		building = building?
 		building_line = building_line?
 		tradegoods = list<tradegood>?
 	}
@@ -64,6 +65,34 @@ new class owned_province_modifier = {
 				}
 			}
 		}
+		when [exists = this:building] {
+			this:building:on_built +=! {
+				if [
+					this:trigger
+					when [exists = this:country] {
+						owner->has_country_modifier = `{this:id}`
+					}
+					when_not {
+						owner->has_country_flag = `{this:id}`
+					}
+				] {
+					tooltip = {
+						add_province_modifier = {
+							name = `{this:id}_province`
+							duration = -1
+						}
+					}
+					add_province_modifier = {
+						name = `{this:id}_province`
+						hidden = yes
+						duration = -1
+					}
+				}
+			}
+			this:building:on_destroyed +=! {
+				remove_province_modifier = `{this:id}_province`
+			}
+		}
 		when [exists = this:tradegoods] {
 			on_actions:on_trade_good_changed +=! {
 				remove_province_modifier = `{this:id}_province`
@@ -109,6 +138,9 @@ new effect add_owned_province_modifier = {
 				args:trigger
 				when [exists = args:building_line] {
 					has_building_line = args:building_line
+				}
+				when [exists = args:building] {
+					has_building = args:building
 				}
 				when [exists = args:tradegoods] {
 					OR = {

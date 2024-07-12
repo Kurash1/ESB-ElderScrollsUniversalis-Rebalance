@@ -1,0 +1,64 @@
+new idea_group gladitorial_ideas = {
+	name = "Gladitorial"
+	category = ADM
+	trigger = {
+		full_idea_group = mercenary_ideas
+	}
+	ideas = {
+		{
+			name = "Panem et Circensis"
+			desc = "Free entry into the arena for the poor as well as  free food  and a bit of money handed out to them will make the poor masses like us."
+			modifier = {
+				global_unrest = -2
+			}
+		}
+		{
+			name = "Gladiatorial drills"
+			desc = "Our armies emulate the amount of drill gladiators in their schools go through."
+			modifier = {
+				drill_gain_modifier = 25%
+				drill_decay_modifier = -25%
+			}
+		}
+		{
+			name = "Chariot races"
+			desc = "People can bet on races hoping that their favorite team wins. In actuality most often the bank wins of course."
+			modifier = {
+				global_tax_modifier = 15%
+			}
+		}
+		{
+			name = "Recruitment of Gladiators"
+			desc = "A gladiator does nothing else but hone their skills all day. Recruiting them as irregulars on the battlefield ought to be a worthwhile idea."
+			modifier = {
+				mercenary_discipline = 10%
+				mercenary_manpower = 25%
+			}
+		}
+		{
+			name = "Gladiatorial Captains"
+			desc = "Often there is a leader of any given team of mercenaries they ought to be generals of gladiatorial companies as well."
+			modifier = {
+				merc_leader_army_tradition = 1.5
+			}
+		}
+		{
+			name = "Watch and Learn"
+			desc = "The regular soldier of course also watches the fights and race. They probably learn a few new things from them."
+			modifier = {
+				infantry_power = 10%
+			}
+		}
+		{
+			name = "Racing horses"
+			desc = "The horses used in chariot races are whole bloods and therefore good for military usage as well."
+			modifier = {
+				cavalry_power = 10%
+			}
+		}
+	}
+	bonus = {
+		possible_condottieri = 100%
+		prestige_from_land = 50%
+	}
+}

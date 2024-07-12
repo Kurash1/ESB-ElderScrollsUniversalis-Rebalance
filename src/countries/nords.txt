@@ -582,7 +582,7 @@ new country snow_hawk = {
 	name = "Snow-Hawk"
 	adj = "Snow-Hawk"
 	color = {
-		200 255 200
+		40 40 150
 	}
 	capital = snowhawk
 	history += {
@@ -592,16 +592,17 @@ new country snow_hawk = {
 		}
 	}
 }
-new country mort_hall = {
+new country morthal = {
 	inherit = nordic_country
 	primary_culture = hjaalmarcher
 	tag = MOH
-	name = "Mort-Hall"
-	adj = "Mort-Hall"
+	name = "Morthal"
+	adj = "Morthal"
 	color = {
-		122 8 145
+		110 180 80
 	}
 	capital = morthal
+	starting_reform = tier_1_thanedom
 }
 new country high_gate = {
 	inherit = nordic_country
@@ -621,7 +622,7 @@ new country dawn_star = {
 	name = "Dawn-Star"
 	adj = "Dawn-Star"
 	color = {
-		167 255 255
+		255 203 84
 	}
 	capital = dawnstar
 	history += {
@@ -639,16 +640,18 @@ new country stone_hill = {
 	}
 	capital = stonehills
 }
-new country mire_watch = {
+new country myrwatch = {
 	inherit = nordic_country
 	primary_culture = hjaalmarcher
 	tag = MIR
-	name = "Mire-Watch"
-	adj = "Mire-Watch"
+	name = "Myrwatch"
+	adj = "Myrwatch"
 	color = {
-		255 73 158
+		122 8 145
 	}
 	capital = myrwatch
+	government = republic
+	starting_reform = tier_1_mage_tower
 }
 new country wind_ward = {
 	inherit = nordic_country
@@ -703,7 +706,7 @@ new country hjaal = {
 	name = "Hjaal"
 	adj = "Hjaalish"
 	color = {
-		50 106 188
+		200 150 0
 	}
 	capital = hjaals_tooth
 	history += {
@@ -766,7 +769,7 @@ new country broken_fang = {
 	name = "Broken-Fang"
 	adj = "Broken-Fang"
 	color = {
-		75 75 75
+		150 75 75
 	}
 	history += {
 		2568.1.1 = {
@@ -1203,7 +1206,7 @@ new country bleak_wind = {
 	name = "Bleak-Wind"
 	adj = "Bleak-Wind"
 	color = {
-		48 63 47
+		80 100 125
 	}
 	capital = halted_stream
 }
@@ -1228,7 +1231,7 @@ new country rannveig = {
 	name = "Rannveig"
 	adj = "Rannveig's"
 	color = {
-		0 0 50
+		0 0 25
 	}
 	capital = rannveigs_fast
 }
@@ -1846,7 +1849,7 @@ new country ice_sword = {
 	name = "Ice Sword"
 	adj = "Icy"
 	color = {
-		134 204 206
+		35 120 206
 	}
 	capital = snowpoint
 }
@@ -1859,7 +1862,7 @@ new country frozen_sentinels = {
 	name = "Frozen Sentinels"
 	adj = "Frozen"
 	color = {
-		35 120 206
+		134 204 206
 	}
 	capital = frozen_outpost
 }
@@ -1872,7 +1875,7 @@ new country lone_dragons = {
 	name = "Lone Dragons"
 	adj = "Draconic"
 	color = {
-		119 53 62
+		255 240 210
 	}
 	capital = dragonpoint
 }
@@ -1885,7 +1888,7 @@ new country red_house = {
 	name = "Red House"
 	adj = "Red"
 	color = {
-		255 0 0
+		200 0 0
 	}
 	capital = morvunskar
 }

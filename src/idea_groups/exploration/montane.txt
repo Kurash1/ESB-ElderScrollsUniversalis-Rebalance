@@ -1,3 +1,19 @@
+new owned_province_modifier montane_ideas_prospectors =  {
+	name = "Prospectors"
+	trigger_tooltip = "producing Gems, Common Ores, Rare Ores, Gold, Silver, or Ebony"
+	tradegoods = { gems c_metals r_metals gold silver ebony }
+	province = {
+		local_development_cost = -0.1
+	}
+}
+new owned_province_modifier montane_ideas_mines =  {
+	name = "Expansion of Mines"
+	trigger_tooltip = "with a Mine"
+	building = mine_manufactory
+	province = {
+		trade_goods_size_modifier = 0.15
+	}
+}
 new idea_group montane_ideas = {
 	name = "Montane"
 	category = ADM
@@ -6,7 +22,7 @@ new idea_group montane_ideas = {
 	}
 	ideas = {
 		{
-			name = "Responsible gold mining"
+			name = "Responsible Gold Mining"
 			desc = "We realised that just ripping out as much gold as is possible is not good for currency stability."
 			modifier = {
 				monthly_gold_inflation_modifier = -50%
@@ -18,33 +34,45 @@ new idea_group montane_ideas = {
 			modifier = {
 				goods_line = 1
 			}
+			effect = {
+				add_owned_province_modifier = montane_ideas_prospectors
+			}
+			removed_effect = {
+				remove_owned_province_modifier = montane_ideas_prospectors
+			}
 		}
 		{
-			name = "Rich mining towns"
+			name = "Rich Mining Towns"
 			desc = "Our miners are getting rich from their now vast incomes and readily spend money into other branches of the economy."
 			modifier = {
 				global_prosperity_growth = 0.1
 			}
 		}
 		{
-			name = "Pensions for widows"
+			name = "Pensions for Widows"
 			desc = "Huge pensions for widows of miners, that died due to accidents in the mines, will increase the loyalty of our people towards us."
 			modifier = {
 				global_unrest = -1
 			}
 		}
 		{
-			name = "Mining tax"
+			name = "Mining Tax"
 			desc = "It is only fair if the government also gets a fair share out of the mining operations. After all we invested into these lands in the first place!"
 			modifier = {
 				global_tax_modifier = 10%
 			}
 		}
 		{
-			name = "Expansion of mines and mining towns"
+			name = "Expansion of Mines"
 			desc = "We need to yield more ore out of the ground."
 			modifier = {
-				global_trade_goods_size = 0.5
+				build_cost = -5%
+			}
+			effect = {
+				add_owned_province_modifier = montane_ideas_mines
+			}
+			removed_effect = {
+				remove_owned_province_modifier = montane_ideas_mines
 			}
 		}
 		{

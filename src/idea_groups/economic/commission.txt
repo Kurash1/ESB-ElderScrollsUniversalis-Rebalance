@@ -1,0 +1,62 @@
+new idea_group commission_ideas = {
+	name = "Commission"
+	category = ADM
+	trigger = {
+		full_idea_group = logistic_ideas
+	}
+	ideas = {
+		{
+			name = "Battlefield reinforcements"
+			desc = "We started drilling our troops to fill erupting gaps during battles."
+			modifier = {
+				reinforce_speed = 25%
+				reinforce_cost_modifier = -25%
+			}
+		}
+		{
+			name = "Extra alcohol rations"
+			desc = "No matter if a battle is won or lost our troops are commissioned extra alcohol rations."
+			modifier = {
+				land_morale_constant = 0.25
+			}
+		}
+		{
+			name = "Commission offices"
+			desc = "We established a proper bureaucracy for food, beverages and all kinds of supplies. Our soldiers love guarding these offices."
+			modifier = {
+				land_attrition = -10%
+			}
+		}
+		{
+			name = "Homefront"
+			desc = "The homefront is prepared to put more effort into the industrial-military complex."
+			modifier = {
+				war_exhaustion = -0.02
+			}
+		}
+		{
+			name = "Conscription"
+			desc = "Every healthy adult in our country has to be mustered and drafted into the army."
+			modifier = {
+				global_manpower_modifier = 15%
+			}
+		}
+		{
+			name = "Change in salaries"
+			desc = "We now pay our soldiers in mainly food and salt in addition to a little bit of money and the promise of a plot of land after end of service."
+			modifier = {
+				land_maintenance_modifier = -5%
+			}
+		}
+		{
+			name = "Husbandry"
+			desc = "Thoroughly bred horses in great quantity are quite a new development but we ought to make good use of it."
+			modifier = {
+				cavalry_cost = -10%
+			}
+		}
+	}
+	bonus = {
+		global_regiment_recruit_speed = -25%
+	}
+}

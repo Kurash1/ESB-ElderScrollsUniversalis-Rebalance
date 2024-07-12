@@ -1,4 +1,4 @@
-interface_files:countryideasview:countryideasview += {
+interface_files:countryideasview:countryideasview:window_holder += {
 	guiButtonType = {
 		name = "select_national_ideas"
 		position = { x = 475 y = 170 }

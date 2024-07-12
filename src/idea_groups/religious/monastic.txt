@@ -1,0 +1,61 @@
+new idea_group monastic_ideas = {
+	name = "Monastic"
+	category = ADM
+	trigger = {
+		full_idea_group = religious_ideas
+	}
+	ideas = {
+		{
+			name = "Cloister Networks"
+			desc = "Our Cloisters exist in a network of other cloisters of the same faith. They are willing to help us with our trade issues."
+			modifier = {
+				trade_line = 1
+			}
+		}
+		{
+			name = "Cloister Breweries"
+			desc = "Monks are associated with breweries and beer for a reason after all."
+			modifier = {
+				production_efficiency = 10%
+			}
+		}
+		{
+			name = "Hospitals"
+			desc = "Monks and nuns take care of the sick and the wounded."
+			modifier = {
+				manpower_recovery_speed = 10%
+			}
+		}
+		{
+			name = "Church fiefdoms"
+			desc = "The churches and monasteries hold vast swathes of land. They know precisely how to develop it as well."
+			modifier = {
+				tax_line = 1
+			}
+		}
+		{
+			name = "Missions"
+			desc = "We establish new monasteries for our clergy in return for their support."
+			modifier = {
+				missionaries = 1
+			}
+		}
+		{
+			name = "Network of monasteries"
+			desc = "Our country posses an entire network of prosperous cloisters."
+			modifier = {
+				governing_capacity_modifier = 10%
+			}
+		}
+		{
+			name = "Places of Study and Education"
+			desc = "Monasteries often possess good schools and vast libraries."
+			modifier = {
+				possible_policy = 1
+			}
+		}
+	}
+	bonus = {
+		administrative_efficiency = 5%
+	}
+}

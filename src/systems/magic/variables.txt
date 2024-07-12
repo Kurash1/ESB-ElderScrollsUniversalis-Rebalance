@@ -60,17 +60,6 @@ new script_variable monthly_magicka_from_development = {
 		&monthly_magicka_from_development *= 0.01
 	}
 }
-new script_variable monthly_magicka_from_ruler = {
-	tag = "magicka"
-	name = "Monthly Magicka from Ruler"
-	calculate = {
-		&monthly_magicka_from_ruler &= ADM
-		&monthly_magicka_from_ruler &= DIP
-		&monthly_magicka_from_ruler &= MIL
-		
-		&monthly_magicka_from_ruler *= 0.05
-	}
-}
 new modifier_definition monthly_magicka = {
 	name = "Monthly Magicka"
 	is_percentage = no
@@ -89,12 +78,10 @@ new script_variable monthly_magicka_var = {
 	name = "Monthly Magicka"
 	calculate = {
 		variables:monthly_magicka_from_development:calculate
-		variables:monthly_magicka_from_ruler:calculate
 		variables:monthly_magicka_from_modifier:calculate
 		variables:magicka_gain_var:calculate
 		
 		&monthly_magicka_var := monthly_magicka_from_development
-		&monthly_magicka_var += monthly_magicka_from_ruler
 		&monthly_magicka_var += monthly_magicka_from_modifier
 		
 		&monthly_magicka_var *= magicka_gain_var

@@ -23,6 +23,65 @@ new class event_modifier = {
 		}
 	}
 }
+new class unit = {
+	list = units
+	default = {
+		desc = ""
+	}
+	args = {
+		name = string
+		desc = string
+		
+		type = string
+		unit_type = technology_group?
+		trigger = named_trigger?
+		
+		manpower = float?
+		
+		maneuver = int?
+		offensive_morale = int?
+		defensive_morale = int?
+		offensive_fire = int?
+		defensive_fire = int?
+		offensive_shock = int?
+		defensive_shock = int?
+		
+		hull_size = int?
+		base_cannons = int?
+		blockade = int?
+		sail_speed = float?
+		sailors = int?
+		sprite_level = int?
+	}
+	simple_transpile = {
+		foreach $ in units {
+			new localisation `{$}` = `{$:name}`
+			new localisation `{$}DESCR` = `{$:desc}`
+			write_file "common/units/{$}.txt" = {
+				type = $:type
+				
+				when [exists = $:unit_type] { unit_type = $:unit_type }
+				when [exists = $:trigger] { trigger = { $:trigger } }
+				when [exists = $:manpower] { manpower = $:manpower }
+				
+				when [exists = $:maneuver] { maneuver = $:maneuver }
+				when [exists = $:offensive_morale] { offensive_morale = $:offensive_morale }
+				when [exists = $:defensive_morale] { defensive_morale = $:defensive_morale }
+				when [exists = $:offensive_fire] { offensive_fire = $:offensive_fire }
+				when [exists = $:defensive_fire] { defensive_fire = $:defensive_fire }
+				when [exists = $:offensive_shock] { offensive_shock = $:offensive_shock }
+				when [exists = $:defensive_shock] { defensive_shock = $:defensive_shock }
+				
+				when [exists = $:hull_size] { hull_size = $:hull_size }
+				when [exists = $:base_cannons] { base_cannons = $:base_cannons }
+				when [exists = $:blockade] { blockade = $:blockade }
+				when [exists = $:sail_speed] { sail_speed = $:sail_speed }
+				when [exists = $:sailors] { sailors = $:sailors }
+				when [exists = $:sprite_level] { sprite_level = $:sprite_level }
+			}
+		}
+	}
+}
 new class historical_war = {
 	list = historical_wars
 	args = {

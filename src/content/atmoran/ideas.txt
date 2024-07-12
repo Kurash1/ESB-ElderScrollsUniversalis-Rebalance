@@ -66,3 +66,69 @@ new idea_group atmoran_ideas = {
 		}
 	}
 }
+new idea_group nymph_dance_ideas = {
+	name = "Nymph-Dance"
+	category = national
+	start = {
+		religious_unity = 25%
+		no_religion_penalty = yes
+	}
+	bonus = {
+		possible_dip_policy = 1
+		free_dip_policy = 1
+	}
+	trigger = {
+		tag = nymph_dance
+	}
+	ideas = {
+		{
+			name = "Dibellan Arts"
+			desc = "Dibellan diplomats are schooled in the dibellan arts. They will certainly turn every foreign ruler into a willing partner."
+			modifier = {
+				diplomatic_reputation = 2
+			}
+		}
+		{
+			name = "Love and Beauty"
+			desc = "Show the world the love and beauty of Dibella the moth."
+			modifier = {
+				global_missionary_strength = 0.03
+			}
+		}
+		{
+			name = "Spies in private areas"
+			desc = "We employ special rather beautiful spies in certain rather private areas."
+			modifier = {
+				spy_offence = 15%
+			}
+		}
+		{
+			name = "Nymphs"
+			desc = "All types of rather territorial nymphs are worshipped in emulation of our dearest lady."
+			modifier = {
+				defensiveness = 33%
+			}
+		}
+		{
+			name = "Clerics of beauty on the field"
+			desc = "Our gorgeous clerics march along side our brave troops into battle. Surely the lift their spirits."
+			modifier = {
+				land_morale = 15%
+			}
+		}
+		{
+			name = "Quality over quantity in relationships"
+			desc = "This teaching must be just as true on a state level but on a state level quantity often equals quality."
+			modifier = {
+				diplomatic_upkeep = 2
+			}
+		}
+		{
+			name = "Gardens of Dibella"
+			desc = "Our gardens in Thanhiend are beyond any doubt sheer marvelous and spectacular. The sybil resides here during the summer months as well."
+			modifier = {
+				prestige = 1
+			}
+		}
+	}
+}

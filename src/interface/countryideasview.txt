@@ -14,6 +14,13 @@ new interface_file countryideasview = {
 		iconType = {
 			name = "domesticpanel_bg"
 			spriteType = "GFX_ideas_bg"
+			position = { x = -999 y = -10 }
+			Orientation = "UPPER_LEFT"
+		}
+		
+		iconType = {
+			name = "real_background"
+			spriteType = "GFX_ideas_bg"
 			position = { x = -7 y = -10 }
 			Orientation = "UPPER_LEFT"
 		}
@@ -159,29 +166,32 @@ new interface_file countryideasview = {
 		listboxType = {
 			name = "ideagroups_listbox_left"
 			backGround = ""
-			position = { x = 25 y = 243 }
-			size = { x = 270 y = 650 }
+			position = { x = 10 y = 243 }
+			size = { x = 252 y = 650 }
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
 			spacing = 1.0
-			scrollbartype = "standardlistbox_invisible"
-			borderSize = {x = 0 y = 0}
+			scrollbartype = "standardlistbox_slider"
+			borderSize = { x = 0 y = 0 }
 		}
 		
 		listboxType = {
 			name = "ideagroups_listbox_right"
 			backGround = ""
 			position = { x = 276 y = 243 }
-			size = { x = 270 y = 650 }
+			size = { x = 252 y = 650 }
 			Orientation = "UPPER_LEFT"
 			horizontal = 0
 			spacing = 1.0
-			scrollbartype = "standardlistbox_invisible"
-			borderSize = {x = 0 y = 0}
-		}		
-
-		################################################################################################
-		### --- Unlock idea group window
+			scrollbartype = "standardlistbox_slider"
+			borderSize = { x = 0 y = 0 }
+		}
+		
+		windowType = {
+			name = "window_holder"
+			position = { x = 0 y = 0 }
+			
+		}
 		
 		windowType = {
 			name = "countryideaview_ideagroupunlock"
@@ -300,7 +310,7 @@ new interface_file countryideasview = {
 				clicksound = back_click
 			}			
 		}		
-	}	
+	}
 
 	################################################################################################
 	### --- Country unique idea item

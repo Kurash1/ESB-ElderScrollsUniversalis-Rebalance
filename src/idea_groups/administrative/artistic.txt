@@ -1,0 +1,62 @@
+new idea_group artistic_ideas = {
+	name = "Artistic"
+	category = ADM
+	trigger = {
+		full_idea_group = society_ideas
+	}
+	ideas = {
+		{
+			name = "Theaters"
+			desc = "Tragedies and comedies people love to watch plays. Comedies lift their moods tragedies are carthatic."
+			modifier = {
+				global_unrest = -1
+			}
+		}
+		{
+			name = "Artisans"
+			desc = "Like craftspeople but more fancy."
+			modifier = {
+				production_efficiency = 10%
+				production_line = 1
+			}
+		}
+		{
+			name = "Writing, Sculpting and Painting"
+			desc = "Surely those endevaours will inspire our population to grand achievments."
+			modifier = {
+				prestige = 1
+			}
+		}
+		{
+			name = "Song and dance"
+			desc = "Our songs and dances are famous among the entirety of the known world."
+			modifier = {
+				diplomatic_reputation = 1.5
+			}
+		}
+		{
+			name = "Stately Play Visitations"
+			desc = "We ought to invite our foreign guests to watch plays in our theaters with us."
+			modifier = {
+				improve_relation_modifier = 20%
+			}
+		}
+		{
+			name = "Luxurious gifts"
+			desc = "Our artisans produce some very luxurious items we could gift to other countries."
+			modifier = {
+				monthly_favor_modifier = 50%
+			}
+		}
+		{
+			name = "Bards"
+			desc = "Quick-witted and always rather creative our bards and minstrels are extraordinary in their skills."
+			modifier = {
+				power_projection_from_insults = 50%
+			}
+		}
+	}
+	bonus = {
+		prestige_decay = -0.01
+	}
+}
