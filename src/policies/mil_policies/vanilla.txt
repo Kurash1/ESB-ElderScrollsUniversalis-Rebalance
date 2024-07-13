@@ -1,0 +1,381 @@
+new policy privy_council_establishment_act = {
+	monarch_power = MIL
+	group_1 = spy_ideas
+	group_2 = defensive_ideas
+	modifier = {
+		defensiveness = 0.15
+		yearly_corruption = -0.1
+	}
+}
+new policy the_mercenary_registration_act = {
+	monarch_power = MIL
+	group_1 = spy_ideas
+	group_2 = quantity_ideas
+	modifier = {
+		global_manpower_modifier = 0.1
+		mercenary_manpower = 0.2
+	}
+}
+new policy the_provincial_taxation_system = {
+	monarch_power = MIL
+	group_1 = administrative_ideas
+	group_2 = quantity_ideas
+	modifier = {
+		land_maintenance_modifier = -0.05
+		manpower_recovery_speed = 0.15
+	}
+}
+new policy the_mining_act = {
+	monarch_power = MIL
+	group_1 = expansion_ideas
+	group_2 = quality_ideas
+	modifier = {
+		leader_land_fire = 1
+	}
+}
+new policy the_liquor_act = {
+	monarch_power = MIL
+	group_1 = quality_ideas
+	group_2 = administrative_ideas
+	modifier = {
+		recover_army_morale_speed = 0.15
+		reinforce_speed = 0.15
+	}
+}
+new policy horse_artillery = {
+	monarch_power = MIL
+	group_1 = offensive_ideas
+	group_2 = economic_ideas
+	modifier = {
+		artillery_power = 0.1
+	}
+}
+new policy public_road_act = {
+	monarch_power = MIL
+	group_1 = offensive_ideas
+	group_2 = trade_ideas
+	modifier = {
+		movement_speed = 0.10
+		trade_efficiency = 0.10
+	}
+}
+new policy superior_supply_system = {
+	monarch_power = MIL
+	group_1 = quality_ideas
+	group_2 = exploration_ideas
+	modifier = {
+		manpower_recovery_speed = 0.1
+		land_attrition = -0.25
+	}
+}
+new policy modern_siege_weapons = {
+	monarch_power = MIL
+	group_1 = innovativeness_ideas
+	group_2 = offensive_ideas
+	modifier = {
+		siege_ability = 0.1
+		leader_siege = 1
+	}
+}
+new policy superior_fortification_act = {
+	monarch_power = MIL
+	group_1 = innovativeness_ideas
+	group_2 = defensive_ideas
+	modifier = {
+		defensiveness = 0.1
+		fort_maintenance_modifier = -0.33
+	}
+}
+new policy modern_firearm_techniques = {
+	monarch_power = MIL
+	group_1 = innovativeness_ideas
+	group_2 = quality_ideas
+	modifier = {
+		infantry_power = 0.15
+	}
+}
+new policy the_garrison_act = {
+	monarch_power = MIL
+	group_1 = innovativeness_ideas
+	group_2 = quantity_ideas
+	modifier = {
+		fort_maintenance_modifier = -0.25
+		garrison_size = 0.15
+	}
+}
+new policy military_zeal_act = {
+	monarch_power = MIL
+	group_1 = quality_ideas
+	group_2 = religious_ideas
+	modifier = {
+		morale_damage = 0.05
+		siege_ability = 0.1
+	}
+}
+new policy field_priests = {
+	monarch_power = MIL
+	group_1 = religious_ideas
+	group_2 = quantity_ideas
+	modifier = {
+		land_morale = 0.1
+		recover_army_morale_speed = 0.05
+	}
+}
+new policy pen_rely_on_sword_act = {
+	monarch_power = MIL
+	group_1 = diplomatic_ideas
+	group_2 = quantity_ideas
+	modifier = {
+		diplomatic_reputation = 1
+		land_forcelimit_modifier = 0.1
+	}
+}
+new policy local_army_organisation = {
+	monarch_power = MIL
+	group_1 = expansion_ideas
+	group_2 = defensive_ideas
+	modifier = {
+		global_regiment_cost = -0.1
+		recover_army_morale_speed = 0.15
+	}
+}
+new policy underhanded_diplomacy_act = {
+	monarch_power = MIL
+	group_1 = diplomatic_ideas
+	group_2 = offensive_ideas
+	modifier = {
+		spy_offence = 0.33
+		diplomatic_reputation = 1
+	}
+}
+new policy hired_adventurers_act = {
+	monarch_power = MIL
+	group_1 = quantity_ideas
+	group_2 = exploration_ideas
+	modifier = {
+		movement_speed = 0.1
+		leader_land_manuever = 1
+	}
+}
+new policy colonial_garrisons = {
+	monarch_power = MIL
+	group_1 = quantity_ideas
+	group_2 = expansion_ideas
+	modifier = {
+		land_forcelimit_modifier = 0.1
+		global_colonial_growth = 10
+	}
+}
+new policy the_maritime_intelligencer_unit = {
+	monarch_power = MIL
+	group_1 = naval_ideas
+	group_2 = spy_ideas
+	modifier = {
+		siege_blockade_progress = 1
+		global_naval_engagement_modifier = 0.1
+	}
+}
+new policy the_nautic_education_act = {
+	monarch_power = MIL
+	group_1 = naval_ideas
+	group_2 = innovativeness_ideas
+	modifier = {
+		recover_navy_morale_speed = 0.15
+		leader_naval_fire = 1
+	}
+}
+new policy zealous_captains = {
+	monarch_power = MIL
+	group_1 = naval_ideas
+	group_2 = religious_ideas
+	modifier = {
+		sunk_ship_morale_hit_recieved = -0.10
+		leader_naval_shock = 1
+	}
+}
+new policy inspirational_leaders = {
+	monarch_power = MIL
+	group_1 = humanist_ideas
+	group_2 = quantity_ideas
+	modifier = {
+		leader_land_shock = 1
+	}
+}
+new policy the_naval_inspection_act = {
+	monarch_power = MIL
+	group_1 = humanist_ideas
+	group_2 = naval_ideas
+	modifier = {
+		ship_durability = 0.05
+		recover_navy_morale_speed = 0.1
+	}
+}
+new policy the_preparation_act = {
+	monarch_power = MIL
+	group_1 = humanist_ideas
+	group_2 = defensive_ideas
+	modifier = {
+		land_attrition = -0.25
+		war_exhaustion = -0.05
+	}
+}
+new policy local_militias = {
+	monarch_power = MIL
+	group_1 = influence_ideas
+	group_2 = defensive_ideas
+	modifier = {
+		war_exhaustion = -0.03
+		garrison_damage = 0.5
+	}
+}
+new policy foreign_conscription_centers = {
+	monarch_power = MIL
+	group_1 = influence_ideas
+	group_2 = offensive_ideas
+	modifier = {
+		reinforce_cost_modifier = -0.25
+		diplomatic_upkeep = 1
+	}
+}
+new policy guerilla_warfare = {
+	monarch_power = MIL
+	group_1 = influence_ideas
+	group_2 = quantity_ideas
+	modifier = {
+		hostile_attrition = 1
+		shock_damage = 0.05
+	}
+}
+new policy weapon_quality_standards = {
+	monarch_power = MIL
+	group_1 = economic_ideas
+	group_2 = quality_ideas
+	modifier = {
+		discipline = 0.05
+	}
+}
+new policy deserteur_act = {
+	monarch_power = MIL
+	group_1 = spy_ideas
+	group_2 = quality_ideas
+	modifier = {
+		army_tradition_decay = -0.005
+		reinforce_speed = 0.15
+	}
+}
+new policy mobile_siege_engines_act = {
+	monarch_power = MIL
+	group_1 = infrastructure_ideas
+	group_2 = offensive_ideas
+	modifier = {
+		movement_speed = 0.05
+		artillery_levels_available_vs_fort = 2
+	}
+}
+new policy bolstered_defence_act = {
+	monarch_power = MIL
+	group_1 = infrastructure_ideas
+	group_2 = defensive_ideas
+	modifier = {
+		hostile_attrition = 1
+		garrison_size = 0.25
+	}
+}
+new policy handpicked_recruits_act = {
+	monarch_power = MIL
+	group_1 = infrastructure_ideas
+	group_2 = quality_ideas
+	modifier = {
+		drill_gain_modifier = 0.33
+		yearly_army_professionalism = 0.0025
+	}
+}
+new policy mass_conscription_act = {
+	monarch_power = MIL
+	group_1 = infrastructure_ideas
+	group_2 = quantity_ideas
+	modifier = {
+		reinforce_speed = 0.2
+		reinforce_cost_modifier = -0.2
+	}
+}
+new policy naval_armament_act = {
+	monarch_power = MIL
+	group_1 = infrastructure_ideas
+	group_2 = naval_ideas
+	modifier = {
+		global_ship_recruit_speed = -0.25
+		movement_speed_in_fleet_modifier = 1
+	}
+}
+new policy mercenary_tactical_movement_act = {
+	monarch_power = MIL
+	group_1 = infrastructure_ideas
+	group_2 = mercenary_ideas
+	modifier = {
+		mercenary_discipline = 0.05
+	}
+}
+new policy sharp_wits_act = {
+	monarch_power = MIL
+	group_1 = court_ideas
+	group_2 = offensive_ideas
+	modifier = {
+		power_projection_from_insults = 0.25
+		morale_damage = 0.1
+	}
+}
+new policy sturdy_argument_act = {
+	monarch_power = MIL
+	group_1 = court_ideas
+	group_2 = defensive_ideas
+	modifier = {
+		ae_impact = -0.1
+		morale_damage_received = -0.1
+	}
+}
+new policy special_forces_act = {
+	monarch_power = MIL
+	group_1 = court_ideas
+	group_2 = quality_ideas
+	modifier = {
+		special_unit_forcelimit = 0.1
+		yearly_army_professionalism = 0.002
+	}
+}
+new policy plentiful_materials_act = {
+	monarch_power = MIL
+	group_1 = court_ideas
+	group_2 = quantity_ideas
+	modifier = {
+		artillery_cost = -0.15
+		infantry_cost = -0.1
+	}
+}
+new policy naval_competence_act = {
+	monarch_power = MIL
+	group_1 = court_ideas
+	group_2 = naval_ideas
+	modifier = {
+		leader_naval_manuever = 1
+		leader_naval_fire = 1
+	}
+}
+new policy dutiful_mercenaries_act = {
+	monarch_power = MIL
+	group_1 = mercenary_ideas
+	group_2 = religious_ideas
+	modifier = {
+		land_morale = 0.1
+		global_missionary_strength = 0.02
+	}
+}
+new policy hired_expeditions_act = {
+	monarch_power = MIL
+	group_1 = mercenary_ideas
+	group_2 = expansion_ideas
+	modifier = {
+		force_march_free = yes
+		recover_army_morale_speed = 0.15
+	}
+}

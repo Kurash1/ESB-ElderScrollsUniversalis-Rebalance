@@ -1,5 +1,5 @@
-new named_int IDEA_TOP = 47
-new named_int IDEA_LEFT = 10
+new named_int IDEA_TOP = 40
+new named_int IDEA_LEFT = 5
 
 interface_files:countryideasview:countryideasview:window_holder += {
 	windowType = {
@@ -47,7 +47,7 @@ new effect qq_tooltip_idea = {
 		tooltip = {
 			args:effect
 		}
-		add_idea = args:id
+		#add_idea = args:id
 	}
 }
 new named_trigger has_all_idea_group = {
@@ -152,8 +152,16 @@ new effect add_to_tree = {
 			tooltip = "£{args:group:category:to_lower}£ {args:group:name} Ideas"
 			potential = args:potential
 			trigger = {
-				has_free_idea_group_slot
-				args:group:trigger
+				if [has_idea_group = args:group:id] {
+					custom_trigger_tooltip = {
+						new_tooltip = "You have enabled {args:group:name} Ideas"
+						always = yes
+					}
+				}
+				else {
+					has_free_idea_group_slot
+					args:group:trigger
+				}
 			}
 			effect = {
 				add_idea_group = args:group:id
@@ -262,57 +270,54 @@ new named_effect create_idea_tree = {
 	#did this so it gets loaded later on
 	
 	#
-	# Administrative ideas
-	#
-	add_to_tree = { group = court_ideas x = 0 y = 0 }
-	draw_line = { 1 1 0 0 }
-	
-	add_to_tree = { group = imperialism_ideas x = 1 y = 0 }
-	draw_line = { 1 1 1 0 }
-	
-	add_to_tree = { group = hegemonic_ideas x = 2 y = 0 }
-	draw_line = { 1 0 2 0 }
-	
-	add_to_tree = { group = centralization_ideas x = 0 y = 1 }
-	draw_line = { 1 2 0 1 }
-	
-	add_to_tree = { group = administrative_ideas x = 1 y = 1 }
-	
-	add_to_tree = { group = corruption_ideas x = 2 y = 1 }
-	draw_line = { 1 1 2 1 }
-	draw_line = { 3 0 2 1 }
-	
-	add_to_tree = { group = theocracy_ideas x = 0 y = 2 potential = { government = theocracy } }
-	add_to_tree = { group = monarchy_ideas x = 0 y = 2 potential = { government = monarchy } shadow = no }
-	add_to_tree = { group = republican_ideas x = 0 y = 2 potential = { government = republic } shadow = no }
-	add_to_tree = { group = native_ideas x = 0 y = 2 potential = { government = native } shadow = no }
-	draw_line = { 1 2 0 2 }
-	
-	add_to_tree = { group = state_administration_ideas x = 1 y = 2 }
-	draw_line = { 1 1 1 2 }
-	
-	add_to_tree = { group = jurisprudence_ideas x = 2 y = 2 }
-	draw_line = { 1 2 2 2 }
-	
-	add_to_tree = { group = absolutistic_ideas x = 0 y = 3 }
-	draw_line = { 1 2 0 3 }
-	
-	add_to_tree = { group = dynastic_ideas x = 1 y = 3 }
-	draw_line = { 1 2 1 3 }
-	
-	add_to_tree = { group = society_ideas x = 2 y = 3 }
-	draw_line = { 1 2 2 3 }
-	
-	add_to_tree = { group = artistic_ideas x = 3 y = 4 }
-	draw_line_between = { society_ideas artistic_ideas }
-	
-	#
 	# Espionage Ideas
 	#
 	add_to_tree = { group = spy_ideas x = 3 y = 0 }
 	
 	add_to_tree = { group = propaganda_ideas x = 3 y = 1 }
-	draw_line = { 3 0 3 1 }
+	draw_line_between = { spy_ideas propaganda_ideas }
+	
+	#
+	# Administrative ideas
+	#
+	add_to_tree = { group = administrative_ideas x = 1 y = 1 }
+	
+	add_to_tree = { group = court_ideas x = 0 y = 0 }
+	draw_line_between = { administrative_ideas court_ideas }
+	
+	add_to_tree = { group = imperialism_ideas x = 1 y = 0 }
+	draw_line_between = { administrative_ideas imperialism_ideas }
+	
+	add_to_tree = { group = hegemonic_ideas x = 2 y = 0 }
+	draw_line_between = { administrative_ideas hegemonic_ideas }
+	
+	add_to_tree = { group = corruption_ideas x = 2 y = 1 }
+	draw_line_between = { administrative_ideas corruption_ideas }
+	draw_line_between = { spy_ideas corruption_ideas }
+	
+	add_to_tree = { group = state_administration_ideas x = 1 y = 2 }
+	draw_line_between = { administrative_ideas state_administration_ideas }
+	
+	add_to_tree = { group = centralization_ideas x = 0 y = 1 }
+	draw_line_between = { state_administration_ideas centralization_ideas }
+	
+	add_to_tree = { group = theocracy_ideas x = 0 y = 2 potential = { government = theocracy } }
+	add_to_tree = { group = monarchy_ideas x = 0 y = 2 potential = { government = monarchy } shadow = no }
+	add_to_tree = { group = republican_ideas x = 0 y = 2 potential = { government = republic } shadow = no }
+	add_to_tree = { group = native_ideas x = 0 y = 2 potential = { government = native } shadow = no }
+	draw_line_between = { state_administration_ideas monarchy_ideas }
+	
+	add_to_tree = { group = jurisprudence_ideas x = 1 y = 3 }
+	draw_line_between = { state_administration_ideas jurisprudence_ideas }
+	
+	add_to_tree = { group = absolutistic_ideas x = 0 y = 3 }
+	draw_line_between = { state_administration_ideas absolutistic_ideas }
+	
+	add_to_tree = { group = society_ideas x = 2 y = 2 }
+	draw_line_between = { state_administration_ideas society_ideas }
+	
+	add_to_tree = { group = artistic_ideas x = 3 y = 2 }
+	draw_line_between = { society_ideas artistic_ideas }
 	
 	#
 	# Economic Ideas
@@ -320,43 +325,43 @@ new named_effect create_idea_tree = {
 	add_to_tree = { group = economic_ideas x = 5 y = 1 }
 	
 	add_to_tree = { group = agricultural_ideas x = 4 y = 0 }
-	draw_line = { 5 1 4 0 }
+	draw_line_between = { economic_ideas agricultural_ideas }
 	
-	add_to_tree = { group = masonry_ideas x = 4 y = 2 }
+	add_to_tree = { group = masonry_ideas x = 6 y = 1 }
 	draw_line_between = { economic_ideas masonry_ideas }
 	
-	add_to_tree = { group = architectural_ideas x = 4 y = 3 }
+	add_to_tree = { group = architectural_ideas x = 7 y = 1 }
 	draw_line_between = { masonry_ideas architectural_ideas }
 	
-	add_to_tree = { group = woodworking_ideas x = 6 y = 0 }
-	draw_line = { 5 1 6 0 }
+	add_to_tree = { group = woodworking_ideas x = 5 y = 0 }
+	draw_line_between = { economic_ideas woodworking_ideas }
 	
-	add_to_tree = { group = alchemical_ideas x = 5 y = 0 }
+	add_to_tree = { group = alchemical_ideas x = 4 y = 1 }
 	draw_line_between = { economic_ideas alchemical_ideas }
 	
-	add_to_tree = { group = treasury_ideas x = 6 y = 1 }
-	draw_line = { 5 1 6 1 }
+	add_to_tree = { group = treasury_ideas x = 4 y = 2 }
+	draw_line_between = { economic_ideas treasury_ideas }
 	
-	add_to_tree = { group = infrastructure_ideas x = 4 y = 1 }
+	add_to_tree = { group = infrastructure_ideas x = 6 y = 0 }
 	draw_line_between = { economic_ideas infrastructure_ideas }
 	
-	add_to_tree = { group = logistic_ideas x = 3 y = 2 }
+	add_to_tree = { group = logistic_ideas x = 7 y = 0 }
 	draw_line_between = { infrastructure_ideas logistic_ideas }
 	
-	add_to_tree = { group = commission_ideas x = 3 y = 3 }
+	add_to_tree = { group = commission_ideas x = 8 y = 0 }
 	draw_line_between = { logistic_ideas commission_ideas }
 	
 	#
 	# Tolerance Ideas
 	#
-	add_to_tree = { group = humanist_ideas x = 7 y = 1 }
+	add_to_tree = { group = humanist_ideas x = 7 y = 2 }
 	
 	add_to_tree = { group = innovativeness_ideas x = 6 y = 2 }
-	draw_line = { 5 1 6 2 }
-	draw_line = { 7 1 6 2 }
+	draw_line_between = { economic_ideas innovativeness_ideas }
+	draw_line_between = { humanist_ideas innovativeness_ideas }
 	
-	add_to_tree = { group = acceptance_ideas x = 7 y = 0 }
-	draw_line = { 7 1 7 0 }
+	add_to_tree = { group = acceptance_ideas x = 8 y = 1 }
+	draw_line_between = { humanist_ideas acceptance_ideas }
 	
 	add_to_tree = { group = engineering_ideas x = 5 y = 3 }
 	draw_line_between = { innovativeness_ideas engineering_ideas }
@@ -364,68 +369,65 @@ new named_effect create_idea_tree = {
 	add_to_tree = { group = hydrology_ideas x = 5 y = 2 }
 	draw_line_between = { engineering_ideas hydrology_ideas }
 	
-	add_to_tree = { group = siegecraft_ideas x = 4 y = 4 }
+	add_to_tree = { group = siegecraft_ideas x = 4 y = 3 }
 	draw_line_between = { engineering_ideas siegecraft_ideas }
-	
-	#
-	# Standing Army Ideas
-	#
-	add_to_tree = { group = quantity_ideas x = 8 y = 0 }
-	draw_line = { 9 0 8 0 }
-	
-	add_to_tree = { group = standing_army_ideas x = 9 y = 0 }
-	
-	add_to_tree = { group = large_army_ideas x = 8 y = 1 }
-	draw_line = { 8 0 8 1 }
-	
-	add_to_tree = { group = quality_ideas x = 9 y = 1 }
-	draw_line = { 9 0 9 1 }
-	
-	add_to_tree = { group = professionalism_ideas x = 8 y = 2 }
-	draw_line = { 9 1 8 2 }
-	
-	add_to_tree = { group = marine_ideas x = 9 y = 2 }
-	draw_line = { 9 1 9 2 }
-	draw_line = { 8 3 9 2 }
-	
-	#
-	# Maritime Ideas
-	#
-	add_to_tree = { group = fleet_base_ideas x = 7 y = 5 }
-	draw_line = { 8 5 7 5 }
-	
-	add_to_tree = { group = maritime_ideas x = 8 y = 5 }
-	
-	#
-	# Naval Ideas
-	#
-	add_to_tree = { group = ship_quality_ideas x = 7 y = 2 }
-	draw_line = { 8 3 7 2 }
-	
-	add_to_tree = { group = inland_fleet_ideas x = 7 y = 3 }
-	draw_line = { 8 3 7 3 }
-	
-	add_to_tree = { group = naval_ideas x = 8 y = 3 }
-	
-	add_to_tree = { group = support_fleet_ideas x = 9 y = 3 }
-	draw_line = { 8 3 9 3 }
-	
-	add_to_tree = { group = pirate_fleet_ideas x = 7 y = 4 }
-	draw_line = { 8 3 7 4 }
-	draw_line = { 8 5 7 4 }
-	
-	add_to_tree = { group = merchant_fleet_ideas x = 8 y = 4 }
-	draw_line = { 8 3 8 4 }
-	draw_line = { 9 5 8 4 }
-	draw_line_between = { maritime_ideas merchant_fleet_ideas }
-	
-	add_to_tree = { group = high_seas_fleet_ideas x = 9 y = 4 }
-	draw_line = { 8 3 9 4 }
 	
 	#
 	# Trade Ideas
 	#
-	add_to_tree = { group = trade_ideas x = 9 y = 5 }
+	add_to_tree = { group = trade_ideas x = 8 y = 8 }
+	
+	#
+	# Maritime Ideas
+	#
+	add_to_tree = { group = maritime_ideas x = 7 y = 8 }
+	
+	add_to_tree = { group = fleet_base_ideas x = 6 y = 8 }
+	draw_line_between = { maritime_ideas fleet_base_ideas }
+	
+	#
+	# Naval Ideas
+	#
+	add_to_tree = { group = naval_ideas x = 7 y = 6 }
+	
+	add_to_tree = { group = inland_fleet_ideas x = 7 y = 5 }
+	draw_line_between = { naval_ideas inland_fleet_ideas }
+	
+	add_to_tree = { group = support_fleet_ideas x = 8 y = 6 }
+	draw_line_between = { naval_ideas support_fleet_ideas }
+	
+	add_to_tree = { group = pirate_fleet_ideas x = 7 y = 7 }
+	draw_line_between = { naval_ideas pirate_fleet_ideas }
+	draw_line_between = { maritime_ideas pirate_fleet_ideas }
+	
+	add_to_tree = { group = merchant_fleet_ideas x = 8 y = 7 }
+	draw_line_between = { naval_ideas merchant_fleet_ideas }
+	draw_line_between = { trade_ideas merchant_fleet_ideas }
+	draw_line_between = { maritime_ideas merchant_fleet_ideas }
+	
+	add_to_tree = { group = high_seas_fleet_ideas x = 6 y = 7 }
+	draw_line_between = { naval_ideas high_seas_fleet_ideas }
+	
+	#
+	# Standing Army Ideas
+	#
+	add_to_tree = { group = standing_army_ideas x = 8 y = 3 }
+	
+	add_to_tree = { group = quantity_ideas x = 8 y = 2 }
+	draw_line_between = { standing_army_ideas quantity_ideas }
+	
+	add_to_tree = { group = large_army_ideas x = 7 y = 3 }
+	draw_line_between = { quantity_ideas large_army_ideas }
+	
+	add_to_tree = { group = quality_ideas x = 8 y = 4 }
+	draw_line_between = { standing_army_ideas quality_ideas }
+	
+	add_to_tree = { group = professionalism_ideas x = 7 y = 4 }
+	draw_line_between = { quality_ideas professionalism_ideas }
+	
+	add_to_tree = { group = marine_ideas x = 8 y = 5 }
+	draw_line_between = { quality_ideas marine_ideas }
+	draw_line_between = { support_fleet_ideas marine_ideas }
 	
 	#
 	# Exploration Ideas
@@ -433,88 +435,79 @@ new named_effect create_idea_tree = {
 	add_to_tree = { group = exploration_ideas x = 0 y = 4 }
 	
 	add_to_tree = { group = expansion_ideas x = 1 y = 4 }
-	draw_line = { 0 4 1 4 }
+	draw_line_between = { exploration_ideas expansion_ideas }
 	
 	add_to_tree = { group = montane_ideas x = 1 y = 5 }
-	draw_line = { 0 4 1 5 }
+	draw_line_between = { exploration_ideas montane_ideas }
 	
 	add_to_tree = { group = smithing_ideas x = 2 y = 5 }
-	draw_line = { 1 5 2 5 }
+	draw_line_between = { montane_ideas smithing_ideas }
 	
-	add_to_tree = { group = weapon_quality_ideas x = 3 y = 5 }
-	draw_line = { 2 5 3 5 }
-	
-	add_to_tree = { group = armour_quality_ideas x = 3 y = 6 }
-	draw_line_between = { smithing_ideas armour_quality_ideas }
-	
-	#add_to_tree = { group = reclamation_ideas x = 2 y = 2 }
-	#draw_line = { 1 4 2 4 }
-	
-	#
-	# War Magic Ideas
-	#
-	add_to_tree = { group = restoration_ideas x = 0 y = 6 }
-	draw_line = { 1 6 0 6 }
-	
-	add_to_tree = { group = conjuration_ideas x = 2 y = 6 }
-	draw_line = { 1 6 2 6 }
-	
-	add_to_tree = { group = necromancy_ideas x = 3 y = 7 }
-	draw_line_between = { conjuration_ideas necromancy_ideas }
-	
-	add_to_tree = { group = war_magic_ideas x = 1 y = 6 }
-	
-	add_to_tree = { group = destruction_ideas x = 1 y = 7 }
-	draw_line = { 1 6 1 7 }
-	
-	add_to_tree = { group = alteration_ideas x = 0 y = 7 }
-	draw_line = { 1 6 0 7 }
-	draw_line = { 1 8 0 7 }
+	add_to_tree = { group = scouting_ideas x = 0 y = 5 }
+	draw_line_between = { exploration_ideas scouting_ideas }
 	
 	#
 	# Arcane Ideas
 	#
-	add_to_tree = { group = enchanting_ideas x = 2 y = 7 }
-	draw_line = { 1 8 2 7 }
-	
-	add_to_tree = { group = illusion_ideas x = 0 y = 8 }
-	draw_line = { 1 8 0 8 }
-	
 	add_to_tree = { group = arcane_ideas x = 1 y = 8 }
 	
+	add_to_tree = { group = enchanting_ideas x = 2 y = 7 }
+	draw_line_between = { arcane_ideas enchanting_ideas }
+	
+	add_to_tree = { group = illusion_ideas x = 0 y = 8 }
+	draw_line_between = { arcane_ideas illusion_ideas }
+	
 	add_to_tree = { group = mysticism_ideas x = 2 y = 8 }
-	draw_line = { 1 8 2 8 }
+	draw_line_between = { arcane_ideas mysticism_ideas }
+	
+	#
+	# War Magic Ideas
+	#
+	add_to_tree = { group = war_magic_ideas x = 1 y = 6 }
+	
+	add_to_tree = { group = restoration_ideas x = 0 y = 6 }
+	draw_line_between = { war_magic_ideas restoration_ideas }
+	
+	add_to_tree = { group = conjuration_ideas x = 2 y = 6 }
+	draw_line_between = { war_magic_ideas conjuration_ideas }
+	
+	add_to_tree = { group = necromancy_ideas x = 3 y = 7 }
+	draw_line_between = { conjuration_ideas necromancy_ideas }
+	
+	add_to_tree = { group = destruction_ideas x = 1 y = 7 }
+	draw_line_between = { war_magic_ideas destruction_ideas }
+	
+	add_to_tree = { group = alteration_ideas x = 0 y = 7 }
+	draw_line_between = { war_magic_ideas alteration_ideas }
+	draw_line_between = { arcane_ideas alteration_ideas }
 	
 	#
 	# Diplomatic Ideas
 	#
-	add_to_tree = { group = diplomatic_ideas x = 5 y = 8 }
+	add_to_tree = { group = diplomatic_ideas x = 4 y = 8 }
 	
-	add_to_tree = { group = prestigious_ideas x = 6 y = 8 }
+	add_to_tree = { group = prestigious_ideas x = 3 y = 8 }
 	draw_line_between = { diplomatic_ideas prestigious_ideas }
 	
-	add_to_tree = { group = relationship_ideas x = 5 y = 7 }
-	draw_line_between = { diplomatic_ideas relationship_ideas }
-	
-	add_to_tree = { group = influence_ideas x = 4 y = 8 }
+	add_to_tree = { group = influence_ideas x = 5 y = 8 }
 	draw_line_between = { diplomatic_ideas influence_ideas }
 	
-	add_to_tree = { group = feudal_ideas x = 4 y = 7 }
+	add_to_tree = { group = feudal_ideas x = 5 y = 7 }
 	draw_line_between = { influence_ideas feudal_ideas }
 	
-	add_to_tree = { group = decentralization_ideas x = 3 y = 8 }
+	add_to_tree = { group = decentralization_ideas x = 4 y = 7 }
 	draw_line_between = { influence_ideas decentralization_ideas }
 	
 	#
 	# Mercenary Ideas
 	#
-	add_to_tree = { group = mercenary_ideas x = 4 y = 6 }
+	add_to_tree = { group = mercenary_ideas x = 5 y = 6 }
 	
-	add_to_tree = { group = knightly_ideas x = 5 y = 6 }
+	add_to_tree = { group = knightly_ideas x = 6 y = 6 }
 	draw_line_between = { mercenary_ideas knightly_ideas }
 	draw_line_between = { feudal_ideas knightly_ideas }
 	
-	add_to_tree = { group = gladitorial_ideas x = 4 y = 5 }
+	add_to_tree = { group = gladitorial_ideas x = 4 y = 6 }
 	draw_line_between = { mercenary_ideas gladitorial_ideas }
 	
 	#
@@ -526,41 +519,41 @@ new named_effect create_idea_tree = {
 	draw_line_between = { innovativeness_ideas scholastic_ideas }
 	draw_line_between = { religious_ideas scholastic_ideas }
 	
-	add_to_tree = { group = philosophical_ideas x = 6 y = 5 }
+	add_to_tree = { group = philosophical_ideas x = 5 y = 5 }
 	draw_line_between = { religious_ideas philosophical_ideas }
 	
 	add_to_tree = { group = monastic_ideas x = 5 y = 4 }
 	draw_line_between = { religious_ideas monastic_ideas }
 	
-	add_to_tree = { group = crusader_ideas x = 5 y = 5 }
+	add_to_tree = { group = crusader_ideas x = 6 y = 5 }
 	draw_line_between = { religious_ideas crusader_ideas }
 	draw_line_between = { crusader_ideas knightly_ideas }
 	
 	#
 	# Strategic Ideas
 	#
-	add_to_tree = { group = guerilla_ideas x = 8 y = 6 }
-	draw_line = { 9 7 8 6 }
+	add_to_tree = { group = strategic_ideas x = 3 y = 4 }
 	
-	add_to_tree = { group = fortress_ideas x = 9 y = 6 }
-	draw_line = { 9 7 9 6 }
+	add_to_tree = { group = defensive_ideas x = 3 y = 3 }
+	draw_line_between = { strategic_ideas defensive_ideas }
 	
-	add_to_tree = { group = extended_campaign_ideas x = 7 y = 7 }
-	draw_line = { 8 8 7 7 }
+	add_to_tree = { group = offensive_ideas x = 3 y = 5 }
+	draw_line_between = { strategic_ideas offensive_ideas }
 	
-	add_to_tree = { group = general_staff_ideas x = 8 y = 7 }
-	draw_line = { 9 8 8 7 }
+	add_to_tree = { group = general_staff_ideas x = 4 y = 4 }
+	draw_line_between = { strategic_ideas general_staff_ideas }
 	
-	add_to_tree = { group = defensive_ideas x = 9 y = 7 }
-	draw_line = { 9 8 9 7 }
+	add_to_tree = { group = guerilla_ideas x = 2 y = 3 }
+	draw_line_between = { defensive_ideas guerilla_ideas }
 	
-	add_to_tree = { group = mobility_ideas x = 7 y = 8 }
-	draw_line = { 8 8 7 8 }
+	add_to_tree = { group = fortress_ideas x = 2 y = 4 }
+	draw_line_between = { defensive_ideas fortress_ideas }
 	
-	add_to_tree = { group = offensive_ideas x = 8 y = 8 }
-	draw_line = { 9 8 8 8 }
+	add_to_tree = { group = extended_campaign_ideas x = 4 y = 5 }
+	draw_line_between = { offensive_ideas extended_campaign_ideas }
 	
-	add_to_tree = { group = strategic_ideas x = 9 y = 8 }
+	add_to_tree = { group = mobility_ideas x = 3 y = 6 }
+	draw_line_between = { offensive_ideas mobility_ideas }
 	
 	IDEA_TREE_DRAWIO += `			</root>
 		</mxGraphModel>

@@ -1,0 +1,68 @@
+new idea_group scouting_ideas = {
+	name = "Scouting"
+	category = DIP
+	trigger = {
+		full_idea_group = exploration_ideas
+	}
+	ideas = {
+		{
+			name = "Ranger Outposts"
+			desc = "Establishing fortified ranger outposts and observation posts along our borders and in remote regions. These outposts serve as strategic bases for scouting missions, monitoring enemy movements, and safeguarding our territory against threats from within and without."
+			modifier = {
+				rival_border_fort_maintenance = -50%
+				army_line = 1
+			}
+		}
+		{
+			name = "Trailblazing"
+			desc = "The scouts of our company are expert trailblazers, capable of navigating the most challenging terrains with ease."
+			modifier = {
+				movement_speed = 10%
+				road_line = 1
+			}
+		}
+		{
+			name = "Explorer's Guild"
+			desc = "Founding an official guild dedicated to exploration and discovery attracts skilled adventurers and explorers to our cause, fostering a culture of exploration and innovation within our nation."
+			modifier = {
+				scouts_maintenance_efficiency = 20%
+				scouts_survival_efficiency = 20%
+			}
+		}
+		{
+			name = "Pioneer Spirit"
+			desc = "Instilling a pioneering spirit within our populace will encourage exploration, colonization, and innovation, driving our nation forward into new frontiers and ensuring our place as a leading force in the global arena."
+			modifier = {
+				colonist_placement_chance = 0.1
+				possible_dip_policy = 1
+			}
+		}
+		{
+			name = "Global Mapping Initiative"
+			desc = "Launching a comprehensive mapping initiative on a global scale, we aim to produce the most detailed and accurate maps ever seen, shedding light on the darkest corners of the world and cementing our legacy as pioneers of exploration."
+			modifier = {
+				survey_prestige_gain = 15
+			}
+		}
+		{
+			name = "Surveillance Techniques"
+			desc = "Effective surveillance requires more than just keen observation—it also requires the ability to interpret and analyze the information gathered. By investing in surveillance techniques, we can train our scouts to identify patterns, detect anomalies, and extract valuable insights from the data they collect."
+			modifier = {
+				spy_offence = 0.15
+				diplomats = 1
+			}
+		}
+		{
+			name = "Master Scouts"
+			desc = "A master scout is worth a dozen ordinary soldiers, capable of infiltrating enemy territory, gathering intelligence, and returning safely with their findings. By investing in the training and development of our scouts, we can create a corps of elite operatives who are unmatched in their ability to scout out the enemy and report back with vital information."
+			modifier = {
+				army_tradition = 0.5
+				prestige = 0.5
+			}
+		}
+	}
+	bonus = {
+		free_dip_policy = 1
+		range = 0.5
+	}
+}
