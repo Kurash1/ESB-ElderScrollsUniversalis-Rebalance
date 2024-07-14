@@ -1066,6 +1066,35 @@ new effect history_ruler_info = {
 		}
 	}
 }
+new effect history_consort_info = {
+	default = {
+		female = yes
+	}
+	args = {
+		name = text
+		dynasty = text
+		birth_date = string
+		death_date = string
+		female = bool
+		adm = int
+		dip = int
+		mil = int
+	}
+	transpile = {
+		args:birth_date = {
+			queen = {
+				name = args:name
+				dynasty = args:dynasty
+				birth_date = args:birth_date
+				death_date = args:death_date
+				adm = args:adm
+				dip = args:dip
+				mil = args:mil
+				female = args:female
+			}
+		}
+	}
+}
 hre_defines:emperor := windhelm
 new relation alliance = {
 	first = JRR
@@ -1219,6 +1248,75 @@ new country volunruud = {
 	adj = "Volunruud"
 	color = {
 		188 28 0
+	}
+	history += {
+		history_ruler_info = {
+			name = "Kvenel 'the Tongue'"
+			dynasty = "Volunnar"
+			birth_date = 2544.1.1
+			crowned = 2564.1.1
+			death_date = 2662.1.1
+			adm = 4
+			dip = 3
+			mil = 6
+			effect = {
+				add_ruler_personality = bold_fighter
+				add_ruler_personality = inspiring_leader
+				add_ruler_personality = strict
+				
+				queen = {
+					name = "Unknown"
+					dynasty = "Unknown"
+					birth_date = 2546.1.1
+					death_date = 2659.1.1
+					adm = 0
+					dip = 0
+					mil = 0
+					female = yes
+				}
+			}
+		}
+		history_ruler_info = {
+			name = "Unknown"
+			dynasty = "Volunnar"
+			birth_date = 2565.1.1
+			crowned = 2662.1.1
+			death_date = 2722.1.1
+			adm = 0
+			dip = 0
+			mil = 0
+		}
+		hire_advisor = {
+			type = treasurer
+			name = "Unknown"
+			skill = 3
+			cost_multiplier = 0
+			age = 22
+		}
+		hire_advisor = {
+			type = trader
+			name = "Unknown"
+			skill = 3
+			cost_multiplier = 0
+			age = 23
+		}
+		hire_advisor = {
+			type = army_reformer
+			name = "Haman Forgefire"
+			skill = 3
+			cost_multiplier = 0
+			age = 25
+		}
+		2564.1.1 = {
+			define_general = {
+				name = "Unknown Unknown"
+				shock = 5
+				fire = 2
+				manuever = 4
+				siege = 2
+				trait = tongue_personality
+			}
+		}
 	}
 	capital = volunruud
 }

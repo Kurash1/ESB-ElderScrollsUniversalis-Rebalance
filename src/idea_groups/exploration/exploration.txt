@@ -59,7 +59,4 @@ new idea_group exploration_ideas = {
 		trade_range_modifier = 0.5
 		merchants = 1
 	}
-	ai_will_do = {
-		factor = 1
-	}
 }

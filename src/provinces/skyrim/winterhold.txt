@@ -1,77 +1,168 @@
+/replace @h with hre=no#h
 new area kastav = {
 	name = "Kastav"
 	region = winterhold
 }
+new province imsifa = {
+	position = {
+		1925.000 2010.000 1925.000 2010.000 1925.000 2010.000 1925.000 2010.000 1925.000 2010.000 1925.000 2010.000 1925.000 2010.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = kastav
+	name = "Imsifa"
+	terrain = highlands
+	color = {
+		138 121 255
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = c_metals
+	
+		@history_owner = snow_veil
+	}
+}
+new province kastav = {
+	position = {
+		1905.000 2004.000 1905.000 2004.000 1905.000 2004.000 1905.000 2004.000 1905.000 2004.000 1905.000 2004.000 1905.000 2004.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = kastav
+	name = "Kastav"
+	terrain = highlands
+	color = {
+		159 209 200
+	}
+	history = {
+		center_of_trade = 1
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = potions
+	
+		is_city = yes
+		history_owner = bear_warriors
+	}
+}
+
 new area anthor = {
 	name = "Anthor"
 	region = winterhold
 }
+new province tildar = {
+	position = {
+		1878.000 2026.000 1878.000 2026.000 1878.000 2026.000 1878.000 2026.000 1878.000 2026.000 1878.000 2026.000 1878.000 2026.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = anthor
+	name = "Tildar"
+	terrain = highlands
+	color = {
+		182 167 198
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = stone
+		
+		@history_owner = anthor
+	}
+}
+new province njari = {
+	position = {
+		1895.000 2015.000 1895.000 2015.000 1895.000 2015.000 1895.000 2015.000 1895.000 2015.000 1895.000 2015.000 1895.000 2015.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = anthor
+	name = "Njari"
+	terrain = highlands
+	color = {
+		123 221 100
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = stone
+		
+		@history_owner = anthor
+	}
+}
+new province britara = {
+	position = {
+		1915.000 2020.000 1915.000 2020.000 1915.000 2020.000 1915.000 2020.000 1915.000 2020.000 1915.000 2020.000 1915.000 2020.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = anthor
+	name = "Britara"
+	terrain = highlands
+	color = {
+		188 103 240
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = stone
+	
+		@history_owner = anthor
+	}
+}
+new province anthor_peak = {
+	position = {
+		1902.000 2031.000 1902.000 2031.000 1902.000 2031.000 1902.000 2031.000 1902.000 2031.000 1902.000 2031.000 1902.000 2031.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = anthor
+	name = "Anthor Peak"
+	terrain = mountain
+	color = {
+		253 145 168
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = c_metals
+	
+		@history_owner = anthor
+	}
+}
+
 new area driftshade = {
 	name = "Driftshade"
-	region = winterhold
-}
-new area north_wayward = {
-	name = "North Wayward"
-	region = winterhold
-}
-new area alftand = {
-	name = "Alftand"
-	region = winterhold
-}
-new area saarthal = {
-	name = "Saarthal"
-	region = winterhold
-}
-new area sightless_hills = {
-	name = "Sightless Hills"
-	region = winterhold
-}
-new area winterhold = {
-	name = "Winterhold"
-	region = winterhold
-}
-new area whistling_mine = {
-	name = "Whistling Mine"
-	region = winterhold
-}
-new area stillborn_cave = {
-	name = "Stillborn Cave"
-	region = winterhold
-}
-new area yngvild = {
-	name = "Yngvild"
-	region = winterhold
-}
-new area pilgrims_coast = {
-	name = "Pilgrim's Coast"
-	region = winterhold
-}
-new area ysgramoors_tomb = {
-	name = "Ysgramoor's Tomb"
-	region = winterhold
-}
-new area iron_coast = {
-	name = "Iron Coast"
-	region = winterhold
-}
-new area skytemple = {
-	name = "Skytemple"
-	region = winterhold
-}
-new area snow_veil = {
-	name = "Snow Veil"
-	region = winterhold
-}
-new area bleak_coast = {
-	name = "Bleak Coast"
-	region = winterhold
-}
-new area japhets_folly = {
-	name = "Japhet's Folly"
-	region = winterhold
-}
-new area the_chill = {
-	name = "The Chill"
 	region = winterhold
 }
 new province snowpoint = {
@@ -121,251 +212,39 @@ new province frostflow = {
 		culture = winterholdian
 		hre = yes
 		history_trade_goods = fur
+		
 		history_owner = frost_flow
 	}
 }
-new province erdlaith = {
+new province driftshade = {
 	position = {
-		1920.000 2132.000 1920.000 2132.000 1920.000 2132.000 1928.000 2128.000 1920.000 2132.000 1920.000 2132.000 1920.000 2132.000
+		1820.000 2044.000 1820.000 2044.000 1820.000 2044.000 1820.000 2044.000 1820.000 2044.000 1820.000 2044.000 1820.000 2044.000
 	}
 	rotation = {
-		0.000 0.000 0.000 -1.047 0.000 0.000 0.000
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
 	}
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = the_chill
-	name = "Erdlaith"
-	terrain = coastline
+	terrain = mountain
+	area = driftshade
+	name = "Driftshade"
 	color = {
-		240 242 148
+		201 184 212
 	}
 	history = {
-		culture = winterholdian
 		religion = nordic_pantheon
+		culture = winterholdian
 		hre = yes
-		history_trade_goods = fish
+		history_trade_goods = wood
 		
-		history_owner = wave_crusher
+		history_owner = frost_flow
 	}
 }
-new province svangljot = {
-	position = {
-		1948.000 2138.000 1948.000 2138.000 1948.000 2138.000 1944.000 2133.000 1948.000 2138.000 1948.000 2138.000 1948.000 2138.000
-	}
-	rotation = {
-		0.000 0.000 0.000 1.309 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = the_chill
-	name = "Svangljot"
-	terrain = coastline
-	color = {
-		199 120 160
-	}
-	history = {
-		culture = winterholdian
-		religion = nordic_pantheon
-		hre = yes
-		history_trade_goods = fish
-	
-		history_owner = wave_crusher
-	}
-}
-new province serpent_stone = {
-	position = {
-		1963.000 2087.000 1963.000 2087.000 1963.000 2087.000 1968.000 2087.000 1963.000 2087.000 1963.000 2087.000 1963.000 2087.000
-	}
-	rotation = {
-		0.000 0.000 0.000 -0.873 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = japhets_folly
-	name = "Serpent Stone"
-	terrain = coastline
-	color = {
-		157 235 114
-	}
-	history = {
-		culture = winterholdian
-		religion = nordic_pantheon
-		hre = yes
-		quick_province_modifier = {
-			name = "Serpent Stone"
-			modifier = {
-				shock_damage = 5%
-			}
-		}
-		history_trade_goods = fish
-	
-		history_owner = wave_crusher
-	}
-}
-new province japhets_folly = {
-	position = {
-		1982.000 2103.000 1982.000 2103.000 1982.000 2103.000 1983.000 2100.000 1982.000 2103.000 1982.000 2103.000 1982.000 2103.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.698 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = japhets_folly
-	name = "Japhet's Folly"
-	terrain = coastline
-	color = {
-		211 232 162
-	}
-	history = {
-		center_of_trade = 1
-		culture = winterholdian
-		religion = nordic_pantheon
-		hre = yes
-		history_trade_goods = fish
-	
-		history_owner = wave_crusher
-	}
-}
-new province aegilgeth = {
-	position = {
-		1974.000 2024.000 1974.000 2024.000 1974.000 2024.000 1980.000 2022.000 1974.000 2024.000 1974.000 2024.000 1974.000 2024.000
-	}
-	rotation = {
-		0.000 0.000 0.000 -1.309 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = snow_veil
-	name = "Aegilgeth"
-	terrain = coastline
-	color = {
-		193 135 251
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = fish
-	
-		is_city = yes
-		history_owner = snow_veil
-	}
-}
-new province snow_veil_sanctum = {
-	position = {
-		1961.000 2030.000 1961.000 2030.000 1961.000 2030.000 1961.000 2030.000 1961.000 2030.000 1961.000 2030.000 1961.000 2030.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = snow_veil
-	name = "Snow Veil Sanctum"
-	terrain = hills
-	color = {
-		191 154 191
-	}
-	history = {
-		center_of_trade = 1
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = r_metals
-	
-		is_city = yes
-		history_owner = snow_veil
-	}
-}
-new province sonior = {
-	position = {
-		1933.000 2026.000 1933.000 2026.000 1933.000 2026.000 1933.000 2026.000 1933.000 2026.000 1933.000 2026.000 1933.000 2026.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = stillborn_cave
-	name = "Sonior"
-	terrain = hills
-	color = {
-		105 164 183
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = fur
-	
-		is_city = yes
-		history_owner = snow_veil
-	}
-}
-new province imsifa = {
-	position = {
-		1925.000 2010.000 1925.000 2010.000 1925.000 2010.000 1925.000 2010.000 1925.000 2010.000 1925.000 2010.000 1925.000 2010.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = kastav
-	name = "Imsifa"
-	terrain = highlands
-	color = {
-		138 121 255
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = c_metals
-	
-		is_city = yes
-		history_owner = snow_veil
-		57.1.1 = {
-			religion = nordic_pantheon
-			culture = winterholdian
-		}
-	}
-}
-new province kastav = {
-	position = {
-		1905.000 2004.000 1905.000 2004.000 1905.000 2004.000 1905.000 2004.000 1905.000 2004.000 1905.000 2004.000 1905.000 2004.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = kastav
-	name = "Kastav"
-	terrain = highlands
-	color = {
-		159 209 200
-	}
-	history = {
-		center_of_trade = 1
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = potions
-	
-		is_city = yes
-		history_owner = bear_warriors
-	}
+
+new area north_wayward = {
+	name = "North Wayward"
+	region = winterhold
 }
 new province matette = {
 	position = {
@@ -389,8 +268,7 @@ new province matette = {
 		hre = yes
 		history_trade_goods = fur
 	
-		is_city = no
-		history_owner = anthor
+		@history_owner = anthor
 	}
 }
 new province gwenara = {
@@ -415,13 +293,12 @@ new province gwenara = {
 		hre = yes
 		history_trade_goods = fur
 	
-		is_city = yes
-		history_owner = anthor
+		@history_owner = anthor
 	}
 }
-new province driftshade = {
+new province mabgritte = {
 	position = {
-		1820.000 2044.000 1820.000 2044.000 1820.000 2044.000 1820.000 2044.000 1820.000 2044.000 1820.000 2044.000 1820.000 2044.000
+		1865.000 2034.000 1865.000 2034.000 1865.000 2034.000 1865.000 2034.000 1865.000 2034.000 1865.000 2034.000 1865.000 2034.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
@@ -429,20 +306,563 @@ new province driftshade = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	terrain = mountain
-	area = driftshade
-	name = "Driftshade"
+	area = north_wayward
+	name = "Mabgritte"
+	terrain = highlands
 	color = {
-		201 184 212
+		136 100 152
 	}
 	history = {
 		religion = nordic_pantheon
 		culture = winterholdian
 		hre = yes
-		history_trade_goods = wood
+		history_trade_goods = fur
+	
+		@history_owner = anthor
+	}
+}
+
+new area alftand = {
+	name = "Alftand"
+	region = winterhold
+}
+new province joldli = {
+	position = {
+		1870.000 2052.000 1870.000 2052.000 1870.000 2052.000 1870.000 2052.000 1870.000 2052.000 1870.000 2052.000 1870.000 2052.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = alftand
+	name = "Joldli"
+	terrain = hills
+	color = {
+		146 138 197
+	}
+	history = {
+		hre = yes
+		history_trade_goods = fur
+		
+		religion = nordic_pantheon
+		culture = winterholdian
+		
+		@history_owner = saarthal
+	}
+}
+new province alftand = {
+	position = {
+		1857.000 2045.000 1857.000 2045.000 1857.000 2045.000 1857.000 2045.000 1857.000 2045.000 1857.000 2045.000 1857.000 2045.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = alftand
+	name = "Alftand"
+	terrain = hills
+	color = {
+		221 168 192
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = r_metals
+	
+		@history_owner = saarthal
+	}
+}
+new province fanais = {
+	position = {
+		1853.000 2056.000 1853.000 2056.000 1853.000 2056.000 1853.000 2056.000 1853.000 2056.000 1853.000 2056.000 1853.000 2056.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = alftand
+	name = "Fanais"
+	terrain = hills
+	color = {
+		223 166 152
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = fur
+	
+		@history_owner = saarthal
+	}
+}
+
+new area saarthal = {
+	name = "Saarthal"
+	region = winterhold
+}
+new province wind_break = {
+	position = {
+		1873.000 2079.000 1873.000 2079.000 1873.000 2079.000 1873.000 2079.000 1873.000 2079.000 1873.000 2079.000 1873.000 2079.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = saarthal
+	name = "Wind Break"
+	terrain = hills
+	color = {
+		217 128 217
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = fur
+	
+		@history_owner = blue_axe
+	}
+}
+new province saarthal = {
+	position = {
+		1867.000 2065.000 1867.000 2065.000 1867.000 2065.000 1867.000 2065.000 1867.000 2065.000 1867.000 2065.000 1867.000 2065.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = saarthal
+	name = "Saarthal"
+	terrain = hills
+	color = {
+		231 199 200
+	}
+	history = {
+		center_of_trade = 1
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = c_metals
+		@history_owner = saarthal
+	}
+}
+new province netvild = {
+	position = {
+		1880.000 2071.000 1880.000 2071.000 1880.000 2071.000 1880.000 2071.000 1880.000 2071.000 1880.000 2071.000 1880.000 2071.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = saarthal
+	name = "Netvild"
+	terrain = hills
+	color = {
+		208 181 192
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = fur
+	
+		@history_owner = saarthal
+	}
+}
+
+new area sightless_hills = {
+	name = "Sightless Hills"
+	region = winterhold
+}
+new province nimeclo = {
+	position = {
+		1880.000 2039.000 1880.000 2039.000 1880.000 2039.000 1880.000 2039.000 1880.000 2039.000 1880.000 2039.000 1880.000 2039.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = sightless_hills
+	name = "Nimeclo"
+	terrain = highlands
+	color = {
+		184 125 239
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		@history_owner = anthor
+		history_trade_goods = fur
+	}
+}
+new province sappika = {
+	position = {
+		1894.000 2046.000 1894.000 2046.000 1894.000 2046.000 1894.000 2046.000 1894.000 2046.000 1894.000 2046.000 1894.000 2046.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = sightless_hills
+	name = "Sappika"
+	terrain = highlands
+	color = {
+		189 173 251
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = fur
+	
+		@history_owner = anthor
+	}
+}
+new province helasine = {
+	position = {
+		1886.000 2057.000 1886.000 2057.000 1886.000 2057.000 1886.000 2057.000 1886.000 2057.000 1886.000 2057.000 1886.000 2057.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = sightless_hills
+	name = "Helasine"
+	terrain = highlands
+	color = {
+		146 153 231
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = fur
+	
+		@history_owner = saarthal
+	}
+}
+
+new area winterhold = {
+	name = "Winterhold"
+	region = winterhold
+}
+new province winterhold = {
+	position = {
+		1907.000 2065.000 1907.000 2065.000 1907.000 2065.000 1907.000 2065.000 1907.000 2065.000 1907.000 2065.000 1907.000 2065.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = winterhold
+	name = "Winterhold"
+	terrain = hills
+	color = {
+		238 125 199
+	}
+	history = {
+		center_of_trade = 1
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = cloth
+	
+		@history_owner = winterhold
+	}
+}
+new province danen = {
+	position = {
+		1921.000 2076.000 1921.000 2076.000 1921.000 2076.000 1921.000 2076.000 1921.000 2076.000 1921.000 2076.000 1921.000 2076.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = winterhold
+	name = "Danen"
+	terrain = hills
+	color = {
+		162 214 211
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = fur
+	
+		@history_owner = sky_temple
+	}
+}
+new province college_of_winterhold = {
+	position = {
+		1906.000 2077.000 1906.000 2077.000 1906.000 2077.000 1906.000 2077.000 1906.000 2077.000 1906.000 2077.000 1906.000 2077.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = winterhold
+	name = "College of Winterhold"
+	terrain = hills
+	color = {
+		121 227 201
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = mag_goods
+	
+		@history_owner = winterhold
+	}
+}
+
+new area whistling_mine = {
+	name = "Whistling Mine"
+	region = winterhold
+}
+new province journeymans_nook = {
+	position = {
+		1937.000 2051.000 1937.000 2051.000 1937.000 2051.000 1937.000 2051.000 1937.000 2051.000 1937.000 2051.000 1937.000 2051.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = whistling_mine
+	name = "Journeyman's Nook"
+	terrain = hills
+	color = {
+		150 144 167
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = fur
+	
+		@history_owner = winterhold
+	}
+}
+new province greiide = {
+	position = {
+		1915.000 2052.000 1915.000 2052.000 1915.000 2052.000 1915.000 2052.000 1915.000 2052.000 1915.000 2052.000 1915.000 2052.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = whistling_mine
+	name = "Greiide"
+	terrain = hills
+	color = {
+		183 147 232
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = fur
+	
+		@history_owner = winterhold
+	}
+}
+new province whistling_mine = {
+	position = {
+		1928.000 2041.000 1928.000 2041.000 1928.000 2041.000 1928.000 2041.000 1928.000 2041.000 1928.000 2041.000 1928.000 2041.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = whistling_mine
+	name = "Whistling Mine"
+	terrain = hills
+	color = {
+		221 144 171
+	}
+	history = {
+		center_of_trade = 1
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = c_metals
+	
+		@history_owner = winterhold
+	}
+}
+new province brylana = {
+	position = {
+		1923.000 2062.000 1923.000 2062.000 1923.000 2062.000 1923.000 2062.000 1923.000 2062.000 1923.000 2062.000 1923.000 2062.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = whistling_mine
+	name = "Brylana"
+	terrain = hills
+	color = {
+		179 192 128
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = fur
+	
+		@history_owner = winterhold
+	}
+}
+
+new area stillborn_cave = {
+	name = "Stillborn Cave"
+	region = winterhold
+}
+new province sonior = {
+	position = {
+		1933.000 2026.000 1933.000 2026.000 1933.000 2026.000 1933.000 2026.000 1933.000 2026.000 1933.000 2026.000 1933.000 2026.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = stillborn_cave
+	name = "Sonior"
+	terrain = hills
+	color = {
+		105 164 183
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = fur
+		
+		@history_owner = snow_veil
+	}
+}
+new province frabkning = {
+	position = {
+		1946.000 2024.000 1946.000 2024.000 1946.000 2024.000 1946.000 2024.000 1946.000 2024.000 1946.000 2024.000 1946.000 2024.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = stillborn_cave
+	name = "Frabkning"
+	terrain = hills
+	color = {
+		137 208 173
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = fur
+	
+		@history_owner = snow_veil
+	}
+}
+new province mavedolyn = {
+	position = {
+		1945.000 2038.000 1945.000 2038.000 1945.000 2038.000 1945.000 2038.000 1945.000 2038.000 1945.000 2038.000 1945.000 2038.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = stillborn_cave
+	name = "Mavedolyn"
+	terrain = hills
+	color = {
+		215 168 210
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = fur
+	
+		@history_owner = snow_veil
+	}
+}
+
+new area yngvild = {
+	name = "Yngvild"
+	region = winterhold
+}
+new province tower_stone = {
+	position = {
+		1852.000 2072.000 1852.000 2072.000 1852.000 2072.000 1852.500 2077.000 1852.000 2072.000 1852.000 2072.000 1852.000 2072.000
+	}
+	rotation = {
+		0.000 0.000 0.000 2.356 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = yngvild
+	name = "Tower Stone"
+	terrain = coastline
+	color = {
+		154 187 107
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		quick_province_modifier = {
+			name = "Tower Stone"
+			modifier = {
+				siege_ability = 10%
+			}
+		}
+		history_trade_goods = fish
 	
 		is_city = yes
-		history_owner = frost_flow
+		history_owner = yngvild
 	}
 }
 new province yngvild = {
@@ -468,7 +888,6 @@ new province yngvild = {
 		hre = yes
 		history_trade_goods = mag_goods
 	
-		is_city = no
 		history_owner = yngvild
 	}
 }
@@ -524,6 +943,11 @@ new province hobs_fall_cave = {
 		history_owner = yngvild
 	}
 }
+
+new area pilgrims_coast = {
+	name = "Pilgrim's Coast"
+	region = winterhold
+}
 new province aldievi = {
 	position = {
 		1862.000 2079.000 1862.000 2079.000 1862.000 2079.000 1859.000 2083.000 1862.000 2079.000 1862.000 2079.000 1862.000 2079.000
@@ -550,9 +974,9 @@ new province aldievi = {
 		history_owner = yngvild
 	}
 }
-new province tower_stone = {
+new province uthgke = {
 	position = {
-		1852.000 2072.000 1852.000 2072.000 1852.000 2072.000 1852.500 2077.000 1852.000 2072.000 1852.000 2072.000 1852.000 2072.000
+		1872.000 2101.000 1872.000 2101.000 1872.000 2101.000 1868.000 2102.000 1872.000 2101.000 1872.000 2101.000 1872.000 2101.000
 	}
 	rotation = {
 		0.000 0.000 0.000 2.356 0.000 0.000 0.000
@@ -560,31 +984,190 @@ new province tower_stone = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = yngvild
-	name = "Tower Stone"
+	area = pilgrims_coast
+	name = "Uthgke"
 	terrain = coastline
 	color = {
-		154 187 107
+		101 144 221
 	}
 	history = {
 		religion = nordic_pantheon
 		culture = winterholdian
 		hre = yes
-		quick_province_modifier = {
-			name = "Tower Stone"
-			modifier = {
-				siege_ability = 10%
-			}
+		history_trade_goods = fish
+	
+		is_city = yes
+		history_owner = blue_axe
+	}
+}
+new province pilgrims_coast = {
+	position = {
+		1872.000 2090.000 1872.000 2090.000 1872.000 2090.000 1865.500 2091.000 1872.000 2090.000 1872.000 2090.000 1872.000 2090.000
+	}
+	rotation = {
+		0.000 0.000 0.000 1.571 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = pilgrims_coast
+	name = "Pilgrim's Coast"
+	terrain = coastline
+	color = {
+		131 222 223
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = fish
+	
+		is_city = no
+		history_owner = blue_axe
+	}
+}
+new province thilrund = {
+	name = "Thilrund"
+    inherit = wrothgar_inherit
+    color = { 168 231 190 }
+	terrain = coastline
+	area = pilgrims_coast
+	history = {
+		culture = winterholdian
+		religion = nordic_pantheon
+		hre = yes
+		history_trade_goods = fish
+		
+		history_owner = whale_song
+	}
+	position={
+		1853.000 2118.000 1846.000 2121.000 1850.000 2120.000 1847.000 2117.000 1850.000 2119.000 1850.000 2119.000 1851.000 2119.000 
+	}
+	rotation={
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	}
+	height={
+		0.000 0.000 1.000 0.000 0.000 0.000 0.000 
+	}
+}
+
+new area ysgramoors_tomb = {
+	name = "Ysgramoor's Tomb"
+	region = winterhold
+}
+new province dwarf_valley = {
+	position = {
+		1897.000 2087.000 1897.000 2087.000 1897.000 2087.000 1897.000 2087.000 1897.000 2087.000 1897.000 2087.000 1897.000 2087.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = ysgramoors_tomb
+	name = "Dwarf Valley"
+	terrain = hills
+	color = {
+		217 142 205
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		@history_owner = blue_axe
+		history_trade_goods = c_metals
+	}
+}
+new province ysgramoors_tomb = {
+	position = {
+		1883.000 2095.000 1883.000 2095.000 1883.000 2095.000 1883.000 2095.000 1883.000 2095.000 1883.000 2095.000 1883.000 2095.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = ysgramoors_tomb
+	name = "Ysgramoor's Tomb"
+	terrain = highlands
+	color = {
+		123 249 122
+	}
+	history = {
+		center_of_trade = 1
+		culture = winterholdian
+		religion = nordic_pantheon
+		hre = yes
+		history_trade_goods = c_metals
+	
+		history_owner = blue_axe
+	}
+}
+new province njaddir = {
+	position = {
+		1887.000 2081.000 1887.000 2081.000 1887.000 2081.000 1887.000 2081.000 1887.000 2081.000 1887.000 2081.000 1887.000 2081.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = ysgramoors_tomb
+	name = "Njaddir"
+	terrain = hills
+	color = {
+		236 199 171
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = fur
+	
+		is_city = yes
+		@history_owner = blue_axe
+	}
+}
+
+new area iron_coast = {
+	name = "Iron Coast"
+	region = winterhold
+}
+new province mertlogi = {
+	position = {
+		1909.000 2102.000 1909.000 2102.000 1909.000 2102.000 1912.500 2106.500 1909.000 2102.000 1909.000 2102.000 1909.000 2102.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -2.356 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = iron_coast
+	name = "Mertlogi"
+	terrain = coastline
+	color = {
+		116 186 243
+	}
+	history = {
+		culture = winterholdian
+		religion = nordic_pantheon
+		hre = yes
+		history_trade_goods = fish
+	
+		is_city = no
+		history_owner = sky_temple
+		57.1.1 = {
+			is_city = yes
 		}
-		history_trade_goods = fish
-	
-		is_city = yes
-		history_owner = yngvild
 	}
 }
-new province joldli = {
+new province skytemple = {
 	position = {
-		1870.000 2052.000 1870.000 2052.000 1870.000 2052.000 1870.000 2052.000 1870.000 2052.000 1870.000 2052.000 1870.000 2052.000
+		1908.000 2090.000 1908.000 2090.000 1908.000 2090.000 1908.000 2090.000 1908.000 2090.000 1908.000 2090.000 1908.000 2090.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
@@ -592,191 +1175,11 @@ new province joldli = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = alftand
-	name = "Joldli"
+	area = iron_coast
+	name = "Skytemple"
 	terrain = hills
 	color = {
-		146 138 197
-	}
-	history = {
-		hre = yes
-		history_trade_goods = fur
-	
-		is_city = yes
-		religion = nordic_pantheon
-		culture = winterholdian
-		history_owner = saarthal
-	}
-}
-new province alftand = {
-	position = {
-		1857.000 2045.000 1857.000 2045.000 1857.000 2045.000 1857.000 2045.000 1857.000 2045.000 1857.000 2045.000 1857.000 2045.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = alftand
-	name = "Alftand"
-	terrain = hills
-	color = {
-		221 168 192
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = r_metals
-	
-		is_city = yes
-		history_owner = saarthal
-	}
-}
-new province fanais = {
-	position = {
-		1853.000 2056.000 1853.000 2056.000 1853.000 2056.000 1853.000 2056.000 1853.000 2056.000 1853.000 2056.000 1853.000 2056.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = alftand
-	name = "Fanais"
-	terrain = hills
-	color = {
-		223 166 152
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = fur
-	
-		is_city = no
-		history_owner = saarthal
-	}
-}
-new province mabgritte = {
-	position = {
-		1865.000 2034.000 1865.000 2034.000 1865.000 2034.000 1865.000 2034.000 1865.000 2034.000 1865.000 2034.000 1865.000 2034.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = north_wayward
-	name = "Mabgritte"
-	terrain = highlands
-	color = {
-		136 100 152
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = fur
-	
-		is_city = yes
-		history_owner = anthor
-	}
-}
-new province nimeclo = {
-	position = {
-		1880.000 2039.000 1880.000 2039.000 1880.000 2039.000 1880.000 2039.000 1880.000 2039.000 1880.000 2039.000 1880.000 2039.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = sightless_hills
-	name = "Nimeclo"
-	terrain = highlands
-	color = {
-		184 125 239
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		history_owner = anthor
-		hre = yes
-		history_trade_goods = fur
-	}
-}
-new province tildar = {
-	position = {
-		1878.000 2026.000 1878.000 2026.000 1878.000 2026.000 1878.000 2026.000 1878.000 2026.000 1878.000 2026.000 1878.000 2026.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = anthor
-	name = "Tildar"
-	terrain = highlands
-	color = {
-		182 167 198
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = stone
-	
-		is_city = yes
-		history_owner = anthor
-	}
-}
-new province njari = {
-	position = {
-		1895.000 2015.000 1895.000 2015.000 1895.000 2015.000 1895.000 2015.000 1895.000 2015.000 1895.000 2015.000 1895.000 2015.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = anthor
-	name = "Njari"
-	terrain = highlands
-	color = {
-		123 221 100
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = stone
-	
-		is_city = yes
-		history_owner = anthor
-	}
-}
-new province britara = {
-	position = {
-		1915.000 2020.000 1915.000 2020.000 1915.000 2020.000 1915.000 2020.000 1915.000 2020.000 1915.000 2020.000 1915.000 2020.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = anthor
-	name = "Britara"
-	terrain = highlands
-	color = {
-		188 103 240
+		106 133 102
 	}
 	history = {
 		religion = nordic_pantheon
@@ -785,479 +1188,65 @@ new province britara = {
 		history_trade_goods = stone
 	
 		is_city = no
-		history_owner = anthor
-	}
-}
-new province frabkning = {
-	position = {
-		1946.000 2024.000 1946.000 2024.000 1946.000 2024.000 1946.000 2024.000 1946.000 2024.000 1946.000 2024.000 1946.000 2024.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = stillborn_cave
-	name = "Frabkning"
-	terrain = hills
-	color = {
-		137 208 173
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = fur
-	
-		is_city = yes
-		history_owner = snow_veil
-	}
-}
-new province mavedolyn = {
-	position = {
-		1945.000 2038.000 1945.000 2038.000 1945.000 2038.000 1945.000 2038.000 1945.000 2038.000 1945.000 2038.000 1945.000 2038.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = stillborn_cave
-	name = "Mavedolyn"
-	terrain = hills
-	color = {
-		215 168 210
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = fur
-	
-		is_city = yes
-		history_owner = snow_veil
-	}
-}
-new province herkevi = {
-	position = {
-		1972.000 2040.000 1972.000 2040.000 1972.000 2040.000 1978.000 2042.000 1972.000 2040.000 1972.000 2040.000 1972.000 2040.000
-	}
-	rotation = {
-		0.000 0.000 0.000 -1.658 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = snow_veil
-	name = "Herkevi"
-	terrain = coastline
-	color = {
-		129 230 103
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = fish
-	
-		is_city = yes
-		history_owner = snow_veil
-	}
-}
-new province tekltla = {
-	position = {
-		1965.000 2055.000 1965.000 2055.000 1965.000 2055.000 1970.000 2059.000 1965.000 2055.000 1965.000 2055.000 1965.000 2055.000
-	}
-	rotation = {
-		0.000 0.000 0.000 -2.182 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = bleak_coast
-	name = "Tekltla"
-	terrain = coastline
-	color = {
-		215 148 135
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = fish
-	
-		is_city = yes
-		history_owner = bleak_coast
-	}
-}
-new province reydis = {
-	position = {
-		1955.000 2047.000 1955.000 2047.000 1955.000 2047.000 1955.000 2047.000 1955.000 2047.000 1955.000 2047.000 1955.000 2047.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = bleak_coast
-	name = "Reydis"
-	terrain = hills
-	color = {
-		243 138 222
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = stone
-	
-		is_city = yes
-		history_owner = bleak_coast
-	}
-}
-new province bleakcoast = {
-	position = {
-		1954.000 2071.000 1954.000 2071.000 1954.000 2071.000 1958.500 2069.000 1954.000 2071.000 1954.000 2071.000 1954.000 2071.000
-	}
-	rotation = {
-		0.000 0.000 0.000 -2.007 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = bleak_coast
-	name = "Bleakcoast"
-	terrain = coastline
-	color = {
-		204 126 112
-	}
-	history = {
-		center_of_trade = 1
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = fish
-	
-		is_city = yes
-		history_owner = bleak_coast
-	}
-}
-new province seraina = {
-	position = {
-		1947.000 2061.000 1947.000 2061.000 1947.000 2061.000 1947.000 2061.000 1947.000 2061.000 1947.000 2061.000 1947.000 2061.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = bleak_coast
-	terrain = grasslands
-	name = "Seraina"
-	color = {
-		193 242 121
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = c_metals
-	
-		is_city = yes
-		history_owner = bleak_coast
-	}
-}
-new province gormeki = {
-	position = {
-		1933.000 2070.000 1933.000 2070.000 1933.000 2070.000 1933.000 2070.000 1933.000 2070.000 1933.000 2070.000 1933.000 2070.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = bleak_coast
-	name = "Gormeki"
-	terrain = hills
-	color = {
-		165 206 100
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = fur
-	
-		is_city = yes
-		history_owner = bleak_coast
-	}
-}
-new province wreck_coast = {
-	position = {
-		1943.000 2080.000 1943.000 2080.000 1943.000 2080.000 1949.000 2085.000 1943.000 2080.000 1943.000 2080.000 1943.000 2080.000
-	}
-	rotation = {
-		0.000 0.000 0.000 -2.007 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = bleak_coast
-	name = "Wreck Coast"
-	terrain = coastline
-	color = {
-		146 109 183
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = fish
-	
-		is_city = yes
-		history_owner = bleak_coast
-	}
-}
-new province journeymans_nook = {
-	position = {
-		1937.000 2051.000 1937.000 2051.000 1937.000 2051.000 1937.000 2051.000 1937.000 2051.000 1937.000 2051.000 1937.000 2051.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = whistling_mine
-	name = "Journeyman's Nook"
-	terrain = hills
-	color = {
-		150 144 167
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = fur
-	
-		is_city = yes
-		history_owner = winterhold
-	}
-}
-new province greiide = {
-	position = {
-		1915.000 2052.000 1915.000 2052.000 1915.000 2052.000 1915.000 2052.000 1915.000 2052.000 1915.000 2052.000 1915.000 2052.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = whistling_mine
-	name = "Greiide"
-	terrain = hills
-	color = {
-		183 147 232
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = fur
-	
-		is_city = yes
-		history_owner = winterhold
-	}
-}
-new province whistling_mine = {
-	position = {
-		1928.000 2041.000 1928.000 2041.000 1928.000 2041.000 1928.000 2041.000 1928.000 2041.000 1928.000 2041.000 1928.000 2041.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = whistling_mine
-	name = "Whistling Mine"
-	terrain = hills
-	color = {
-		221 144 171
-	}
-	history = {
-		center_of_trade = 1
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = c_metals
-	
-		is_city = yes
-		history_owner = winterhold
-	}
-}
-new province anthor_peak = {
-	position = {
-		1902.000 2031.000 1902.000 2031.000 1902.000 2031.000 1902.000 2031.000 1902.000 2031.000 1902.000 2031.000 1902.000 2031.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = anthor
-	name = "Anthor Peak"
-	terrain = mountain
-	color = {
-		253 145 168
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = c_metals
-	
-		is_city = yes
-		history_owner = anthor
-	}
-}
-new province sappika = {
-	position = {
-		1894.000 2046.000 1894.000 2046.000 1894.000 2046.000 1894.000 2046.000 1894.000 2046.000 1894.000 2046.000 1894.000 2046.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = sightless_hills
-	name = "Sappika"
-	terrain = highlands
-	color = {
-		189 173 251
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = fur
-	
-		is_city = yes
-		history_owner = anthor
-	}
-}
-new province brylana = {
-	position = {
-		1923.000 2062.000 1923.000 2062.000 1923.000 2062.000 1923.000 2062.000 1923.000 2062.000 1923.000 2062.000 1923.000 2062.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = whistling_mine
-	name = "Brylana"
-	terrain = hills
-	color = {
-		179 192 128
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = fur
-	
-		is_city = yes
-		history_owner = winterhold
-	}
-}
-new province winterhold = {
-	position = {
-		1907.000 2065.000 1907.000 2065.000 1907.000 2065.000 1907.000 2065.000 1907.000 2065.000 1907.000 2065.000 1907.000 2065.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = winterhold
-	name = "Winterhold"
-	terrain = hills
-	color = {
-		238 125 199
-	}
-	history = {
-		center_of_trade = 1
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = cloth
-	
-		is_city = yes
-		history_owner = winterhold
-	}
-}
-new province danen = {
-	position = {
-		1921.000 2076.000 1921.000 2076.000 1921.000 2076.000 1921.000 2076.000 1921.000 2076.000 1921.000 2076.000 1921.000 2076.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = winterhold
-	name = "Danen"
-	terrain = hills
-	color = {
-		162 214 211
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = fur
-	
-		is_city = yes
 		history_owner = sky_temple
 	}
 }
-new province college_of_winterhold = {
+new province drifold = {
 	position = {
-		1906.000 2077.000 1906.000 2077.000 1906.000 2077.000 1906.000 2077.000 1906.000 2077.000 1906.000 2077.000 1906.000 2077.000
+		1896.000 2101.000 1896.000 2101.000 1896.000 2101.000 1894.000 2106.500 1896.000 2101.000 1896.000 2101.000 1896.000 2101.000
 	}
 	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+		0.000 0.000 0.000 2.705 0.000 0.000 0.000
 	}
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = winterhold
-	name = "College of Winterhold"
-	terrain = hills
+	area = iron_coast
+	name = "Drifold"
+	terrain = coastline
 	color = {
-		121 227 201
+		145 180 182
 	}
 	history = {
 		religion = nordic_pantheon
 		culture = winterholdian
 		hre = yes
-		history_trade_goods = mag_goods
+		history_trade_goods = fish
 	
 		is_city = yes
-		history_owner = winterhold
+		history_owner = blue_axe
 	}
+}
+new province lilva = {
+	position = {
+		1882.000 2107.000 1882.000 2107.000 1882.000 2107.000 1880.000 2110.000 1882.000 2107.000 1882.000 2107.000 1882.000 2107.000
+	}
+	rotation = {
+		0.000 0.000 0.000 3.840 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = iron_coast
+	name = "Lilva"
+	terrain = coastline
+	color = {
+		226 192 250
+	}
+	history = {
+		culture = winterholdian
+		religion = nordic_pantheon
+		hre = yes
+		history_trade_goods = fish
+	
+		is_city = no
+		history_owner = blue_axe
+	}
+}
+
+new area skytemple = {
+	name = "Skytemple"
+	region = winterhold
 }
 new province bittegho = {
 	position = {
@@ -1335,38 +1324,39 @@ new province lydihild = {
 		is_city = yes
 	}
 }
-new province mertlogi = {
+
+new area snow_veil = {
+	name = "Snow Veil"
+	region = winterhold
+}
+new province aegilgeth = {
 	position = {
-		1909.000 2102.000 1909.000 2102.000 1909.000 2102.000 1912.500 2106.500 1909.000 2102.000 1909.000 2102.000 1909.000 2102.000
+		1974.000 2024.000 1974.000 2024.000 1974.000 2024.000 1980.000 2022.000 1974.000 2024.000 1974.000 2024.000 1974.000 2024.000
 	}
 	rotation = {
-		0.000 0.000 0.000 -2.356 0.000 0.000 0.000
+		0.000 0.000 0.000 -1.309 0.000 0.000 0.000
 	}
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = iron_coast
-	name = "Mertlogi"
+	area = snow_veil
+	name = "Aegilgeth"
 	terrain = coastline
 	color = {
-		116 186 243
+		193 135 251
 	}
 	history = {
-		culture = winterholdian
 		religion = nordic_pantheon
+		culture = winterholdian
 		hre = yes
 		history_trade_goods = fish
 	
-		is_city = no
-		history_owner = sky_temple
-		57.1.1 = {
-			is_city = yes
-		}
+		history_owner = snow_veil
 	}
 }
-new province skytemple = {
+new province snow_veil_sanctum = {
 	position = {
-		1908.000 2090.000 1908.000 2090.000 1908.000 2090.000 1908.000 2090.000 1908.000 2090.000 1908.000 2090.000 1908.000 2090.000
+		1961.000 2030.000 1961.000 2030.000 1961.000 2030.000 1961.000 2030.000 1961.000 2030.000 1961.000 2030.000 1961.000 2030.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
@@ -1374,11 +1364,93 @@ new province skytemple = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = iron_coast
-	name = "Skytemple"
+	area = snow_veil
+	name = "Snow Veil Sanctum"
 	terrain = hills
 	color = {
-		106 133 102
+		191 154 191
+	}
+	history = {
+		center_of_trade = 1
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = r_metals
+	
+		history_owner = snow_veil
+	}
+}
+new province herkevi = {
+	position = {
+		1972.000 2040.000 1972.000 2040.000 1972.000 2040.000 1978.000 2042.000 1972.000 2040.000 1972.000 2040.000 1972.000 2040.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -1.658 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = snow_veil
+	name = "Herkevi"
+	terrain = coastline
+	color = {
+		129 230 103
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = fish
+	
+		history_owner = snow_veil
+	}
+}
+
+new area bleak_coast = {
+	name = "Bleak Coast"
+	region = winterhold
+}
+new province tekltla = {
+	position = {
+		1965.000 2055.000 1965.000 2055.000 1965.000 2055.000 1970.000 2059.000 1965.000 2055.000 1965.000 2055.000 1965.000 2055.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -2.182 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = bleak_coast
+	name = "Tekltla"
+	terrain = coastline
+	color = {
+		215 148 135
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = fish
+	
+		is_city = yes
+		history_owner = bleak_coast
+	}
+}
+new province reydis = {
+	position = {
+		1955.000 2047.000 1955.000 2047.000 1955.000 2047.000 1955.000 2047.000 1955.000 2047.000 1955.000 2047.000 1955.000 2047.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = bleak_coast
+	name = "Reydis"
+	terrain = hills
+	color = {
+		243 138 222
 	}
 	history = {
 		religion = nordic_pantheon
@@ -1386,168 +1458,39 @@ new province skytemple = {
 		hre = yes
 		history_trade_goods = stone
 	
-		is_city = no
-		history_owner = sky_temple
+		@history_owner = bleak_coast
 	}
 }
-new province dwarf_valley = {
+new province bleakcoast = {
 	position = {
-		1897.000 2087.000 1897.000 2087.000 1897.000 2087.000 1897.000 2087.000 1897.000 2087.000 1897.000 2087.000 1897.000 2087.000
+		1954.000 2071.000 1954.000 2071.000 1954.000 2071.000 1958.500 2069.000 1954.000 2071.000 1954.000 2071.000 1954.000 2071.000
 	}
 	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+		0.000 0.000 0.000 -2.007 0.000 0.000 0.000
 	}
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = ysgramoors_tomb
-	name = "Dwarf Valley"
-	terrain = hills
-	color = {
-		217 142 205
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		history_owner = blue_axe
-		hre = yes
-		history_trade_goods = c_metals
-	}
-}
-new province drifold = {
-	position = {
-		1896.000 2101.000 1896.000 2101.000 1896.000 2101.000 1894.000 2106.500 1896.000 2101.000 1896.000 2101.000 1896.000 2101.000
-	}
-	rotation = {
-		0.000 0.000 0.000 2.705 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = iron_coast
-	name = "Drifold"
+	area = bleak_coast
+	name = "Bleakcoast"
 	terrain = coastline
 	color = {
-		145 180 182
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = fish
-	
-		is_city = yes
-		history_owner = blue_axe
-	}
-}
-new province ysgramoors_tomb = {
-	position = {
-		1883.000 2095.000 1883.000 2095.000 1883.000 2095.000 1883.000 2095.000 1883.000 2095.000 1883.000 2095.000 1883.000 2095.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = ysgramoors_tomb
-	name = "Ysgramoor's Tomb"
-	terrain = highlands
-	color = {
-		123 249 122
+		204 126 112
 	}
 	history = {
 		center_of_trade = 1
-		culture = winterholdian
-		religion = nordic_pantheon
-		hre = yes
-		history_trade_goods = c_metals
-	
-		is_city = no
-		history_owner = blue_axe
-	}
-}
-new province lilva = {
-	position = {
-		1882.000 2107.000 1882.000 2107.000 1882.000 2107.000 1880.000 2110.000 1882.000 2107.000 1882.000 2107.000 1882.000 2107.000
-	}
-	rotation = {
-		0.000 0.000 0.000 3.840 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = iron_coast
-	name = "Lilva"
-	terrain = coastline
-	color = {
-		226 192 250
-	}
-	history = {
-		culture = winterholdian
-		religion = nordic_pantheon
-		hre = yes
-		history_trade_goods = fish
-	
-		is_city = no
-		history_owner = blue_axe
-	}
-}
-new province uthgke = {
-	position = {
-		1872.000 2101.000 1872.000 2101.000 1872.000 2101.000 1868.000 2102.000 1872.000 2101.000 1872.000 2101.000 1872.000 2101.000
-	}
-	rotation = {
-		0.000 0.000 0.000 2.356 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = pilgrims_coast
-	name = "Uthgke"
-	terrain = coastline
-	color = {
-		101 144 221
-	}
-	history = {
 		religion = nordic_pantheon
 		culture = winterholdian
 		hre = yes
 		history_trade_goods = fish
 	
 		is_city = yes
-		history_owner = blue_axe
+		history_owner = bleak_coast
 	}
 }
-new province pilgrims_coast = {
+new province seraina = {
 	position = {
-		1872.000 2090.000 1872.000 2090.000 1872.000 2090.000 1865.500 2091.000 1872.000 2090.000 1872.000 2090.000 1872.000 2090.000
-	}
-	rotation = {
-		0.000 0.000 0.000 1.571 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = pilgrims_coast
-	name = "Pilgrim's Coast"
-	terrain = coastline
-	color = {
-		131 222 223
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = fish
-	
-		is_city = no
-		history_owner = blue_axe
-	}
-}
-new province wind_break = {
-	position = {
-		1873.000 2079.000 1873.000 2079.000 1873.000 2079.000 1873.000 2079.000 1873.000 2079.000 1873.000 2079.000 1873.000 2079.000
+		1947.000 2061.000 1947.000 2061.000 1947.000 2061.000 1947.000 2061.000 1947.000 2061.000 1947.000 2061.000 1947.000 2061.000
 	}
 	rotation = {
 		0.000 0.000 0.000 0.000 0.000 0.000 0.000
@@ -1555,11 +1498,36 @@ new province wind_break = {
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = saarthal
-	name = "Wind Break"
+	area = bleak_coast
+	terrain = grasslands
+	name = "Seraina"
+	color = {
+		193 242 121
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = c_metals
+	
+		@history_owner = bleak_coast
+	}
+}
+new province gormeki = {
+	position = {
+		1933.000 2070.000 1933.000 2070.000 1933.000 2070.000 1933.000 2070.000 1933.000 2070.000 1933.000 2070.000 1933.000 2070.000
+	}
+	rotation = {
+		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = bleak_coast
+	name = "Gormeki"
 	terrain = hills
 	color = {
-		217 128 217
+		165 206 100
 	}
 	history = {
 		religion = nordic_pantheon
@@ -1567,140 +1535,150 @@ new province wind_break = {
 		hre = yes
 		history_trade_goods = fur
 	
-		is_city = no
-		history_owner = blue_axe
-		57.1.1 = {
-			is_city = no
+		@history_owner = bleak_coast
+	}
+}
+new province wreck_coast = {
+	position = {
+		1943.000 2080.000 1943.000 2080.000 1943.000 2080.000 1949.000 2085.000 1943.000 2080.000 1943.000 2080.000 1943.000 2080.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -2.007 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = bleak_coast
+	name = "Wreck Coast"
+	terrain = coastline
+	color = {
+		146 109 183
+	}
+	history = {
+		religion = nordic_pantheon
+		culture = winterholdian
+		hre = yes
+		history_trade_goods = fish
+	
+		is_city = yes
+		history_owner = bleak_coast
+	}
+}
+
+new area japhets_folly = {
+	name = "Japhet's Folly"
+	region = winterhold
+}
+new province serpent_stone = {
+	position = {
+		1963.000 2087.000 1963.000 2087.000 1963.000 2087.000 1968.000 2087.000 1963.000 2087.000 1963.000 2087.000 1963.000 2087.000
+	}
+	rotation = {
+		0.000 0.000 0.000 -0.873 0.000 0.000 0.000
+	}
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = japhets_folly
+	name = "Serpent Stone"
+	terrain = coastline
+	color = {
+		157 235 114
+	}
+	history = {
+		culture = winterholdian
+		religion = nordic_pantheon
+		hre = yes
+		quick_province_modifier = {
+			name = "Serpent Stone"
+			modifier = {
+				shock_damage = 5%
+			}
 		}
-	}
-}
-new province njaddir = {
-	position = {
-		1887.000 2081.000 1887.000 2081.000 1887.000 2081.000 1887.000 2081.000 1887.000 2081.000 1887.000 2081.000 1887.000 2081.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = ysgramoors_tomb
-	name = "Njaddir"
-	terrain = hills
-	color = {
-		236 199 171
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = fur
+		history_trade_goods = fish
 	
-		is_city = yes
-		history_owner = blue_axe
+		history_owner = wave_crusher
 	}
 }
-new province saarthal = {
+new province japhets_folly = {
 	position = {
-		1867.000 2065.000 1867.000 2065.000 1867.000 2065.000 1867.000 2065.000 1867.000 2065.000 1867.000 2065.000 1867.000 2065.000
+		1982.000 2103.000 1982.000 2103.000 1982.000 2103.000 1983.000 2100.000 1982.000 2103.000 1982.000 2103.000 1982.000 2103.000
 	}
 	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+		0.000 0.000 0.000 0.698 0.000 0.000 0.000
 	}
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = saarthal
-	name = "Saarthal"
-	terrain = hills
+	area = japhets_folly
+	name = "Japhet's Folly"
+	terrain = coastline
 	color = {
-		231 199 200
+		211 232 162
 	}
 	history = {
 		center_of_trade = 1
-		history_owner = saarthal
-		religion = nordic_pantheon
 		culture = winterholdian
+		religion = nordic_pantheon
 		hre = yes
-		history_trade_goods = c_metals
+		history_trade_goods = fish
 	
-		is_city = yes
+		history_owner = wave_crusher
 	}
 }
-new province netvild = {
+
+new area the_chill = {
+	name = "The Chill"
+	region = winterhold
+}
+new province erdlaith = {
 	position = {
-		1880.000 2071.000 1880.000 2071.000 1880.000 2071.000 1880.000 2071.000 1880.000 2071.000 1880.000 2071.000 1880.000 2071.000
+		1920.000 2132.000 1920.000 2132.000 1920.000 2132.000 1928.000 2128.000 1920.000 2132.000 1920.000 2132.000 1920.000 2132.000
 	}
 	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
+		0.000 0.000 0.000 -1.047 0.000 0.000 0.000
 	}
 	height = {
 		0.365 0.365 0.365 0.365 0.365 0.365 0.365
 	}
-	area = saarthal
-	name = "Netvild"
-	terrain = hills
-	color = {
-		208 181 192
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = fur
-	
-		is_city = no
-		history_owner = saarthal
-	}
-}
-new province helasine = {
-	position = {
-		1886.000 2057.000 1886.000 2057.000 1886.000 2057.000 1886.000 2057.000 1886.000 2057.000 1886.000 2057.000 1886.000 2057.000
-	}
-	rotation = {
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000
-	}
-	height = {
-		0.365 0.365 0.365 0.365 0.365 0.365 0.365
-	}
-	area = sightless_hills
-	name = "Helasine"
-	terrain = highlands
-	color = {
-		146 153 231
-	}
-	history = {
-		religion = nordic_pantheon
-		culture = winterholdian
-		hre = yes
-		history_trade_goods = fur
-	
-		is_city = yes
-		history_owner = saarthal
-	}
-}
-new province thilrund = {
-	name = "Thilrund"
-    inherit = wrothgar_inherit
-    color = { 168 231 190 }
+	area = the_chill
+	name = "Erdlaith"
 	terrain = coastline
-	area = pilgrims_coast
+	color = {
+		240 242 148
+	}
 	history = {
 		culture = winterholdian
 		religion = nordic_pantheon
 		hre = yes
 		history_trade_goods = fish
 		
-		history_owner = whale_song
+		history_owner = wave_crusher
 	}
-	position={
-		1853.000 2118.000 1846.000 2121.000 1850.000 2120.000 1847.000 2117.000 1850.000 2119.000 1850.000 2119.000 1851.000 2119.000 
+}
+new province svangljot = {
+	position = {
+		1948.000 2138.000 1948.000 2138.000 1948.000 2138.000 1944.000 2133.000 1948.000 2138.000 1948.000 2138.000 1948.000 2138.000
 	}
-	rotation={
-		0.000 0.000 0.000 0.000 0.000 0.000 0.000 
+	rotation = {
+		0.000 0.000 0.000 1.309 0.000 0.000 0.000
 	}
-	height={
-		0.000 0.000 1.000 0.000 0.000 0.000 0.000 
+	height = {
+		0.365 0.365 0.365 0.365 0.365 0.365 0.365
+	}
+	area = the_chill
+	name = "Svangljot"
+	terrain = coastline
+	color = {
+		199 120 160
+	}
+	history = {
+		culture = winterholdian
+		religion = nordic_pantheon
+		hre = yes
+		history_trade_goods = fish
+	
+		history_owner = wave_crusher
 	}
 }
 

@@ -108,6 +108,34 @@ new effect starting_ruler = {
 		}
 	}
 }
+new effect starting_consort = {
+	default = {
+		female = yes
+	}
+	args = {
+		name = text
+		dynasty = text
+		adm = int
+		dip = int
+		mil = int
+		age = int
+		female = bool
+	}
+	transpile = {
+		queen = {
+			name = args:name
+			monarch_name = args:name
+			dynasty = args:dynasty
+			adm = args:adm
+			dip = args:dip
+			mil = args:mil
+			birth_date = `{(2568-args:age)}.1.1`
+			death_date = `{(2568-args:age+100)}.1.1`
+			female = args:female
+			claim = 100
+		}
+	}
+}
 new effect starting_heir = {
 	args = {
 		name = text
