@@ -1,0 +1,91 @@
+new spell_header mysticism = {
+	name = "Mysticism"
+}
+new spell dispel = {
+	name = "Dispel"
+	type = country
+	cost = 100
+	trigger = {
+		has_idea = mysticism_ideas_1
+		OR = {
+			foreach $ in event_modifiers [$:id:starts_with = "spell_"] {
+				has_country_modifier = $
+			}
+		}
+	}
+	on_cast = {
+		foreach $ in event_modifiers [$:id:starts_with = "spell_"] {
+			remove_country_modifier = $
+		}
+	}
+}
+
+new idea_group mysticism_ideas = {
+	name = "Mysticism"
+	category = ADM
+	trigger = {
+		full_idea_group = arcane_ideas
+	}
+	ideas = {
+		{
+			name = "Follow Traditions"
+			desc = "Our rulers are known to follow and respect our traditions setting an example for all our people. "
+			modifier = {
+				legitimacy = 0.5
+				republican_tradition = 0.5
+				devotion = 0.5
+				horde_unity = 0.5
+				meritocracy = 0.5
+				global_unrest = -2
+			}
+		}
+		{
+			name = "The Old Ways"
+			desc = "Those who follow in the footsteps of our ancestors are treated better than most. "
+			modifier = {
+				missionaries = 1
+			}
+		}
+		{
+			name = "The Unenlightened"
+			desc = "We need to be patient with those that are yet to see the true path and guide them accordingly"
+			modifier = {
+				tolerance_heathen = 2
+				tolerance_heretic = 2
+			}
+		}
+		{
+			name = "Secure Traditions"
+			desc = "Our grasp on our beliefs are strong enough that a few dissidents won't undermine our rule. "
+			modifier = {
+				religious_unity = 0.15
+			}
+		}
+		{
+			name = "Stable Society"
+			desc = "We should help our society feel safe and secure under our umbrella as a tame society is easier to rule. "
+			modifier = {
+				stability_cost_modifier = -0.15
+				global_unrest = -1
+			}
+		}
+		{
+			name = "Educated Preachers"
+			desc = "Our preachers and clerics are well-spoken and articulate making it easier for people to see the true light. "
+			modifier = {
+				global_missionary_strength = 0.03
+			}
+		}
+		{
+			name = "Humble Life"
+			desc = "A place to eat, drink, sleep and a couple of gold coins for the road is all our missionaries ask for in return for spreading our gospel."
+			modifier = {
+				missionary_maintenance_cost = -0.25
+				tolerance_own = 1
+			}
+		}
+	}
+	bonus = {
+		enforce_religion_cost = -0.5
+	}
+}

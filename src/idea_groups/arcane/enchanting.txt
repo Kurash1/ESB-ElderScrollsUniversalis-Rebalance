@@ -1,0 +1,64 @@
+new idea_group enchanting_ideas = {
+	name = "Enchanting"
+	category = DIP
+	trigger = {
+		full_idea_group = arcane_ideas
+	}
+	ideas = {
+		{
+			name = "Royal Artifacts"
+			desc = "Our rulers must use magical items worthy of their position and cement their rule with them. "
+			modifier = {
+				legitimacy = 1
+				republican_tradition = 0.5
+				devotion = 1
+				horde_unity = 1
+			}
+		}
+		{
+			name = "Enchanted Infrastructure"
+			desc = "By enchanting crucial parts of our infrastructure we can make grandiose cities much faster. "
+			modifier = {
+				road_line = 1
+			}
+		}
+		{
+			name = "Animated Services"
+			desc = "Enchanted brooms, quills and other various mundane items allow the lives of our people too much more productive. "
+			modifier = {
+				state_maintenance_modifier = -0.15
+			}
+		}
+		{
+			name = "Enchanted Tools"
+			desc = "Well crafted tools have a very high impact on manufacturing items, well crafted and enchanted tools give us an unparalleled edge in technological advance. "
+			modifier = {
+				production_line = 1
+			}
+		}
+		{
+			name = "Enchanted Weaponry"
+			desc = "The weapons of our soldiers all carry basic enchantments to make them more effective in combat. "
+			modifier = {
+				shock_damage = 0.05
+			}
+		}
+		{
+			name = "Grand Artifacts"
+			desc = "The artifacts our people can produce are famed and known through all of Nirn. "
+			modifier = {
+				prestige = 0.5
+			}
+		}
+		{
+			name = "Trading Enchanted Items"
+			desc = "Selling our enchanted items to other peoples allow us to dramatically boost our trade presence in the world "
+			modifier = {
+				global_trade_power = 0.25
+			}
+		}
+	}
+	bonus = {
+		development_cost = -0.1
+	}
+}

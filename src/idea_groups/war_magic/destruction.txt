@@ -1,0 +1,109 @@
+new spell_header destruction = {
+	name = "Destruction"
+}
+new spell frost_storm = {
+	name = "Frost Storm"
+	type = province
+	cost = 100
+	on_cast = {
+		add_devastation = 50
+	}
+}
+new spell siege_magic = {
+	name = "Fireball"
+	type = siege
+	cost = 100
+	on_cast = {
+		change_siege = 5
+	}
+}
+new spell chain_lightning = {
+	name = "Chain Lightning"
+	type = province
+	cost = 150
+	on_cast = {
+		kill_units = {
+			who = enemy
+			amount = 5
+		}
+	}
+}
+new spell elemental_runes = {
+	name = "Elemental Runes"
+	type = province
+	cost = 50
+	on_cast = {
+		quick_province_modifier = {
+			name = "Elemental Runes"
+			modifier = {
+				max_attrition = 2
+				local_hostile_attrition = 2
+			}
+		}
+	}
+}
+
+new idea_group destruction_ideas = {
+	name = "Destruction"
+	category = MIL
+	trigger = {
+		full_idea_group = war_magic_ideas
+	}
+	ideas = {
+		{
+			name = "Elite Battlemages"
+			desc = "Our most skilled mages should lead our armies into battle and show them how it's done. "
+			modifier = {
+				leader_land_fire = 1
+				leader_land_manuever = 1
+			}
+		}
+		{
+			name = "Incineration"
+			desc = "Our destruction mages can rein down fireballs upon the ranks of our enemies burning several men to a crisp with each cast. "
+			modifier = {
+				fire_damage = 5%
+			}
+		}
+		{
+			name = "Arcane Admirals"
+			desc = "We all know the effectiveness of cannons but what if our admirals are the actual cannons of our navy? "
+			modifier = {
+				leader_naval_fire = 1
+				leader_naval_manuever = 1
+			}
+		}
+		{
+			name = "Ice Ballista"
+			desc = "By conjuring major ice spikes and hurling them at a fort we can quickly breach its defences"
+			modifier = {
+				artillery_levels_available_vs_fort = 2
+				siege_ability = 10%
+			}
+		}
+		{
+			name = "Storm Conjuration"
+			desc = "Our best mages stay in the back ranks channelling the most destructive magic they can muster on their foes "
+			modifier = {
+				artillery_power = 10%
+			}
+		}
+		{
+			name = "Unimpeded Mages"
+			desc = "If well protected our mages are surely going make the enemy regret their existence. "
+			modifier = {
+				backrow_artillery_damage = 20%
+			}
+		}
+		{
+			name = "Destroy the Dissidents"
+			desc = "Every time a revolt is brewing we send out a team of capable mages who make short work of any dissidents, sometimes burning entire villages to the ground."
+			modifier = {
+				harsh_treatment_cost = -20%
+			}
+		}
+	}
+	bonus = {
+		siege_ability = 20%
+	}
+}

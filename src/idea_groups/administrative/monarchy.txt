@@ -1,0 +1,68 @@
+new idea_group monarchy_ideas = {
+	name = "Monarchy"
+	category = ADM
+	trigger = {
+		full_idea_group = state_administration_ideas
+		government = monarchy
+	}
+	ideas = {
+		{
+			name = "Noble Family Ties"
+			desc = "Our family ties with the high nobility will tighten our right to rule."
+			modifier = {
+				legitimacy = 1
+			}
+		}
+		{
+			name = "Dynastic Politics"
+			desc = "We will keep our dynasty alive at all costs."
+			modifier = {
+				heir_chance = 0.5
+				monthly_heir_claim_increase = 0.05
+			}
+		}
+		{
+			name = "Local Nobility"
+			desc = "The nobility know they are better than common people and will give their loyalty to those who are worthy. If we confirm their privileges, they will remember our largess and be more resistant to the inducements of foreign powers."
+			modifier = {
+				yearly_corruption = -0.03
+				global_spy_defence = 0.15
+			}
+		}
+		{
+			name = "Noble Knights"
+			desc = "Supporting cavalry requires an economic system that produces a large number of surplus horses. If we were to guarantee the privileges of our noble class, not only would they be much happier - they would do much of the work to produce the needed horses. Our court fool described it as service guarantees serfs."
+			modifier = {
+				cavalry_cost = -0.15
+				cavalry_power = 0.15
+			}
+		}
+		{
+			name = "Increase of Crown Authority"
+			desc = "Increasing the crown authority will make it easier for us to govern the realm."
+			modifier = {
+				yearly_absolutism = 0.5
+			}
+		}
+		{
+			name = "International Nobility"
+			desc = "International relations are a tricky business. Some say that the merchant class who are used to dealing with foreigners are best for this. Those who say this ignore the kindred ties that our noble families have established through the years. These ties will help our cause diplomatically."
+			modifier = {
+				improve_relation_modifier = 0.15
+				diplomatic_reputation = 1
+			}
+		}
+		{
+			name = "Local Militia"
+			desc = "Our nobility will muster men to form militias when it comes to defending the homeland."
+			modifier = {
+				global_manpower_modifier = 0.25
+			}
+		}
+	}
+	bonus = {
+		vassal_income = 0.25
+		vassal_forcelimit_bonus = 0.25
+		reduced_liberty_desire = 15
+	}
+}

@@ -1,0 +1,65 @@
+new idea_group exploration_ideas = {
+	name = "Exploration"
+	category = DIP
+	ideas = {
+		{
+			name = "Quest for Tamriel"
+			desc = "Tamriel is a vast place and we only know very little about it. We must find out what there is to learn."
+			modifier = {
+				may_explore = yes
+			}
+		}
+		{
+			name = "That which is below"
+			desc = "There are relics and ruins of ages long past beneath our feet. The earlier we uncover their ancient knowledge the better."
+			modifier = {
+				global_expedition_speed = 0.15
+			}
+		}
+		{
+			name = "Honored Adventures"
+			desc = "Adventuring is a perilous task with huge risk. We must honour the brave souls who dare take up those perils."
+			modifier = {
+				prestige_on_expedition_completion = 10
+			}
+		}
+		{
+			name = "Map the Unknown"
+			desc = "Cartographers are a necessity on any expedition. We must count them among our ranks."
+			modifier = {
+				survey_speed = 0.5
+			}
+		}
+		{
+			name = "Explorer's Guild"
+			desc = "By establishing a proper guild for exploration we can minimize both the risks and maximize the rewards of any given expedition."
+			modifier = {
+				global_expedition_progress = 0.25
+			}
+		}
+		{
+			name = "Dedicated Scouting Corps"
+			desc = "With a dedicated scouting organisation we can find new resources far more efficiently than our competitors."
+			modifier = {
+				global_trade_goods_size_modifier = 0.1
+				survey_experience_gain = 0.1
+			}
+		}
+		{
+			name = "A song to remember"
+			desc = "The heroic deeds of our brave explorers must not be forgotten. They shall be remembered by song for eons to come."
+			modifier = {
+				prestige = 0.5
+				monthly_splendor = 1
+			}
+		}
+	}
+	bonus = {
+		range = 0.5
+		trade_range_modifier = 0.5
+		merchants = 1
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}

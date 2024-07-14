@@ -1,0 +1,150 @@
+new spell_header conjuration = {
+	name = "Conjuration"
+}
+new spell bound_weapons = {
+	name = "Bound Weapons"
+	type = country
+	cost = 200
+	trigger = {
+		has_idea = conjuration_ideas_1
+		NOT->has_country_modifier = spell_bound_weapons
+	}
+	on_cast = {
+		quick_country_modifier = {
+			name = "Bound Weaponry for Soldiers"
+			id = spell_bound_weapons
+			years = 5
+			modifier = {
+				fire_damage = 0.2
+				shock_damage = 0.2
+			}
+		}
+	}
+}
+new spell dremora_general = {
+	name = "Dremora General"
+	type = country
+	cost = 150
+	scaled = no
+	trigger = {
+		has_idea = conjuration_ideas_1
+		NOT->has_country_modifier = spell_daedra_pact
+	}
+	on_cast = {
+		quick_country_modifier = {
+			name = "Made a Daedric Pact"
+			id = spell_daedra_pact
+			years = 10
+			modifier = {
+				diplomatic_reputation = -1
+				global_unrest = 1
+			}
+		}
+		
+		create_general = {
+			tradition = 100
+			add_shock = 2
+			culture = dremora
+		}
+	}
+}
+new spell summon_fortress = {
+	name = "Summon Fortress"
+	type = province
+	cost = 100
+	scaled = no
+	trigger = {
+		has_idea = conjuration_ideas_1
+		event_target:spell_target->NOT->has_country_modifier = spell_fort
+	}
+	on_cast = {
+		event_target:spell_target->quick_country_modifier = {
+			name = "Magical Fortress"
+			id = spell_fort
+			years = 10
+			modifier = {
+				fort_level = 2
+			}
+		}
+	}
+}
+new spell conjure_forces = {
+	name = "Conjure Forces"
+	type = country
+	cost = 100
+	scaled = no
+	trigger = {
+		has_idea = conjuration_ideas_1
+	}
+	on_cast = {
+		add_manpower = 5
+	}
+}
+
+new idea_group conjuration_ideas = {
+	name = "Conjuration"
+	category = MIL
+	trigger = {
+		full_idea_group = war_magic_ideas
+	}
+	ideas = {
+		{
+			name = "Conjuration Magic"
+			desc = "Conjuration magic is the art of summoning creatures or items from another plane. It is one of the six colleges of Magic. It has been practiced for centuries by witch covens and wizards throughout Tamriel. Clan Direnni's sorcerers were some of the first to formalize the rituals, chants, and incantations used to open a connection with the plane of Oblivion, many of which are still standard centuries later. This school can be used to summon a wide range of daedric creatures, weapons and armor."
+			modifier = {
+				spells_known = 4
+			}
+			effect = {
+				new_custom_tooltip = "Unlocks §YBound Weapons§! Spell
+Unlocks §YDremora General§! Spell
+Unlocks §YSummon Fortress§! Spell
+Unlocks §YSummon Forces§! Spell"
+			}
+		}
+		{
+			name = "Bound Weapons"
+			desc = "By using purely magical weapons conjured by our best mages regular soldiers can have access to legendary weapons."
+			modifier = {
+				shock_damage = 10%
+			}
+		}
+		{
+			name = "Soul Trapping"
+			desc = "By training our mages in the art of soul trapping we can increase our overall finances and the capacity to field even more conjurers. "
+			modifier = {
+				global_tax_modifier = 10%
+			}
+		}
+		{
+			name = "Daedric Conjuring"
+			desc = "Summoning daedra is a very dangerous venture thus only the very best may attempt it, regardless the conjured beings are far more powerful than the regular soldier. "
+			modifier = {
+				discipline = 5%
+			}
+		}
+		{
+			name = "Conjurers Army"
+			desc = "By allowing conjurers to join the front lines we can  make it so that every conjurer counts as twice the soldier."
+			modifier = {
+				land_forcelimit_modifier = 10%
+			}
+		}
+		{
+			name = "Master Conjuration"
+			desc = "Repeatedly resummoning things without running out of Magicka is a thing only the very elite of conjurers is capable of. "
+			modifier = {
+				global_manpower_modifier = 10%
+			}
+		}
+		{
+			name = "Animated Sentries"
+			desc = "Simple familiars while harmless can be excellent scouts."
+			modifier = {
+				defensiveness = 10%
+			}
+		}
+	}
+	bonus = {
+		manpower_recovery_speed = 15%
+	}
+}

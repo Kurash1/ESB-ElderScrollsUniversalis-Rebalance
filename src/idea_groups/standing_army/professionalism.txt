@@ -1,0 +1,62 @@
+new idea_group professionalism_ideas = {
+	name = "Professionalism"
+	category = MIL
+	trigger = {
+		full_idea_group = quality_ideas
+	}
+	ideas = {
+		{
+			name = "Well Maintained Army"
+			desc = ""
+			modifier = {
+				army_line = 1
+			}
+		}
+		{
+			name = "Drilled Troops"
+			desc = ""
+			modifier = {
+				drill_gain_modifier = 0.5
+			}
+		}
+		{
+			name = "Long Memory"
+			desc = ""
+			modifier = {
+				drill_decay_modifier = -0.5
+			}
+		}
+		{
+			name = "Professional Sieges"
+			desc = ""
+			modifier = {
+				reinforce_cost_modifier = 0.25
+				siege_ability = 0.25
+			}
+		}
+		{
+			name = "Eyes on the front"
+			desc = ""
+			modifier = {
+				reserves_organisation = 0.5
+			}
+		}
+		{
+			name = "Trained Discipline"
+			desc = ""
+			modifier = {
+				discipline = 0.05
+			}
+		}
+		{
+			name = "Well known army"
+			desc = ""
+			modifier = {
+				land_morale_constant = 0.1
+			}
+		}
+	}
+	bonus = {
+		yearly_army_professionalism = 0.005
+	}
+}

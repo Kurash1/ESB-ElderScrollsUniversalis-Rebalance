@@ -1,0 +1,62 @@
+new idea_group absolutistic_ideas = {
+	name = "Absolutistic"
+	category = ADM
+	trigger = {
+		full_idea_group = state_administration_ideas
+	}
+	ideas = {
+		{
+			name = "Centralization"
+			desc = "By centralizing power in the hands of the monarch, we can streamline decision-making and reduce the influence of local elites. This will increase our administrative efficiency and allow us to better serve the needs of our people."
+			modifier = {
+				tax_line = 1
+			}
+		}
+		{
+			name = "Absolute Sovereignty"
+			desc = "As the absolute sovereign of our nation, the monarch's word is law. By emphasizing this absolute sovereignty, we can more effectively enforce our will and keep potential rivals in check."
+			modifier = {
+				global_autonomy = -0.05
+			}
+		}
+		{
+			name = "Absolutist Tradition"
+			desc = "A long tradition of absolutism has shaped the culture and institutions of our nation. By embracing this tradition, we can strengthen the bond between the monarch and the people, and foster a sense of national unity."
+			modifier = {
+				yearly_absolutism = 0.5
+			}
+		}
+		{
+			name = "Strong Arm of the Monarch"
+			desc = "The monarch must be willing to use force to maintain order and ensure obedience. By using harsh measures to punish dissent and rebellion, we can demonstrate our strength and deter future challenges to our authority."
+			modifier = {
+				harsh_treatment_cost = -0.25
+			}
+		}
+		{
+			name = "Divine Right of Kings"
+			desc = "The monarch is the chosen instrument of divine will, endowed with the right to rule by the divine creator. By invoking the divine right of kings, we can justify our rule and rally the people to our cause."
+			modifier = {
+				max_absolutism = 20
+				global_unrest = 2
+			}
+		}
+		{
+			name = "Absolutist Negotiation"
+			desc = "As an absolutist state, we must be firm in our demands and unyielding in negotiations. By taking a hard line in negotiations, we can more effectively assert our interests and secure favorable terms."
+			modifier = {
+				unjustified_demands = -0.1
+			}
+		}
+		{
+			name = "Absolutist Discipline"
+			desc = "An absolutist state depends on strict discipline and obedience. By emphasizing discipline in our military and government, we can maintain order and ensure the smooth functioning of our society."
+			modifier = {
+				discipline = 0.05
+			}
+		}
+	}
+	bonus = {
+		administrative_efficiency = 0.05
+	}
+}

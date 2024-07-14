@@ -1,0 +1,63 @@
+new idea_group trade_ideas = {
+	name = "Trade"
+	category = DIP
+	ideas = {
+		{
+			name = "Shrewd Commerce Practice"
+			desc = "Allows us to make use of more refined trading practices giving our merchants the upper hand over our competitors."
+			modifier = {
+				global_trade_power = 20%
+			}
+		}
+		{
+			name = "Free Trade"
+			desc = "The current merchant families are seeking to ensure that trade privileges remain their exclusive preserve, but we are unwilling to do so and will allow the growth of the merchant class."
+			modifier = {
+				merchants = 1
+				trade_line = 1
+			}
+		}
+		{
+			name = "Merchant Adventures"
+			desc = "Allows us to make use of the numerous traders lusting for fame and fortune, eager to offer their services for a chance to search and explore new trade routes."
+			modifier = {
+				trade_range_modifier = 30%
+				trade_line = 1
+			}
+		}
+		{
+			name = "National Trade Policy"
+			desc = "By adopting a national trade policy, we can strengthen our commercial presence and increase the effectiveness of our trade."
+			modifier = {
+				trade_efficiency = 10%
+			}
+		}
+		{
+			name = "Overseas Merchants"
+			desc = "To grow trade we need to extend the rights of citizenship to people who live abroad, support our trade and are of the right social class."
+			modifier = {
+				merchants = 1
+			}
+		}
+		{
+			name = "Trade Manipulation"
+			desc = "At those key checkpoints where trade could go one way or another, the ability to gain an edge there is key to the growth of our trade income."
+			modifier = {
+				trade_steering = 25%
+			}
+		}
+		{
+			name = "Fast Negotiations"
+			desc = "Sometimes the key to closing a trade deal is to be quickest. We need to ensure that our merchants can have the deal done."
+			modifier = {
+				merchants = 1
+			}
+		}
+	}
+	bonus = {
+		global_own_trade_power = 10%
+	}
+	ai_chance = {
+		factor = 5
+	}
+}

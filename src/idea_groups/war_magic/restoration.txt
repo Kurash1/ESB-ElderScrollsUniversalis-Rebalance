@@ -1,0 +1,62 @@
+new idea_group restoration_ideas = {
+	name = "Restoration"
+	category = MIL
+	trigger = {
+		full_idea_group = war_magic_ideas
+	}
+	ideas = {
+		{
+			name = "Dedicated Healers"
+			desc = "We have dedicated healers to the local populace to alleviate the ravages of war."
+			modifier = {
+				war_exhaustion = -0.05
+			}
+		}
+		{
+			name = "Grand Healing"
+			desc = " Our healers are capable of healing many men back to full strength thus making them able to rejoin the army."
+			modifier = {
+				manpower_recovery_speed = 0.1
+			}
+		}
+		{
+			name = "Auxiliary Healers"
+			desc = " We have healers amid our army constantly aiding those who have fallen getting back on their feet."
+			modifier = {
+				reinforce_speed = 0.15
+			}
+		}
+		{
+			name = "Benevolent Healers"
+			desc = "After subjecting a country to our will, we send them our best restoration mages to mend the wounds of their people. "
+			modifier = {
+				reduced_liberty_desire = 7.5
+			}
+		}
+		{
+			name = "Heal the Citizenry"
+			desc = "After forcefully conquering new land we must ensure that those who got hurt trying to defend it are treated as equals by our medics. "
+			modifier = {
+				years_of_nationalism = -5
+			}
+		}
+		{
+			name = "Greater Wards"
+			desc = "Before great combat starts our mages will shield as many soldiers as they can with protective barriers. "
+			modifier = {
+				fire_damage_received = -0.025
+				shock_damage_received = -0.025
+			}
+		}
+		{
+			name = "Restorative Court Mages"
+			desc = "Having a dedicated healer for the ruler of the nation is crucial to ensure his rule will be long and prosper."
+			modifier = {
+				heir_chance = 0.15
+			}
+		}
+	}
+	bonus = {
+		diplomatic_reputation = 1
+	}
+}

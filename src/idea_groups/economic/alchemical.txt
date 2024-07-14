@@ -1,0 +1,67 @@
+new idea_group alchemical_ideas = {
+	name = "Alchemical"
+	category = ADM
+	trigger = {
+		full_idea_group = economic_ideas
+	}
+	ideas = {
+		{
+			name = "Physician"
+			desc = "We always have a large supply of healing potions readily available for all those who need them "
+			modifier = {
+				reinforce_cost_modifier = -0.5
+				reinforce_speed = 0.5
+			}
+		}
+		{
+			name = "Poisoners"
+			desc = "Poisoning our enemies' food, our blades, their water and even the environment themselves, will make quick work of those who dared step into our lands."
+			modifier = {
+				hostile_attrition = 1.5
+				siege_ability = 0.15
+			}
+		}
+		{
+			name = "Benefactor"
+			desc = "By carefully creating our potions and eliminating any possible drawbacks they have will prevent our nation from crumbling. "
+			modifier = {
+				stability_cost_modifier = -0.25
+				war_exhaustion = -0.03
+			}
+		}
+		{
+			name = "Experimenter"
+			desc = "To create new potions we have to try all possible combinations. "
+			modifier = {
+				reform_progress_growth = 0.1
+			}
+		}
+		{
+			name = "Green Thumb"
+			desc = "To make the best potions we need to scour our land for all ingredients it offers. "
+			modifier = {
+				goods_line = 1
+			}
+		}
+		{
+			name = "Snakeblood"
+			desc = "Poisoning is so common amongst our people that we have developed a natural resistance to it. "
+			modifier = {
+				land_attrition = -0.15
+				global_spy_defence = 0.15
+			}
+		}
+		{
+			name = "Purity"
+			desc = "As well as with our alchemical creations our society must remain pure. "
+			modifier = {
+				tolerance_own = 1
+				culture_conversion_cost = -0.15
+				yearly_corruption = -0.05
+			}
+		}
+	}
+	bonus = {
+		global_trade_goods_size_modifier = 0.15
+	}
+}

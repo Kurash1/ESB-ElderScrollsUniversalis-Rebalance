@@ -1,0 +1,61 @@
+new idea_group influence_ideas = {
+	name = "Influence"
+	category = DIP
+	trigger = {
+		full_idea_group = diplomatic_ideas
+	}
+	ideas = {
+		{
+			name = "Tribute System"
+			desc = "Strengthen our income by establishing a formalized system of yearly tribute from our vassals."
+			modifier = {
+				vassal_income = 0.25
+			}
+		}
+		{
+			name = "Establish Branches"
+			desc = "Inheritance can be a tricky business. By clearly defining roles and rights for our dynasty through Branches, we can ensure a more stable line of succession."
+			modifier = {
+				reduced_liberty_desire = 15
+			}
+		}
+		{
+			name = "Integrated Elites"
+			desc = "By bringing the ruling elite of our subject nations into our government we can smoothen the process of integrating their provinces significantly."
+			modifier = {
+				diplomatic_annexation_cost = -0.25
+			}
+		}
+		{
+			name = "State Propaganda"
+			desc = "As with a man, a nation's reputation is everything, and the establishment of an official propaganda service will ensure our good name is not smeared by the lies of our enemies."
+			modifier = {
+				diplomatic_upkeep = 1
+			}
+		}
+		{
+			name = "Diplomatic Influence"
+			desc = "By focusing on Diplomacy we can increase the power we wield on the diplomatic stage. This power can gain us many friends."
+			modifier = {
+				diplomatic_reputation = 2
+			}
+		}
+		{
+			name = "Postal Service"
+			desc = "With communications being what they are, it is difficult to ensure that our diplomatic dispatches arrive in a timely fashion. Creating a network of post offices and courier rest stops will make it easier for our voice to be heard in distant lands."
+			modifier = {
+				road_line = 1
+			}
+		}
+		{
+			name = "Marcher Lords"
+			desc = "By granting considerable autonomy to vassals in border regions, these 'Marcher Lords' will be able to raise large military armies to support us in our wars."
+			modifier = {
+				vassal_forcelimit_bonus = 1
+			}
+		}
+	}
+	bonus = {
+		unjustified_demands = -0.5
+	}
+}

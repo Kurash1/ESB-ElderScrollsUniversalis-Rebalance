@@ -1,0 +1,62 @@
+new idea_group prestigious_ideas = {
+	name = "Prestigious"
+	category = DIP
+	trigger = {
+		full_idea_group = diplomatic_ideas
+	}
+	ideas = {
+		{
+			name = "Glorious combat"
+			desc = "The glory of combat is not to be neglected. We shall prevail terra marique."
+			modifier = {
+				prestige_from_land = 0.25
+				prestige_from_naval = 0.25
+			}
+		}
+		{
+			name = "National epos"
+			desc = "By writing down our past deeds as a nation we can demonstrate that they actually occured."
+			modifier = {
+				prestige_decay = -0.01
+			}
+		}
+		{
+			name = "Glorious court"
+			desc = "Our Court is so glorious everyone is astonished by it."
+			modifier = {
+				monthly_splendor = 2
+			}
+		}
+		{
+			name = "Consort advisors"
+			desc = "By employing advisors our consort knows from their old home we can minimise spending."
+			modifier = {
+				advisor_cost = -0.15
+			}
+		}
+		{
+			name = "State parties"
+			desc = "We invite even foreign rulers and diplomats to our state banquetts and balls."
+			modifier = {
+				improve_relation_modifier = 0.15
+			}
+		}
+		{
+			name = "Cuius regio eius religio"
+			desc = "There should only be only those religions in our realm our rulers approve of."
+			modifier = {
+				prestige_per_development_from_conversion = 0.5
+			}
+		}
+		{
+			name = "Grande lobby"
+			desc = "Our royal lobby is so grandeous it inspires nothing but awe."
+			modifier = {
+				prestige = 1.5
+			}
+		}
+	}
+	bonus = {
+		land_morale_constant = 0.10
+	}
+}

@@ -1,0 +1,62 @@
+new idea_group treasury_ideas = {
+	name = "Treasury"
+	category = ADM
+	trigger = {
+		full_idea_group = economic_ideas
+	}
+	ideas = {
+		{
+			name = "National Bank"
+			desc = "We are getting better rates. For now."
+			modifier = {
+				interest = -1
+			}
+		}
+		{
+			name = "Mintful Mind"
+			desc = "Why is conjuring more money creating inflation."
+			modifier = {
+				inflation_reduction = -0.03
+				global_tax_modifier = 0.25
+			}
+		}
+		{
+			name = "Careful Selection"
+			desc = "Loyal servants will be rewarded. Corrupters will be mining iron."
+			modifier = {
+				advisor_cost = -0.10
+			}
+		}
+		{
+			name = "Simple Tax System"
+			desc = "Everyone is happier if they dont get to sign 50 papers."
+			modifier = {
+				tax_line = 1
+			}
+		}
+		{
+			name = "International Currency"
+			desc = "Stable currency controls the money flow."
+			modifier = {
+				inflation_action_cost = -0.15
+			}
+		}
+		{
+			name = "Rich Coffers"
+			desc = "Everyone wants our treasure."
+			modifier = {
+				prestige = 0.5
+			}
+		}
+		{
+			name = "Septim Diplomacy"
+			desc = "We can part with some of it to create friendly buffer zone. And harm our rivals by supporting their enemies."
+			modifier = {
+				improve_relation_modifier = 0.25
+			}
+		}
+	}
+	bonus = {
+		diplomatic_reputation = 1
+	}
+}

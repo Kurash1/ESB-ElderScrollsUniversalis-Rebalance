@@ -1,0 +1,67 @@
+new idea_group mobility_ideas = {
+	name = "Mobility"
+	category = MIL
+	trigger = {
+		full_idea_group = offensive_ideas
+	}
+	ideas = {
+		{
+			name = "Athletics"
+			desc = "Rigorous physical training ensures our soldiers have both speed and stamina to be where they need to be faster. "
+			modifier = {
+				movement_speed = 0.1
+				road_line = 1
+			}
+		}
+		{
+			name = "Acrobatics"
+			desc = " With strict training on deftness and agility our soldiers have learned how to evade many hazards and thus avoid many meaningless deaths."
+			modifier = {
+				land_attrition = -0.25
+			}
+		}
+		{
+			name = "Sneak"
+			desc = "Moving silently and unseen is an art our people must cultivate as sabotage and scouting are essential for warfare. "
+			modifier = {
+				spy_offence = 0.25
+			}
+		}
+		{
+			name = "Master Acrobats"
+			desc = "Our increased focus on acrobatics allowed our generals to better conduct our army to outmanoeuvre the enemy. "
+			modifier = {
+				leader_land_manuever = 1
+				leader_naval_manuever = 1
+			}
+		}
+		{
+			name = "Master Athletics"
+			desc = "Our hardy sailors have learned to push beyond their limits to quickly reposition our ships when the need arises. "
+			modifier = {
+				reinforce_speed = 0.25
+				reinforce_cost_modifier = -0.25
+			}
+		}
+		{
+			name = "Deft Riders"
+			desc = "The betterment of one's self allowed our cavalry to not only flank our enemies but to also be less of a burden on the battlefield."
+			modifier = {
+				cavalry_flanking = 0.25
+				cavalry_power = 0.1
+				trade_line = 1
+			}
+		}
+		{
+			name = "Deft Hands"
+			desc = "Lockpicking and increased stamina allow our soldiers to quickly find and loot all valuables in a province before leaving. "
+			modifier = {
+				loot_amount = 0.25
+				available_province_loot = 0.5
+			}
+		}
+	}
+	bonus = {
+		reserves_organisation = 0.5
+	}
+}

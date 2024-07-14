@@ -1,0 +1,61 @@
+new idea_group smithing_ideas = {
+	name = "Smithing"
+	category = MIL
+	trigger = {
+		full_idea_group = montane_ideas
+	}
+	ideas = {
+		{
+			name = "Dragonbone Armor"
+			desc = "The armour made from the bone of dragons or even materials like obsidian is impenetrable and offers our soldiers massive protection. "
+			modifier = {
+				shock_damage_received = -0.025
+			}
+		}
+		{
+			name = "Dragonbone Shields"
+			desc = "The resistance of shields allow us complete protection from arrows and other small projectiles."
+			modifier = {
+				fire_damage_received = -0.025
+			}
+		}
+		{
+			name = "Dragonbone Weapons"
+			desc = "The quality of swords and axes ensures that regular armour will be sliced like warm butter. "
+			modifier = {
+				shock_damage = 0.025
+			}
+		}
+		{
+			name = "Dragonbone Bows"
+			desc = "Using Bosmeri quality craftsmanship on our bows makes our archers walking ballistics. "
+			modifier = {
+				fire_damage = 0.025
+			}
+		}
+		{
+			name = "Armor Factories"
+			desc = "To support the war machine we need to make sure we always have the necessary materials readily available. "
+			modifier = {
+				production_line = 1
+			}
+		}
+		{
+			name = "Battle-Smiths"
+			desc = " We have the best smiths in our army ensuring our soldiers are always well equipped."
+			modifier = {
+				global_supply_limit_modifier = 0.25
+			}
+		}
+		{
+			name = "Well-Equipped Guards"
+			desc = "Even the regular city guards have gotten premium quality gear ensuring the order is well kept and stable."
+			modifier = {
+				harsh_treatment_cost = -0.35
+			}
+		}
+	}
+	bonus = {
+		leader_land_shock = 1
+	}
+}

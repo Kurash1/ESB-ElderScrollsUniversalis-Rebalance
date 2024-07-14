@@ -28,6 +28,11 @@ new gfx_folder loose = {
 	target = gfx/loose
 	restrict_type = dds
 }
+new gfx_folder spells = {
+	target = gfx/spells
+	name = `GFX_spells_{this}`
+	restrict_type = dds
+}
 new gfx_folder event_pictures = {
 	target = gfx/event_pictures/arc
 	restrict_type = dds

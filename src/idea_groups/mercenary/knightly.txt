@@ -35,6 +35,7 @@ new idea_group knightly_ideas = {
 		OR = {
 			full_idea_group = mercenary_ideas
 			full_idea_group = feudal_ideas
+			full_idea_group = crusader_ideas
 		}
 	}
 	ideas = {

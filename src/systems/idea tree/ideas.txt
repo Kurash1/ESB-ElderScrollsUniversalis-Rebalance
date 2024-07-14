@@ -289,7 +289,7 @@ new named_effect create_idea_tree = {
 	draw_line_between = { administrative_ideas imperialism_ideas }
 	
 	add_to_tree = { group = hegemonic_ideas x = 2 y = 0 }
-	draw_line_between = { administrative_ideas hegemonic_ideas }
+	draw_line_between = { imperialism_ideas hegemonic_ideas }
 	
 	add_to_tree = { group = corruption_ideas x = 2 y = 1 }
 	draw_line_between = { administrative_ideas corruption_ideas }

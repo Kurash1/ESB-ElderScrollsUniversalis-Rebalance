@@ -2,7 +2,10 @@ new idea_group scholastic_ideas = {
 	name = "Scholastic"
 	category = ADM
 	trigger = {
-		full_idea_group = religious_ideas
+		OR = {
+			full_idea_group = religious_ideas
+			full_idea_group = innovativeness_ideas
+		}
 	}
 	ideas = {
 		{

@@ -1,0 +1,65 @@
+new idea_group defensive_ideas = {
+	name = "Defensive"
+	category = MIL
+	trigger = {
+		full_idea_group = strategic_ideas
+	}
+	ideas = {
+		{
+			name = "Battlefield Commissions"
+			desc = "Allows us to focus heavily on military advancements and thereby increase our Army Tradition."
+			modifier = {
+				army_tradition = 1.0
+			}
+		}
+		{
+			name = "Military Drill"
+			desc = "Allows us to invest in military training and thereby improve battle formations, weapon handling and boost the morale of our army."
+			modifier = {
+				land_morale_constant = 0.15
+			}
+		}
+		{
+			name = "Improved Maneuver"
+			desc = "Using troops on the battlefield is a vital skill for a good commander. The ability to know where to move troops will give us an edge."
+			modifier = {
+				leader_land_manuever = 1
+				movement_speed = 0.1
+			}
+		}
+		{
+			name = "Regimental System"
+			desc = "By organizing our armies into regiments tied to distinct geographical areas we can allow the army to put down roots in the community. Thus when we come to raise more battalions for our regiments they will be able to be recruited faster."
+			modifier = {
+				land_maintenance_modifier = -0.1
+				army_line = 1
+			}
+		}
+		{
+			name = "Defensive Mentality"
+			desc = "There are those who think that attack is the best form of defence, but that is foolish let them come to us and then hit them on the counter. Our troops will defend tenaciously and our fortresses will hold out for longer."
+			modifier = {
+				defensiveness = 0.25
+			}
+		}
+		{
+			name = "Supply Trains"
+			desc = "While on campaign attrition is our biggest enemy, the key thing then is to get men to replace these losses as quickly as possible."
+			modifier = {
+				reinforce_speed = 0.25
+				reinforce_cost_modifier = -0.25
+			}
+		}
+		{
+			name = "Improved Foraging"
+			desc = "Traditionally we were unable to fight effectively in lands that did not supply a lot of food. However, our troops have become better at acquiring food allowing larger armies to fight."
+			modifier = {
+				land_attrition = -0.25
+				goods_line = 1
+			}
+		}
+	}
+	bonus = {
+		hostile_attrition = 1.5
+	}
+}

@@ -1,0 +1,58 @@
+new idea_group arcane_ideas = {
+	name = "Arcane"
+	category = ADM
+	ideas = {
+		{
+			name = "Arcane Apprentice"
+			desc = "To train our apprentices we generally send them on-field training to use magic to help our workers "
+			modifier = {
+				production_efficiency = 0.10
+			}
+		}
+		{
+			name = "Court Mages"
+			desc = "Mages have often positions on esteemed prestige in the courts and some of them are very well apt to conduct diplomacy on our behalf "
+			modifier = {
+				diplomats = 1
+			}
+		}
+		{
+			name = "Arcane Enchanters"
+			desc = "Arcane enchanters are workbenches for our enchanters to produce awe-inspiring things "
+			modifier = {
+				prestige = 1
+			}
+		}
+		{
+			name = "Evoker Mages"
+			desc = "Our evokers can make the most of what our country produces and how to best sell it. "
+			modifier = {
+				magicka_gain_modifier = 0.1
+			}
+		}
+		{
+			name = "The Mystic Archives"
+			desc = "Mystic Archives are vast and rich repositories of lore and arcane knowledge. "
+			modifier = {
+				advisor_cost = -0.1
+			}
+		}
+		{
+			name = "The Orrery Observatories"
+			desc = "Observatoriums allow us to look at the stars and other phenomenons from the great beyond. "
+			modifier = {
+				monthly_splendor = 1
+			}
+		}
+		{
+			name = "The Archmage"
+			desc = "The Archmage is the greatest position a mage can have and it is their duty the administer the use of magic on our nation."
+			modifier = {
+				yearly_corruption = -0.05
+			}
+		}
+	}
+	bonus = {
+		diplomatic_reputation = 2
+	}
+}

@@ -1,0 +1,64 @@
+new idea_group theocracy_ideas = {
+	name = "Theocracy"
+	category = ADM
+	trigger = {
+		full_idea_group = state_administration_ideas
+		government = theocracy
+	}
+	ideas = {
+		{
+			name = "Celebrate As They Fall"
+			desc = "Our religious festivals will always keep our morale on a high level."
+			modifier = {
+				tolerance_own = 2
+			}
+		}
+		{
+			name = "Divine Assault"
+			desc = "With God on our side, we cannot lose."
+			modifier = {
+				land_morale_constant = 0.15
+			}
+		}
+		{
+			name = "Religious Supremacy"
+			desc = "We will prove the supremacy of our religion. We will have it easier converting others because they have to accept our superiority."
+			modifier = {
+				global_missionary_strength = 0.01
+			}
+		}
+		{
+			name = "Church Law"
+			desc = "Church Law will support us in all our undertakings."
+			modifier = {
+				devotion = 1
+				tax_line = 1
+			}
+		}
+		{
+			name = "Flesh Is Weak"
+			desc = "The flesh is weak, the soul is not. Our armies have learned to fight as if they shared the same soul, and thus their morale shall never be broken."
+			modifier = {
+				morale_damage_received = -0.1
+			}
+		}
+		{
+			name = "Holy War"
+			desc = "In a holy war, we need not need to be modest in our demands."
+			modifier = {
+				warscore_cost_vs_other_religion = -0.25
+			}
+		}
+		{
+			name = "Divine Vindication"
+			desc = "We can vindicate even ridiculous demands with our religion."
+			modifier = {
+				unjustified_demands = -0.25
+			}
+		}
+	}
+	bonus = {
+		global_unrest = -2
+		monthly_fanaticism_power = 1.0
+	}
+}

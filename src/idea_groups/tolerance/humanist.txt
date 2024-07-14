@@ -1,0 +1,62 @@
+new idea_group humanist_ideas = {
+	name = "Tolerance"
+	category = ADM
+	ideas = {
+		{
+			name = "Tolerance"
+			desc = "Adopting a more tolerant view towards the minority religions in our country will greatly increase our religious unity."
+			modifier = {
+				religious_unity = 0.25
+			}
+		}
+		{
+			name = "Local Traditions"
+			desc = "Governing a large nation means ruling over many diverse peoples, each with their customs and traditions. By incorporating these traditions into our official code of laws we create a happy and loyal populace."
+			modifier = {
+				global_unrest = -2
+			}
+		}
+		{
+			name = "Ecumenism"
+			desc = "The problem with how to deal with heretics in the realm is always difficult. Although the good old-fashioned fire and sword approach will solve most problems eventually, diplomacy can also succeed. By encouraging dialogue between the various sects, we can reduce misunderstanding and promote peace in the realm."
+			modifier = {
+				tolerance_heretic = 2
+				tolerance_of_heretics_capacity = 2
+				relation_with_heretics = 20
+			}
+		}
+		{
+			name = "Indirect Rule"
+			desc = "Sometimes the best way to get people to do what you want is to let them believe that they're making their own choices. Such a system of indirect rule will reduce the unrest in newly acquired provinces."
+			modifier = {
+				years_of_nationalism = -10
+			}
+		}
+		{
+			name = "Cultural Ties"
+			desc = "Different cultures have different customs, and for some reason tend to resist attempts from above to change said customs. We can turn this weakness into a strength by incorporating local leaders into our system of government and having them carry out our will in a way that is palatable to them."
+			modifier = {
+				num_accepted_cultures = 2
+			}
+		}
+		{
+			name = "Benevolence"
+			desc = "Our nation is a bastion of tolerance and enlightenment. By ensuring that all other nations know this, we can foster better relations abroad."
+			modifier = {
+				improve_relation_modifier = 0.30
+			}
+		}
+		{
+			name = "Humanist Tolerance"
+			desc = "By striving towards a more tolerant society and making attempts at solving our social and religious problems in more rational ways, the risk of civil disorder will diminish."
+			modifier = {
+				tolerance_heathen = 2
+				tolerance_of_heathens_capacity = 2
+				relation_with_heathens = 20
+			}
+		}
+	}
+	bonus = {
+		improve_relation_modifier = 0.1
+	}
+}

@@ -1,0 +1,141 @@
+new spell_header illusion = {
+	name = "Illusion"
+}
+new spell invisibility = {
+	name = "Invisibility"
+	type = country
+	cost = 150
+	trigger = {
+		has_idea = illusion_ideas_1
+		NOT->has_country_modifier = spell_invisibility
+	}
+	on_cast = {
+		quick_country_modifier = {
+			name = "Invisibility"
+			id = spell_invisibility
+			years = 5
+			modifier = {
+				spy_offence = 0.5
+			}
+		}
+	}
+}
+new spell frenzy = {
+	name = "Frenzy"
+	type = diplomatic
+	cost = 150
+	trigger = {
+		has_idea = illusion_ideas_1
+		event_target:spell_target->NOT->has_country_modifier = spell_frenzy
+	}
+	on_cast = {
+		event_target:spell_target->quick_country_modifier = {
+			name = "Frenzy"
+			id = spell_frenzy
+			years = 5
+			modifier = {
+				global_unrest = 3
+			}
+		}
+	}
+}
+new spell calm = {
+	name = "Calm"
+	type = country
+	cost = 100
+	trigger = {
+		has_idea = illusion_ideas_1
+		NOT->has_country_modifier = spell_calm
+	}
+	on_cast = {
+		quick_country_modifier = {
+			name = "Calm"
+			id = spell_calm
+			years = 5
+			modifier = {
+				global_unrest = -2
+			}
+		}
+	}
+}
+new spell rally = {
+	name = "Rally"
+	type = country
+	cost = 200
+	trigger = {
+		has_idea = illusion_ideas_1
+		NOT->has_country_modifier = spell_rally
+	}
+	on_cast = {
+		quick_country_modifier = {
+			name = "Rally"
+			id = spell_rally
+			years = 5
+			modifier = {
+				land_morale = 0.15
+			}
+		}
+	}
+}
+
+new idea_group illusion_ideas = {
+	name = "Illusion"
+	category = DIP
+	trigger = {
+		full_idea_group = arcane_ideas
+	}
+	ideas = {
+		{
+			name = "Invisibility"
+			desc = "Mages who can master the invisibility spell can get into places and hear things other people could only dream of. "
+			modifier = {
+				spy_offence = 0.3
+			}
+		}
+		{
+			name = "Instill Courage"
+			desc = "By artificially boosting the courage of our troops we can be sure they will fight until the bitter end for us "
+			modifier = {
+				land_morale_constant = 0.1
+			}
+		}
+		{
+			name = "Instill Calm"
+			desc = "Making our neighbours calmer we can ensure they won't take arms upon us preemptively "
+			modifier = {
+				ae_impact = -0.1
+			}
+		}
+		{
+			name = "Instill Fear"
+			desc = " By making them fear us we can ensure that taking what we do not deserve is less costly"
+			modifier = {
+				unjustified_demands = -0.25
+			}
+		}
+		{
+			name = "Instill Frenzy"
+			desc = "Instilling mindless rage on our enemy's population can ensure we can send their countries into utter chaos "
+			modifier = {
+				rebel_support_efficiency = 0.5
+			}
+		}
+		{
+			name = "Pacify"
+			desc = "Any citizen that is a rabble-rouser must have a meeting with our illusionists where he will be transformed into a well behaved and law-abiding citizen. "
+			modifier = {
+				global_unrest = -2
+			}
+		}
+		{
+			name = "Clairvoyance"
+			desc = "By peering in what is to come we can advance our nation at a much faster pace."
+			modifier = {
+				reform_progress_growth = 0.1
+			}
+		}
+	}
+	bonus = {
+		diplomatic_reputation = 2
+	}
+}

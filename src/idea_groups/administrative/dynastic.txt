@@ -1,0 +1,63 @@
+new idea_group dynastic_ideas = {
+	name = "Dynastic"
+	category = ADM
+	trigger = {
+		full_idea_group = state_administration_ideas
+	}
+	ideas = {
+		{
+			name = "Royal birth register"
+			desc = "By establishing a register for any birth in the royal family we can ensure that any potential heir to our position is properly found at once."
+			modifier = {
+				heir_chance = 0.25
+			}
+		}
+		{
+			name = "Estate oaths"
+			desc = "By requiring all members of the estates to swear an oath on our government and country we ensure that they view us as legitimate."
+			modifier = {
+				monthly_heir_claim_increase = 0.05
+				legitimacy = 1
+			}
+		}
+		{
+			name = "Council of ministers"
+			desc = "Coming to the realisation that governing alone is a faulty endeavour we appointed a council of several ministers to aid us in this tas"
+			modifier = {
+				governing_capacity_modifier = 0.1
+			}
+		}
+		{
+			name = "The royal ball"
+			desc = "By holding a yearly royal ball we show the estates that we care for their well being."
+			modifier = {
+				all_estate_loyalty_equilibrium = 0.05
+			}
+		}
+		{
+			name = "Just rulers"
+			desc = "We shall be just rulers for all our people."
+			modifier = {
+				global_unrest = -1
+			}
+		}
+		{
+			name = "A pinnacle of faith and devotion"
+			desc = "By living after the tenants of the divines we are a role modell for our subjects."
+			modifier = {
+				religious_unity = 0.1
+			}
+		}
+		{
+			name = "Prime ministers"
+			desc = "Supervising everything our ministers do ourselves is likewise just as tedious. A prime minister who does this in our stead should streamline this process."
+			modifier = {
+				governing_cost = -0.1
+			}
+		}
+	}
+	bonus = {
+		allow_free_estate_privilege_revocation = yes
+		loyalty_change_on_revoked = 0.25
+	}
+}

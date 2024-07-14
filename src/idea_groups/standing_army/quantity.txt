@@ -1,0 +1,63 @@
+new idea_group quantity_ideas = {
+	name = "Quantity"
+	category = MIL
+	trigger = {
+		full_idea_group = standing_army_ideas
+	}
+	ideas = {
+		{
+			name = "Mass Army"
+			desc = "We have, up to now, been very choosy over who should serve as a ranker in our military. We only took the poorest and most desperate, basically the people no one else would miss. Now though we are going to open up the ranks to everyone, who isn't rich."
+			modifier = {
+				global_manpower_modifier = 0.25
+				army_line = 1
+			}
+		}
+		{
+			name = "The Young can Serve"
+			desc = "How old does a boy have to be before he is a man? How old must he be before he can die for his country? Some rulers are squeamish, we on the other hand are an equal opportunity butcher."
+			modifier = {
+				manpower_recovery_speed = 0.15
+			}
+		}
+		{
+			name = "Enforced Service"
+			desc = "The principle of volunteering underpins our whole army structure. Sometimes there aren't enough volunteers. We should force people to volunteer."
+			modifier = {
+				global_regiment_cost = -0.15
+			}
+		}
+		{
+			name = "The Old and Infirm"
+			desc = "The veteran sergeants are some of the most despicable and corrupt men imaginable, but these men are still useful. Rather than leave them to be beggars on our streets, men like this should be used when their service ends. Let's make them into drill sergeants and quartermasters so their unique skills can be put to use."
+			modifier = {
+				land_maintenance_modifier = -0.05
+			}
+		}
+		{
+			name = "Mercenary Contracts"
+			desc = "By drawing up standing contracts with certain mercenary captains we can ensure that we will always have access to a large pool of mercenaries to draw on, should they be needed."
+			modifier = {
+				global_supply_limit_modifier = 0.25
+			}
+		}
+		{
+			name = "Conscripted Garrisons"
+			desc = "By conscripting our able young men for our garrisons we can ensure that we have enough men to defend our borders."
+			modifier = {
+				garrison_size = 0.25
+			}
+		}
+		{
+			name = "Expanded Supply Trains"
+			desc = "Investing more resources into our supply trains will allow our army to operate for longer periods in a hostile land."
+			modifier = {
+				land_attrition = -0.25
+				road_line = 1
+			}
+		}
+	}
+	bonus = {
+		land_forcelimit_modifier = 0.25
+	}
+}

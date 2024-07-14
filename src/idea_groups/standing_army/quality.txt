@@ -1,0 +1,62 @@
+new idea_group quality_ideas = {
+	name = "Quality"
+	category = MIL
+	trigger = {
+		full_idea_group = standing_army_ideas
+	}
+	ideas = {
+		{
+			name = "Private to Marshal"
+			desc = "Every private has a marshal's baton in his back. Well, perhaps not exactly, but for those who distinguish themselves in battle, promotion and rewards will follow. The troops know this and are inspired by it."
+			modifier = {
+				infantry_power = 0.1
+			}
+		}
+		{
+			name = "Quality Education"
+			desc = "The most vital moment of any army's existence is straight after a battle. Win or lose, exhausted troops are most vulnerable. We must ensure that our troops are ready for combat before the opposition is."
+			modifier = {
+				army_tradition = 0.5
+				army_line = 1
+			}
+		}
+		{
+			name = "Finest of Horses"
+			desc = "How steadily those troops take the ground! How beautifully those cavalry form! Look at those grey horses! Who are those fine horsemen? These are fine troops."
+			modifier = {
+				cavalry_power = 0.1
+			}
+		}
+		{
+			name = "Corvettes"
+			desc = "Corvettes were a class of small warships that were designed to escort friendly vessels and harass the enemy, relying on speed and manoeuvrability rather than massed firepower."
+			modifier = {
+				ship_durability = 0.1
+			}
+		}
+		{
+			name = "Naval Drill"
+			desc = "The confusion of combat can leave a warship unfit for action for a long time. A well-drilled crew will recover much faster than an ordinary one."
+			modifier = {
+				naval_morale = 0.15
+			}
+		}
+		{
+			name = "Copper Bottoms"
+			desc = "Wood may be the ideal material for shipbuilding, but it tends to deteriorate over time. By fitting our ships with copper sheathing below the waterline we can reduce this deterioration, allowing them to better withstand long journeys."
+			modifier = {
+				naval_attrition = -0.25
+			}
+		}
+		{
+			name = "Massed Battery"
+			desc = "Let us mass our archers in a single grand formation, its destructive power will make a hole in the enemy lines."
+			modifier = {
+				artillery_power = 0.10
+			}
+		}
+	}
+	bonus = {
+		discipline = 0.05
+	}
+}

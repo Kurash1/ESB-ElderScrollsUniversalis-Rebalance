@@ -1,0 +1,62 @@
+new idea_group decentralization_ideas = {
+	name = "Decentralization"
+	category = ADM
+	trigger = {
+		full_idea_group = influence_ideas
+		NOT = { has_idea_group = centralization_ideas }
+	}
+	ideas = {
+		{
+			name = "General Expansion"
+			desc = "The resources of the state are not concentrated in one area alone. Whole regions will profit."
+			modifier = {
+				state_maintenance_modifier = -0.1
+			}
+		}
+		{
+			name = "Decentralized Administration"
+			desc = "Because of our big territory, we have to work in a decentralized way to govern."
+			modifier = {
+				development_cost = -0.1
+			}
+		}
+		{
+			name = "Different Centers of Trade"
+			desc = "We won't rely on one centre of trade alone."
+			modifier = {
+				global_prov_trade_power_modifier = 0.1
+			}
+		}
+		{
+			name = "Cultural Centers"
+			desc = "We won't focus on one cultural centre alone, but on many."
+			modifier = {
+				yearly_corruption = -0.1
+			}
+		}
+		{
+			name = "Great State"
+			desc = "The national territory of the state is vast."
+			modifier = {
+				global_prosperity_growth = 0.1
+			}
+		}
+		{
+			name = "Timid Population Growth"
+			desc = "We won't achieve much population growth in some areas, but the growth will be healthier."
+			modifier = {
+				global_unrest = -2
+			}
+		}
+		{
+			name = "Local Trade"
+			desc = "Sometimes local trade in a province can be very profitable in itself. We will remember that."
+			modifier = {
+				all_estate_loyalty_equilibrium = 0.1
+			}
+		}
+	}
+	bonus = {
+		governing_capacity_modifier = 0.15
+	}
+}

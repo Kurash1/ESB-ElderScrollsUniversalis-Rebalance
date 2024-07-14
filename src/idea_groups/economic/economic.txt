@@ -1,0 +1,61 @@
+new idea_group economic_ideas = {
+	name = "Economic"
+	category = ADM
+	ideas = {
+		{
+			name = "Bureaucracy"
+			desc = "Allows us to increase our tax revenues by adopting a more bureaucratic administrative system governed by state officials."
+			modifier = {
+				tax_line = 1
+			}
+		}
+		{
+			name = "Organized Construction"
+			desc = "They need to upgrade the infrastructure of our government is a costly business, if we structure the process correctly we can do this cheaper."
+			modifier = {
+				build_cost = -0.1
+			}
+		}
+		{
+			name = "National Bank"
+			desc = "By establishing a central authority for financial matters, we will have better control over our nation's economy."
+			modifier = {
+				inflation_reduction = 0.1
+			}
+		}
+		{
+			name = "Debt and Loans"
+			desc = "Debt is sometimes simply unavoidable, however, an organized debt market will allow us to float loans at a lower interest rate."
+			modifier = {
+				interest = -1
+			}
+		}
+		{
+			name = "Centralization"
+			desc = "If we centralize the state then we will find it easier to advance the ideas and agenda of the centre over the regions."
+			modifier = {
+				global_autonomy = -5%
+			}
+		}
+		{
+			name = "Nationalistic Enthusiasm"
+			desc = "The supporting of our troops is vital to national defence. With our excellent administration, we can secure generous discounts for our supplies."
+			modifier = {
+				land_maintenance_modifier = -5%
+			}
+		}
+		{
+			name = "Free Economics"
+			desc = "By opposing mercantilism and restricting the state's influence in economic matters, we shall support a free market that will increase our overall production efficiency."
+			modifier = {
+				trade_line = 1
+			}
+		}
+	}
+	bonus = {
+		development_cost = -10%
+	}
+	ai_chance = {
+		factor = 5
+	}
+}
