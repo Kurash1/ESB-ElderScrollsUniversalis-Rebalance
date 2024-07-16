@@ -1,0 +1,71 @@
+new policy fertilizers = {
+	name = "Fertilizers"
+	desc = "Fields that are fertilized yield far richer harvests than unfertilized fields."
+	monarch_power = ADM
+	group_1 = agricultural_ideas
+	group_2 = alchemical_ideas
+	modifier = {
+		global_trade_goods_size_modifier = 15%
+	}
+}
+new policy pleasure_gardens = {
+	name = "Pleasure Gardens"
+	desc = "Those gardens are very pretty but they also serve another purpose they also function as kitchen gardens and tree nurseries."
+	monarch_power = ADM
+	group_1 = agricultural_ideas
+	group_2 = artistic_ideas
+	modifier = {
+		prestige = 0.5
+		monthly_splendor = 2
+	}
+}
+new policy improved_ploughs = {
+	name = "Improved Ploughs"
+	desc = "This new kind of plough can break the ground up deeper, better and faster"
+	monarch_power = ADM
+	group_1 = agricultural_ideas
+	group_2 = engineering_ideas
+	modifier = {
+		production_efficiency = 10%
+	}
+}
+new policy improved_irrigation = {
+	name = "Improved irrigation"
+	desc = "A complicated network out of cisterns, channels, redirected rivers and sluices catapults yields into unknown heights."
+	monarch_power = ADM
+	group_1 = agricultural_ideas
+	group_2 = hydrology_ideas
+	modifier = {
+		production_efficiency = 10%
+	}
+}
+new policy reserve_grainaries = {
+	name = "Reserve Grainaries"
+	desc = "These buildings are only to be opened in times of need or if they are soon due to."
+	monarch_power = ADM
+	group_1 = agricultural_ideas
+	group_2 = logistic_ideas
+	modifier = {
+		global_prosperity_growth = 0.2
+	}
+}
+new policy cloister_gardens = {
+	name = "Cloister Gardens"
+	desc = "Cloisters often cultivate medicinal herbs as well as fruits  in their gardens."
+	monarch_power = ADM
+	group_1 = agricultural_ideas
+	group_2 = monastic_ideas
+	modifier = {
+		global_monthly_devastation = -0.1
+	}
+}
+new policy scythes = {
+	name = "Scythes"
+	desc = "Scythes are far better than sickles would you not agree my lord?"
+	monarch_power = ADM
+	group_1 = agricultural_ideas
+	group_2 = smithing_ideas
+	modifier = {
+		production_efficiency = 10%
+	}
+}

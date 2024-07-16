@@ -1,0 +1,168 @@
+new policy enlightened_despotism = {
+	name = "Enlightened Despotism"
+	desc = "Our ruler is an enlightened invidual who sees himself as first servant of the state. He is no war mongerer nor tries to enforce a specific religion or culture upon their subjects. The only loyalty they demand is loyalty to the state."
+	monarch_power = ADM
+	group_1 = absolutistic_ideas
+	group_2 = acceptance_ideas
+	modifier = {
+		num_accepted_cultures = 2
+		promote_culture_cost = -10%
+	}
+}
+new policy letat_est_moi = {
+	name = "L'etat est moi"
+	desc = "Our ruler is the state and the state is our ruler. They alone govern with the help of non noble bureaucrats."
+	monarch_power = ADM
+	group_1 = absolutistic_ideas
+	group_2 = administrative_ideas
+	modifier = {
+		governing_capacity_modifier = 10%
+		max_absolutism = 15
+	}
+}
+new policy vice_kings_and_governors = {
+	name = "Vice kings and Governors"
+	desc = "Ok we admit it far away territory cannot be governed directly from the capital in all cases. But what we can do is appoint people who are absolutely loyal to the government into these regional positions."
+	monarch_power = ADM
+	group_1 = absolutistic_ideas
+	group_2 = decentralization_ideas
+	modifier = {
+		global_autonomy = -0.05
+		overextension_impact_modifier = -10%
+	}
+}
+new policy baubanite_fortress_architecture = {
+	name = "Vaubanite Fortress Architecture"
+	desc = "There is a rather peculiar person in our country that revolutionized our fortress building. We of course had to appoint them."
+	monarch_power = MIL
+	group_1 = absolutistic_ideas
+	group_2 = defensive_ideas
+	modifier = {
+		defensiveness = 10%
+		garrison_size = 25%
+	}
+}
+new policy secret_service = {
+	name = "Secret Service"
+	desc = "Espionage was up to this point a rather unorganised endevaour. A proper organisation that only manages espionage ought to streamline this process."
+	monarch_power = DIP
+	group_1 = absolutistic_ideas
+	group_2 = spy_ideas
+	modifier = {
+		spy_offence = 20%
+		spy_action_cost_modifier = -10%
+	}
+}
+new policy military_education_act = {
+	name = "Military Education Act"
+	desc = "War is horrible all the more important it is therefore that our ruler understands our generals and can quickly decide which course is the best for the country. Our soldiers will surely thank us if wars are not a suicide commando"
+	monarch_power = MIL
+	group_1 = absolutistic_ideas
+	group_2 = extended_campaign_ideas
+	modifier = {
+		army_tradition = 0.5
+	}
+}
+new policy ministry_of_war = {
+	name = "Ministry of War"
+	desc = "We recently established a ministry of war as to better coordinate with our generals and admirals on the battlefield."
+	monarch_power = MIL
+	group_1 = absolutistic_ideas
+	group_2 = general_staff_ideas
+	modifier = {
+		leader_land_manuever = 1
+		leader_naval_manuever = 1
+	}
+}
+new policy arena_visits = {
+	name = "Arena visits"
+	desc = "Our ruler visits every game in the capital arena. They decide if the loser of any combat is to die or to survive. Of course they take the opinion of the audience into account."
+	monarch_power = ADM
+	group_1 = absolutistic_ideas
+	group_2 = gladitorial_ideas
+	modifier = {
+		global_unrest = -1.5
+	}
+}
+new policy state_militias = {
+	name = "State Militias"
+	desc = "Not only the army but also a state run paramilitary organisation is to fight in any given war. Especially in defensive wars. They will harass the enemy and cut of their supply lines."
+	monarch_power = MIL
+	group_1 = absolutistic_ideas
+	group_2 = guerilla_ideas
+	modifier = {
+		hostile_attrition = 1
+		max_hostile_attrition = 1
+	}
+}
+new policy royal_flagship = {
+	name = "Royal Flagship"
+	desc = "The flagship is not only the flagship of the fleet but also the flagship of the king. Henceforth it has to be grand."
+	monarch_power = DIP
+	group_1 = absolutistic_ideas
+	group_2 = maritime_ideas
+	modifier = {
+		flagship_durability = 10%
+	}
+}
+new policy stoicism = {
+	name = "Stoicism"
+	desc = "The philosophy that focuses on the things within someone's control."
+	monarch_power = MIL
+	group_1 = absolutistic_ideas
+	group_2 = philosophical_ideas
+	modifier = {
+		land_morale = 0.1
+	}
+}
+new policy the_sea_lord = {
+	name = "The Sea Lord"
+	desc = "The sea lord is the minister of all things naval they are responsible for making sure our navy functions at best as it can."
+	monarch_power = DIP
+	group_1 = absolutistic_ideas
+	group_2 = naval_ideas
+	modifier = {
+		sailors_recovery_speed = 20%
+	}
+}
+new policy vaubanite_siegecraft = {
+	name = "Vaubanite Siegecraft"
+	desc = "There is a person in our country who knows exactly how to bring down any fort in a quick and efficient manner. Of course we had to hire them."
+	monarch_power = MIL
+	group_1 = absolutistic_ideas
+	group_2 = offensive_ideas
+	modifier = {
+		siege_ability = 15%
+	}
+}
+new policy first_servant_of_the_state = {
+	name = "First Servant of the State"
+	desc = "Our ruler is the first servant of the state and the people can trust in them."
+	monarch_power = ADM
+	group_1 = absolutistic_ideas
+	group_2 = society_ideas
+	modifier = {
+		all_power_cost = -2%
+	}
+}
+new policy expansive_bureaucracy = {
+	name = "Expansive Bureaucracy"
+	desc = "The bureaucracy is now capable to process any royal decree in a matter of hours at most."
+	monarch_power = ADM
+	group_1 = absolutistic_ideas
+	group_2 = state_administration_ideas
+	modifier = {
+		core_creation = -10%
+	}
+}
+new policy military_books_in_royal_library = {
+	name = "Military Books in Royal Library"
+	desc = "Our ruler does not only has military books in the library but actually read them too!"
+	monarch_power = MIL
+	group_1 = absolutistic_ideas
+	group_2 = state_administration_ideas
+	modifier = {
+		military_tactics = 0.1
+		possible_mil_policy = 1
+	}
+}

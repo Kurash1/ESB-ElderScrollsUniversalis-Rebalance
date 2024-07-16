@@ -1,0 +1,44 @@
+new policy public_private_partnership = {
+	name = "Public private partnership"
+	desc = "We partner up with the private building industry to build stuff more quickly and cheaper for the state."
+	monarch_power = ADM
+	group_1 = administrative_ideas
+	group_2 = architectural_ideas
+	modifier = {
+		build_cost = -10%
+		build_time = -10%
+	}
+}
+new policy anticorruption_office = {
+	name = "Anticorruption office"
+	desc = "Every citizien is to report any dubious activity to these offices."
+	monarch_power = ADM
+	group_1 = administrative_ideas
+	group_2 = corruption_ideas
+	modifier = {
+		yearly_corruption = -0.03
+		global_tax_modifier = -5%
+	}
+}
+new policy humanistic_administration = {
+	name = "Humanistic administration"
+	desc = "Our government is enlightened they let people live as they please for the most part."
+	monarch_power = ADM
+	group_1 = administrative_ideas
+	group_2 = humanist_ideas
+	modifier = {
+		num_accepted_cultures = 2
+		promote_culture_cost = -10%
+	}
+}
+new policy court_system = {
+	name = "Court system"
+	desc = "Our ruler devolved his judicial power to the courts no longer shall pesky squabbles therefore tarnish their reputation."
+	monarch_power = ADM
+	group_1 = administrative_ideas
+	group_2 = jurisprudence_ideas
+	modifier = {
+		global_unrest = -1
+		all_estates_loyalty_equilibrium = 5%
+	}
+}

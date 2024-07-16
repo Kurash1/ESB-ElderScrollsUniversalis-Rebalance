@@ -1,4 +1,4 @@
-/replace @h with hre=no#h
+/replace @h with h
 new area kastav = {
 	name = "Kastav"
 	region = winterhold

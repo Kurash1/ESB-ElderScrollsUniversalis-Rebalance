@@ -143,7 +143,7 @@ new effect add_to_tree = {
 					qq_tooltip_idea = args:group:ideas:6
 					qq_tooltip_idea = args:group:ideas:7
 					new_custom_tooltip = "§YBonus§!:
-		{modifier_to_string = args:group:bonus}"
+	{modifier_to_string = args:group:bonus}"
 				}
 				
 			}

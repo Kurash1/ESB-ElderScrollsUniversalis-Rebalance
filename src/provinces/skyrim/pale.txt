@@ -89,7 +89,7 @@ new province frozen_outpost = {
 	}
 	history = {
 		religion = nordic_pantheon
-		culture = hjaalmarcher
+		culture = palean
 		hre = yes
 		history_trade_goods = wood
 	

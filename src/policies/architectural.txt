@@ -1,0 +1,109 @@
+new policy grand_projects = {
+	name = "Grand projects"
+	desc = "Bigger is always better hence we need to commission great wonders to be constructed."
+	monarch_power = ADM
+	group_1 = architectural_ideas
+	group_2 = artistic_ideas
+	modifier = {
+		great_project_upgrade_cost = -10%
+		great_project_upgrade_time = -10%
+	}
+}
+new policy torus_and_reinforced_walls = {
+	name = "Torus and reinforced walls"
+	desc = "The Torus is a wall that is built directly upon the very rock of a mountain. It withstands pretty much any level of bombardement."
+	monarch_power = MIL
+	group_1 = architectural_ideas
+	group_2 = defensive_ideas
+	modifier = {
+		defensiveness = 20%
+	}
+}
+new policy construction_equipment = {
+	name = "Construction Equipment"
+	desc = "With better construction equipment we will be able to build faster and cheaper."
+	monarch_power = ADM
+	group_1 = architectural_ideas
+	group_2 = engineering_ideas
+	modifier = {
+		build_cost = -10%
+		build_time = -10%
+	}
+}
+new policy fortress_chains = {
+	name = "Fortress chains"
+	desc = "We now construct fortresses that are interconnected. Ultimately they function as one fortress. A speciality of these is of course the citadel on a mountain or a hill and the island fortress that connects to a bigger fortress nearby."
+	monarch_power = MIL
+	group_1 = architectural_ideas
+	group_2 = fortress_ideas
+	modifier = {
+		garrison_size = 25%
+		defensiveness = 10%
+	}
+}
+new policy modern_canal_network = {
+	name = "Modern Canal Network"
+	desc = "Sluices and dams now provide a constant water level in canals for navigation."
+	monarch_power = DIP
+	group_1 = architectural_ideas
+	group_2 = hydrology_ideas
+	modifier = {
+		expand_infrastructure_cost_modifier = -20%
+		global_own_trade_power = 10%
+	}
+}
+new policy viaducts_bridges_and_reinforced_tunnels = {
+	name = "Viaducts, Bridges and Reinforced Tunnels"
+	desc = "Those buildings now allow us to expand our infrastructure into regions deemed impossible only a few years ago."
+	monarch_power = ADM
+	group_1 = architectural_ideas
+	group_2 = infrastructure_ideas
+	modifier = {
+		expand_infrastructure_cost_modifier = -20%
+		development_cost = -10%
+	}
+}
+new policy rotunda_ports = {
+	name = "Rotunda Ports"
+	desc = "Ports designed in a circular fashion with one smaller middle circle and a bigger outer circle maximize the amount of ships any given port can harbour."
+	monarch_power = DIP
+	group_1 = architectural_ideas
+	group_2 = fleet_base_ideas
+	modifier = {
+		naval_forcelimit_modifier = 10%
+		global_ship_repair = 20%
+	}
+}
+new policy fire_protection_act = {
+	name = "Fire protection act"
+	desc = "first floor stone constructions. All houses have to be constructed out of stone up to the first level. This will surely minimize the spread of fires and general damage."
+	monarch_power = ADM
+	group_1 = architectural_ideas
+	group_2 = masonry_ideas
+	modifier = {
+		global_monthly_devastation = -0.05
+		global_prosperity_growth = 0.1
+	}
+}
+new policy cloister_temples_and_churches = {
+	name = "Cloister temples and churches"
+	desc = "Cloisters now build big temples and churches that dominate the local landscape."
+	monarch_power = ADM
+	group_1 = architectural_ideas
+	group_2 = monastic_ideas
+	modifier = {
+		religious_unity = 10%
+		tolerance_own = 1
+	}
+}
+new policy cheap_construction_materials = {
+	name = "Cheap construction materials"
+	desc = "Wood is cheap, renewable and easily acquirable in most areas of Tamriel."
+	monarch_power = ADM
+	group_1 = architectural_ideas
+	group_2 = woodworking_ideas
+	modifier = {
+		development_cost = -10%
+		global_monthly_devastation = -0.1
+	}
+}

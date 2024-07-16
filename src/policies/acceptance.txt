@@ -1,0 +1,73 @@
+new policy foreign_experts_as_advisors = {
+	name = "Foreign experts as advisors"
+	desc = "We must also look abroad to find the best advisors we can get."
+	monarch_power = ADM
+	group_1 = acceptance_ideas
+	group_2 = administrative_ideas
+	modifier = {
+		advisor_cost = -10%
+		advisor_pool = 1
+	}
+}
+new policy foreign_crops = {
+	name = "Foreign Crops"
+	desc = "Many people say foreign crops cannot be a good idea for any country we beg to differ."
+	monarch_power = ADM
+	group_1 = acceptance_ideas
+	group_2 = agricultural_ideas
+	modifier = {
+		global_trade_goods_size_modifier = 10%
+	}
+}
+new policy cultural_diversity_legislative_unity = {
+	name = "Cultural diversity, legislative unity"
+	desc = "The cultures of our country are diverse but the grand legislative and administrative efforts in our country are everywhere roughly the same."
+	monarch_power = ADM
+	group_1 = acceptance_ideas
+	group_2 = centralization_ideas
+	modifier = {
+		years_of_nationalism = -10
+	}
+}
+new policy local_traditions_protected = {
+	name = "Local traditions protected"
+	desc = "Cultures often differ so much that a one fits all situation is completly impractical. Better let local leaders decide about how to govern themselves in things that are purely local or regional at best."
+	monarch_power = ADM
+	group_1 = acceptance_ideas
+	group_2 = decentralization_ideas
+	modifier = {
+		global_unrest = -1.5
+	}
+}
+new policy patriotic_defense_mindset = {
+	name = "Patriotic defense mindset"
+	desc = "The people do not want to be conquered by the foreign despots that will once again put them into slavery and serfdom. They will fiercly resist every attempt of them to do so."
+	monarch_power = MIL
+	group_1 = acceptance_ideas
+	group_2 = defensive_ideas
+	modifier = {
+		enemy_core_creation = 50%
+		defensiveness = 20%
+		hostile_attrition = 1
+	}
+}
+new policy journeyman_years = {
+	name = "Journeyman years"
+	desc = "Our artisans and craftsmen do so called journeyman years in their young years. There they learn foreign techniques they will then employ at home once they return."
+	monarch_power = ADM
+	group_1 = acceptance_ideas
+	group_2 = economic_ideas
+	modifier = {
+		global_trade_goods_size_modifier = 10%
+	}
+}
+new policy local_spies = {
+	name = "Local spies"
+	desc = "There is always someone in a foreign country who is willing to work with us. Be it because of some kind of perceived wrong, a mistaken patriotism or mere coinage. No matter why we can utilise this to our advantage."
+	monarch_power = DIP
+	group_1 = acceptance_ideas
+	group_2 = spy_ideas
+	modifier = {
+		spy_offence = 20%
+	}
+}
