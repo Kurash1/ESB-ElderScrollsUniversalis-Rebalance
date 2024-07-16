@@ -11,7 +11,7 @@ new spell frost_storm = {
 }
 new spell siege_magic = {
 	name = "Fireball"
-	type = siege
+	type = province
 	cost = 100
 	on_cast = {
 		change_siege = 5

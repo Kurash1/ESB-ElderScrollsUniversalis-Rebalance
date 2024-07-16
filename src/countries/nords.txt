@@ -1265,37 +1265,38 @@ new country volunruud = {
 				add_ruler_personality = strict
 				
 				queen = {
-					name = "Unknown"
-					dynasty = "Unknown"
+					name = "Ysolda"
+					dynasty = "Red-Wolf"
+					country_of_origin = countries:solitude
 					birth_date = 2546.1.1
 					death_date = 2659.1.1
-					adm = 0
-					dip = 0
-					mil = 0
+					adm = 2
+					dip = 2
+					mil = 3
 					female = yes
 				}
 			}
 		}
 		history_ruler_info = {
-			name = "Unknown"
+			name = "Llewellyn"
 			dynasty = "Volunnar"
 			birth_date = 2565.1.1
 			crowned = 2662.1.1
 			death_date = 2722.1.1
-			adm = 0
-			dip = 0
-			mil = 0
+			adm = 5
+			dip = 4
+			mil = 5
 		}
 		hire_advisor = {
 			type = treasurer
-			name = "Unknown"
+			name = "Arnsgar Volunnar"
 			skill = 3
 			cost_multiplier = 0
 			age = 22
 		}
 		hire_advisor = {
-			type = trader
-			name = "Unknown"
+			type = diplomat
+			name = "Olaf the Silver-Tongue"
 			skill = 3
 			cost_multiplier = 0
 			age = 23
@@ -1309,12 +1310,11 @@ new country volunruud = {
 		}
 		2564.1.1 = {
 			define_general = {
-				name = "Unknown Unknown"
+				name = "Rona Blue-Axe"
 				shock = 5
 				fire = 2
 				manuever = 4
 				siege = 2
-				trait = tongue_personality
 			}
 		}
 	}
