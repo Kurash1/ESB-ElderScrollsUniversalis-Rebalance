@@ -1315,6 +1315,7 @@ new country volunruud = {
 				fire = 2
 				manuever = 4
 				siege = 2
+				female = yes
 			}
 		}
 	}

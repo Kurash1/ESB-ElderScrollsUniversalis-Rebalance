@@ -9,9 +9,9 @@ new policy grand_projects = {
 		great_project_upgrade_time = -10%
 	}
 }
-new policy torus_and_reinforced_walls = {
-	name = "Torus and reinforced walls"
-	desc = "The Torus is a wall that is built directly upon the very rock of a mountain. It withstands pretty much any level of bombardement."
+new policy talus_and_reinforced_walls = {
+	name = "Talus and reinforced walls"
+	desc = "The Talus is a wall that is built directly upon the very rock of a mountain. It withstands pretty much any level of bombardement."
 	monarch_power = MIL
 	group_1 = architectural_ideas
 	group_2 = defensive_ideas
