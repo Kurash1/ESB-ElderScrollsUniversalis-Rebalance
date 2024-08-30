@@ -4,15 +4,12 @@ new class owned_province_modifier = {
 	default = {
 		desc = ""
 		trigger_tooltip = ""
-		trigger = { }
 	}
 	args = {
 		name = string
 		desc = string
 		
-		country = named_modifier?
 		trigger_tooltip = string
-		trigger = named_trigger
 		province = named_modifier
 		
 		building = building?
@@ -20,16 +17,6 @@ new class owned_province_modifier = {
 		tradegoods = list<tradegood>?
 	}
 	on_create = {
-		when [exists = this:country] {
-			new event_modifier `{this:id}` = {
-				name = `{this:name}`
-				desc = "{this:desc}All owned provinces {this:trigger_tooltip} gain the following bonus:
-		{modifier_to_string = this:province}"
-				modifier = this:country
-			}
-		}
-		
-		
 		new event_modifier `{this:id}_province` = {
 			name = `{this:name}`
 			modifier = this:province
@@ -38,15 +25,7 @@ new class owned_province_modifier = {
 		when [exists = this:building_line] {
 			foreach $building in this:building_line:buildings {
 				$building:on_built +=! {
-					if [
-						this:trigger
-						when [exists = this:country] {
-							owner->has_country_modifier = `{this:id}`
-						}
-						when_not {
-							owner->has_country_flag = `{this:id}`
-						}
-					] {
+					if [owner->has_country_flag = `{this:id}`] {
 						tooltip = {
 							add_province_modifier = {
 								name = `{this:id}_province`
@@ -67,15 +46,7 @@ new class owned_province_modifier = {
 		}
 		when [exists = this:building] {
 			this:building:on_built +=! {
-				if [
-					this:trigger
-					when [exists = this:country] {
-						owner->has_country_modifier = `{this:id}`
-					}
-					when_not {
-						owner->has_country_flag = `{this:id}`
-					}
-				] {
+				if [owner->has_country_flag = `{this:id}`] {
 					tooltip = {
 						add_province_modifier = {
 							name = `{this:id}_province`
@@ -96,15 +67,13 @@ new class owned_province_modifier = {
 		when [exists = this:tradegoods] {
 			on_actions:on_trade_good_changed +=! {
 				remove_province_modifier = `{this:id}_province`
-			
-				foreach $tradegood in this:tradegoods {
+				
+				if [owner->has_country_flag = `{this:id}`] {
 					if [
-						trade_goods = $tradegood
-						when [exists = this:country] {
-							owner->has_country_modifier = `{this:id}`
-						}
-						when_not {
-							owner->has_country_flag = `{this:id}`
+						OR = {
+							foreach $tradegood in this:tradegoods {
+								trade_goods = $tradegood
+							}
 						}
 					] {
 						add_province_modifier = {
@@ -116,26 +85,44 @@ new class owned_province_modifier = {
 				}
 			}
 		}
+		
+		on_actions:on_province_owner_change +=! {
+			if [
+				owner->has_country_flag = `{this:id}`
+				
+				when [exists = this:building_line] {
+					has_building_line = this:building_line
+				}
+				when [exists = this:building] {
+					has_building = this:building
+				}
+				when [exists = this:tradegoods] {
+					OR = {
+						foreach $tradegood in this:tradegoods {
+							trade_goods = $tradegood
+						}
+					}
+				}
+			] {
+				add_province_modifier = {
+					name = `{this:id}_province`
+					hidden = yes
+					duration = -1
+				}
+			}
+		}
 	}
 }
 new effect add_owned_province_modifier = {
 	args = owned_province_modifier
 	transpile = {
-		when [exists = args:country] {
-			add_country_modifier = {
-				name = `{args:id}`
-				duration = -1
-			}
-		}
-		when_not {
-			set_country_flag = `{args:id}`
-		}
+		set_country_flag = `{args:id}`
+		
 		new_custom_tooltip = "All owned provinces {args:trigger_tooltip} gain the following bonus:
 	{modifier_to_string = args:province}"
 	
 		hidden_effect = {
 			every_owned_province [
-				args:trigger
 				when [exists = args:building_line] {
 					has_building_line = args:building_line
 				}
@@ -162,12 +149,7 @@ new effect add_owned_province_modifier = {
 new effect remove_owned_province_modifier = {
 	args = owned_province_modifier
 	transpile = {
-		when [exists = args:country] {
-			remove_country_modifier = `{args:id}`
-		}
-		when_not {
-			clr_country_flag = `{args:id}`
-		}
+		clr_country_flag = `{args:id}`
 		
 		hidden_effect = {
 			every_owned_province = {
