@@ -110,7 +110,8 @@ new effect add_to_tree = {
 				iconType = {
 					name = `custom_mechanic_idea_tree_shadow_{args:group:id}`
 					position = { x = (IDEA_LEFT + args:x * 78) y = (IDEA_TOP + args:y * 78) }
-					quadTextureSprite = "GFX_idea_shadow"
+					scripted = yes
+					quadTextureSprite = `"GFX_idea_{args:group:category:to_lower}_shadow"`
 				}
 			}
 		}
@@ -150,7 +151,10 @@ new effect add_to_tree = {
 		}
 		new custom_button `custom_mechanic_idea_tree_{args:group:id}` = {
 			tooltip = "£{args:group:category:to_lower}£ {args:group:name} Ideas"
-			potential = args:potential
+			potential = {
+				args:potential
+				
+			}
 			trigger = {
 				if [has_idea_group = args:group:id] {
 					custom_trigger_tooltip = {
