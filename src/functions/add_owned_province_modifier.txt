@@ -1,20 +1,16 @@
 new class owned_province_modifier = {
 	list = owned_province_modifiers
 	id = `{this:id}`
-	default = {
-		desc = ""
-		trigger_tooltip = ""
-	}
 	args = {
-		name = string
-		desc = string
+		string name
+		string desc = ""
 		
-		trigger_tooltip = string
-		province = named_modifier
+		string trigger_tooltip = ""
+		named_modifier province
 		
-		building = building?
-		building_line = building_line?
-		tradegoods = list<tradegood>?
+		building? building
+		building_line? building_line
+		list<tradegood>? tradegoods
 	}
 	on_create = {
 		new event_modifier `{this:id}_province` = {

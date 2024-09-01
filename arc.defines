@@ -27,11 +27,11 @@ load_order = {
 	src/personalities.txt
 	src/countries/
 	src/global.txt
-	src/idea_groups/*
+	src/tradegoods.txt
 	src/buildings.txt
+	src/idea_groups/*
 	src/on_actions.txt
 	src/policies/*
-	src/tradegoods.txt
 	src/religions/*
 	src/tradenodes.txt
 	src/content/*
