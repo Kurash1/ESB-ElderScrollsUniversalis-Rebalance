@@ -1,0 +1,31 @@
+new class adjacency = {
+    id = `{this:id}`
+    list = adjacencies
+    default = {
+        start_x = -1
+        start_y = -1
+        stop_x = -1
+        stop_y = -1
+    }
+    args = {
+        from = province
+        to = province
+        type = string
+        through = province
+        start_x = int
+        start_y = int
+        stop_x = int
+        stop_y = int
+    }
+    simple_transpile = {
+        write_formatted_file "map/adjacencies.csv" = {
+            `From;To;Type;Through;start_x;start_y;stop_x;stop_y;Comment`
+            
+            foreach $adjacency in adjacencies {
+				`{$adjacency:from:id};{$adjacency:to:id};{$adjacency:type};{$adjacency:through:id};{$adjacency:start_x};{$adjacency:start_y};{$adjacency:stop_x};{$adjacency:stop_y};`
+            }
+
+            `-1;-1;;-1;-1;-1;-1;-1;-1`
+        }
+    }
+}
