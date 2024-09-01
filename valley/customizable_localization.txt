@@ -1,9 +1,7 @@
 new struct defined_text = {
-	args = {
-		text = string?
-		key = string?
-		trigger = named_trigger?
-	}
+	string? text
+	string? key
+	named_trigger? trigger
 }
 new class customizable_localization = {
 	id = `{this:id}`
@@ -25,7 +23,7 @@ new class customizable_localization = {
 					new named_int $i = 1
 					foreach $text in $custom:texts {
 						text = {
-							when [exists = $text:text] {						
+							when [exists = $text:text] {
 								new localisation `{$custom:id}_text_{$i}` = "{$text:text}"
 								localisation_key = `{$custom:id}_text_{$i}`
 								$i += 1

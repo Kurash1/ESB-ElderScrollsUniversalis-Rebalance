@@ -1,42 +1,22 @@
 new struct conditional_modifier = {
-	args = {
-		trigger = named_trigger
-		modifier = named_modifier
-	}
+	named_trigger trigger
+	named_modifier modifier
 }
 new struct great_project_tier = {
-	default = {
-		province_modifier = { }
-		area_modifier = { }
-		region_modifier = { }
-		country_modifier = { }
-		on_upgraded = { }
-		conditional_modifiers = { }
-	}
-	args = {
-		upgrade_time = int?
-		cost_to_upgrade = int?
-		province_modifier = named_modifier
-		area_modifier = named_modifier
-		region_modifier = named_modifier
-		country_modifier = named_modifier
-		on_upgraded = named_effect
-		conditional_modifiers = list<conditional_modifier>
-	}
+	int? upgrade_time
+	int? cost_to_upgrade
+	named_modifier province_modifier = { }
+	named_modifier area_modifier = { }
+	named_modifier region_modifier = { }
+	named_modifier country_modifier = { }
+	named_effect on_upgraded = { }
+	list<conditional_modifier> conditional_modifiers = { }
 }
 new struct scaling_tier = {
-	default = {
-		province_modifier = { }
-		area_modifier = { }
-		region_modifier = { }
-		country_modifier = { }
-	}
-	args = {
-		province_modifier = modifier
-		area_modifier = modifier
-		region_modifier = modifier
-		country_modifier = modifier
-	}
+	modifier province_modifier = { }
+	modifier area_modifier = { }
+	modifier region_modifier = { }
+	modifier country_modifier = { }
 }
 new effect transpile_single_tier = {
 	args = {
