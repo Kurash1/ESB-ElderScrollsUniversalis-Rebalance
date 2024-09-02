@@ -1,48 +1,3 @@
-new spell_header destruction = {
-	name = "Destruction"
-}
-new spell frost_storm = {
-	name = "Frost Storm"
-	type = province
-	cost = 100
-	on_cast = {
-		add_devastation = 50
-	}
-}
-new spell siege_magic = {
-	name = "Fireball"
-	type = province
-	cost = 100
-	on_cast = {
-		change_siege = 5
-	}
-}
-new spell chain_lightning = {
-	name = "Chain Lightning"
-	type = province
-	cost = 150
-	on_cast = {
-		kill_units = {
-			who = enemy
-			amount = 5
-		}
-	}
-}
-new spell elemental_runes = {
-	name = "Elemental Runes"
-	type = province
-	cost = 50
-	on_cast = {
-		quick_province_modifier = {
-			name = "Elemental Runes"
-			modifier = {
-				max_attrition = 2
-				local_hostile_attrition = 2
-			}
-		}
-	}
-}
-
 new idea_group destruction_ideas = {
 	name = "Destruction"
 	category = MIL
@@ -105,5 +60,51 @@ new idea_group destruction_ideas = {
 	}
 	bonus = {
 		siege_ability = 20%
+	}
+}
+
+@arc_exit_file
+new spell_header destruction = {
+	name = "Destruction"
+}
+new spell frost_storm = {
+	name = "Frost Storm"
+	type = province
+	cost = 100
+	on_cast = {
+		add_devastation = 50
+	}
+}
+new spell siege_magic = {
+	name = "Fireball"
+	type = province
+	cost = 100
+	on_cast = {
+		change_siege = 5
+	}
+}
+new spell chain_lightning = {
+	name = "Chain Lightning"
+	type = province
+	cost = 150
+	on_cast = {
+		kill_units = {
+			who = enemy
+			amount = 5
+		}
+	}
+}
+new spell elemental_runes = {
+	name = "Elemental Runes"
+	type = province
+	cost = 50
+	on_cast = {
+		quick_province_modifier = {
+			name = "Elemental Runes"
+			modifier = {
+				max_attrition = 2
+				local_hostile_attrition = 2
+			}
+		}
 	}
 }

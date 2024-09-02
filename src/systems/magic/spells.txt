@@ -39,21 +39,42 @@ new named_effect calculate_spell_costs = {
 }
 force_compile = calculate_spell_costs
 
+new enum spell_type = {
+	country
+	province
+	diplomatic
+}
+new enum spell_tag = {
+	school_alteration
+	school_destruction
+	school_conjuration
+	school_restoration
+	school_illusion
+}
 new class spell = {
 	list = spells
-	default = {
-		scaled = yes
-		trigger = {
-			
-		}
-	}
 	args = {
-		name = string
-		type = string #will be made an enum later
-		cost = float
-		on_cast = named_effect
-		scaled = bool
-		trigger = named_trigger
+		string name
+		spell_type type
+		named_trigger trigger = { }
+		
+		list<spell_tag> tags = { }
+		
+		float base_cost
+		
+		bool magnitude_is_duration = false
+		# If true then magnitude influences duration, but not the numbers.
+		# If false then magnitude influences the numbers in the modifier.
+		modifier? scaling_modifier
+		# For scaling modifiers that you want to apply to the target
+		# It gets passed the magnitude of the scaling as 'mag'
+		named_effect? on_cast_single
+		# The effect for casting the spell.
+		# Run only once, you can use the runtime variable 'spell_mag'
+		effect? on_cast_repeat_100
+		effect? on_cast_repeat_10
+		effect? on_cast_repeat_1
+		# Repeated for every x% of spell magnitude
 	}
 	on_create = {
 		arc_call_1

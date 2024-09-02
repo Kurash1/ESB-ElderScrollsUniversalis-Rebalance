@@ -1,3 +1,4 @@
+@arc_exit_file
 new country_event cast_spell.2 = {
 	title = "Cast a Spell on [spell_target.GetName]"
 	desc = "Magicka: [magicka.GetValue]/[max_magicka_var.GetValue]£magicka_icon£

@@ -1,25 +1,3 @@
-new spell_header mysticism = {
-	name = "Mysticism"
-}
-new spell dispel = {
-	name = "Dispel"
-	type = country
-	cost = 100
-	trigger = {
-		has_idea = mysticism_ideas_1
-		OR = {
-			foreach $ in event_modifiers [$:id:starts_with = "spell_"] {
-				has_country_modifier = $
-			}
-		}
-	}
-	on_cast = {
-		foreach $ in event_modifiers [$:id:starts_with = "spell_"] {
-			remove_country_modifier = $
-		}
-	}
-}
-
 new idea_group mysticism_ideas = {
 	name = "Mysticism"
 	category = ADM
@@ -87,5 +65,28 @@ new idea_group mysticism_ideas = {
 	}
 	bonus = {
 		enforce_religion_cost = -0.5
+	}
+}
+
+@arc_exit_file
+new spell_header mysticism = {
+	name = "Mysticism"
+}
+new spell dispel = {
+	name = "Dispel"
+	type = country
+	cost = 100
+	trigger = {
+		has_idea = mysticism_ideas_1
+		OR = {
+			foreach $ in event_modifiers [$:id:starts_with = "spell_"] {
+				has_country_modifier = $
+			}
+		}
+	}
+	on_cast = {
+		foreach $ in event_modifiers [$:id:starts_with = "spell_"] {
+			remove_country_modifier = $
+		}
 	}
 }
