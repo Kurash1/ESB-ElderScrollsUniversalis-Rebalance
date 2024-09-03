@@ -1,0 +1,31 @@
+new class church_aspect = {
+	list = church_aspects
+	args = {
+		string name
+		string desc
+		int cost = 100
+		named_trigger potential = { }
+		named_trigger allow = { }
+		named_trigger trigger = { }
+		named_modifier modifier = { }
+		named_effect effect = { }
+		named_trigger ai_will_do = { factor = 1 }
+	}
+	simple_transpile = {
+		write_file "common/church_aspects/ChurchAspects.txt" = {
+			foreach $ in church_aspects {
+				new localisation `{$:id}` = "{$:name}"
+				new localisation `desc_{$:id}` = "{$:desc}"
+				$:id = {
+					cost = $:cost
+					allow = { $:allow }
+					trigger = { $:trigger }
+					potential = { $:potential }
+					modifier = { $:modifier }
+					effect = { $:effect }
+					ai_will_do = { $:ai_will_do }
+				}
+			}
+		}
+	}
+}
