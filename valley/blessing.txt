@@ -1,0 +1,26 @@
+new class blessing = {
+	list = blessings
+	args = {
+		string name
+		string desc
+		named_trigger potential
+		named_modifier modifier
+		named_effect effect
+		named_trigger ai_will_do
+	}
+	simple_transpile = {
+		write_file "common/church_aspects/blessings.txt" = {
+			foreach $ in superregions {
+				new localisation `{$:id}` = "{$:name}"
+				new localisation `desc_{$:id}` = "{$:desc}"
+				$:id = {
+					is_blessing = yes
+					potential = { $:potential }
+					modifier = { $:modifier }
+					effect = { $:effect }
+					ai_will_do = { $:ai_will_do }
+				}
+			}
+		}
+	}
+}
