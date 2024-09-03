@@ -1,0 +1,85 @@
+new enum power_type = {
+	ADM
+	DIP
+	MIL
+}
+new struct skill_scaled_modifier = {
+	named_trigger trigger
+	named_modifier modifier
+}
+new class advisor_type = {
+	id = `{this:id}`
+	list = advisor_types
+	args = {
+		string name
+		string desc
+		named_modifier modifier
+		trigger ai_will_do = { factor = 1 }
+		bool allow_only_male = no
+		bool allow_only_female = no
+		bool allow_only_owner_religion = no
+		trigger chance = { factor = 1 }
+		power_type monarch_power
+		list<skill_scaled_modifier> skill_scaled_modifiers = { }
+	}
+	simple_transpile = {
+		write_file "common/advisortypes/arc.txt" = {
+			foreach $ in advisor_types {
+				new localisation `{$:id}` = "{$:name}"
+				new localisation `{$:id}_desc` = "{$:desc}"
+				$:id = {
+					monarch_power = $:monarch_power
+					when [$:allow_only_male == yes] `allow_only_male = {$:allow_only_male}`
+					when [$:allow_only_female == yes] `allow_only_female = {$:allow_only_female}`
+					when [$:allow_only_owner_religion == yes] `allow_only_owner_religion = {$:allow_only_owner_religion}`
+					foreach $mod in $:skill_scaled_modifiers {
+						skill_scaled_modifier = {
+							trigger = {
+								$mod:trigger
+							}
+							modifier = {
+								$mod:modifier
+							}
+						}
+					}
+					$:modifier
+					ai_will_do = {
+						$:ai_will_do
+					}
+					chance = {
+						$:chance
+					}
+				}
+			}
+		}
+	}
+}
+new class advisor = {
+	id = `{advisors:count}`
+	list = advisors
+	args = {
+		text name
+		province location
+		bool discount = no
+		int skill = 1
+		advisor_type type
+		string date
+		string death_date
+	}
+	simple_transpile = {
+		write_file "history/advisors/arc.txt" = {
+			foreach $ in advisors {
+				advisor = {
+					advisor_id = $:id
+					name = $:name
+					location = $:location
+					discount = $:discount
+					skill = $:skill
+					type = $:type
+					date = $:date
+					death_date = $:death_date
+				}
+			}
+		}
+	}
+}
