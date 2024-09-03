@@ -1,3 +1,33 @@
+new class superregion = {
+	id = `{this:id}_superregion`
+	list = superregions
+	args = {
+		string name
+		string? adj
+	}
+	simple_transpile = {
+		write_file "map/superregion.txt" = {
+			foreach $ in superregions {
+				new localisation `{$:id}` = "{$:name}"
+				new localisation `{$:id}_name` = "{$:name}"
+				when [exists = $:adj] {
+					new localisation `{$:id}_adj` = "{$:adj}"
+				}
+				when_not {
+					new localisation `{$:id}_adj` = "{$:name}"
+				}
+				$:id = {
+					foreach $region in regions [
+						exists = $region:superregion
+						$region:superregion:id == $:id
+					] {
+						$region
+					}
+				}
+			}
+		}
+	}
+}
 new class region = {
 	id = `{this:id}_region`
 	list = regions
