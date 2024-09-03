@@ -10,7 +10,7 @@ new class blessing = {
 	}
 	simple_transpile = {
 		write_file "common/church_aspects/blessings.txt" = {
-			foreach $ in superregions {
+			foreach $ in blessings {
 				new localisation `{$:id}` = "{$:name}"
 				new localisation `desc_{$:id}` = "{$:desc}"
 				$:id = {
