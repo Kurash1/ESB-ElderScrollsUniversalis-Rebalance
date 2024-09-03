@@ -1,0 +1,23 @@
+new class area = {
+	id = `{this:id}_area`
+	list = areas
+	args = {
+		string name
+		region region
+	}
+	simple_transpile = {
+		write_file "map/area.txt" = {
+			foreach $ in areas {
+				new localisation `{$:id}` = "{$:name}"
+				$:id = {
+					foreach $prov in provinces [
+						exists = $prov:area
+						$prov:area:id == $:id
+					] {
+						$prov
+					}
+				}
+			}
+		}
+	}
+}
