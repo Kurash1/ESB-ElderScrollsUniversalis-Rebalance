@@ -1,0 +1,79 @@
+new class age_objective = {
+	list = age_objectives
+	args = {
+		string name
+		string desc
+		named_trigger trigger
+	}
+}
+new class age_ability = {
+	list = age_abilities
+	args = {
+		string name
+		named_trigger allow = { }
+		named_effect effect = { }
+		named_modifier modifier = { }
+		named_effect rule = { }
+		named_trigger ai_will_do = { }
+	}
+}
+new class age = {
+	list = ages
+	args = {
+		string name
+		string desc
+		int start
+		named_trigger can_start
+		bool religious_conflicts = no
+		float papacy = 1
+		named_effect absolutism = {
+			harsh_treatment = 1
+			stability = 1
+			decrease_autonomy_command = 1
+			strengthen_government = 1
+			increase_autonomy_command = -1
+			debase_currency = -1
+			execute_rebel_acceptance_command = -10
+			seat_in_parliament = -5
+			war_exhaustion = -1
+		}
+		dict<age_objective> objectives = { }
+		dict<age_ability> abilities = { }
+	}
+	simple_transpile = {
+		write_file "common/ages/ages.txt" = {
+			foreach $ in ages {
+				new localisation `{$:id}` = "{$:name}"
+				new localisation `{$:id}_desc` = "{$:desc}"
+				$:id = {
+					start = $:start
+					can_start = { $:can_start }
+					absolutism = { $:absolutism }
+					religious_conflicts = $:religious_conflicts
+					papacy = $:papacy
+					objectives = {
+						foreach $obj in $:objectives {
+							new localisation `{$obj:id}` = "{$obj:name}"
+							new localisation `{$obj:id}_desc` = "{$obj:desc}"
+							$obj:id = {
+								$obj:trigger
+							}
+						}
+					}
+					abilities = {
+						foreach $abj in $:abilities {
+							new localisation `{$abj:id}` = "{$abj:name}"
+							$abj:id = {
+								allow = { $abj:allow }
+								effect = { $abj:effect }
+								modifier = { $abj:modifier }
+								rule = { $abj:rule }
+								ai_will_do = { $abj:ai_will_do }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
