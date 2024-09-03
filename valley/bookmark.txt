@@ -1,0 +1,38 @@
+new class bookmark = {
+	list = bookmarks
+	args = {
+		string name
+		string desc
+		string date
+		province center
+		list<country> countries = { }
+		list<country> easy_countries = { }
+		bool default = no
+		named_effect effect = { }
+	}
+	simple_transpile = {
+		foreach $ in bookmarks {
+			write_file "common/bookmarks/{$:id}.txt" = {
+				new localisation `{$:id}_name` = "{$:name}"
+				new localisation `{$:id}_desc` = "{$:desc}"
+				bookmark = {
+					name = `{$:id}_name`
+					desc = `{$:id}_desc`
+					date = $:date
+					center = $:center
+					foreach $c in $:countries {
+						country = $c
+					}
+					foreach $ec in $:easy_countries {
+						country = $ec
+						easy_country = $ec
+					}
+					default = $:default
+					effect = {
+						$:effect
+					}
+				}
+			}
+		}
+	}
+}
