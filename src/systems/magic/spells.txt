@@ -1,12 +1,10 @@
-new named_int SPELL_TOP = 120
-new named_int SPELL_START_LEFT = 75
-new named_int SPELL_LEFT = 10
 new named_int SPELL_RIGHT = 285
+new named_int SPELL_TOP = 75
 
 interface_files:countrytechnologyview:countrytechnologyview += {
 	windowType = {
 		name = "spells_menu"
-		position = { x = 0 y = 0 }
+		position = { x = 10 y = 120 }
 		scripted = yes
 	}
 }
@@ -18,7 +16,7 @@ new custom_window spells_menu = {
 new named_ui_node spell_menu_node = interface_files:countrytechnologyview:countrytechnologyview:spells_menu
 
 new named_bool current_spell_side = no
-new named_int current_spell_position_y = SPELL_START_LEFT
+new named_int current_spell_position_y = SPELL_TOP
 
 spell_menu_node += {
 	windowType = {
@@ -38,6 +36,38 @@ new named_effect calculate_spell_costs = {
 	&development &= total_development
 }
 force_compile = calculate_spell_costs
+
+new named_int spell_pages = 0
+new effect create_next_spell_page = {
+	args = bool
+	transpile = {
+		when [current_spell_side == yes] {
+			spell_pages += 1
+			spell_menu_node += {
+				windowType = {
+					name = `"spells_page_{spell_pages}"`
+					position = { x = 0 y = 0 }
+					scripted = yes
+				}
+			}
+			new custom_window `spells_page_{spell_pages}` = {
+				potential =* {
+					always = no
+				}
+			}
+			current_spell_position_y := SPELL_TOP
+			current_spell_side := no
+			run_effect = {
+				delete = current_spell_page
+			}
+			new named_ui_node current_spell_page = spell_menu_node:last
+		}
+		when_not {
+			current_spell_position_y := SPELL_TOP
+			current_spell_side := yes
+		}
+	}
+}
 
 new enum spell_type = {
 	country
@@ -83,26 +113,26 @@ new class spell = {
 			current_spell_page += {
 				iconType = {
 					name = `custom_mechanic_spell_background_{this:id}`
-					position = { x = (SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + current_spell_position_y) }
+					position = { x = ((current_spell_side * SPELL_RIGHT)) y = (current_spell_position_y) }
 					quadTextureSprite = `"GFX_spell_type_background_{this:type}"`
 					scripted = yes
 				}
 				guiButtonType = {
 					name = `custom_mechanic_spell_{this:id}`
-					position = { x = (7 + SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + 6 + current_spell_position_y) }
+					position = { x = (7 + (current_spell_side * SPELL_RIGHT)) y = (6 + current_spell_position_y) }
 					quadTextureSprite = `"GFX_spells_{this:id}"`
 					scripted = yes
 				}
 				instantTextBoxType = {
 					name = `custom_mechanic_spell_name_{this:id}`
-					position = { x = (59+5 + SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + 8 + current_spell_position_y) }
+					position = { x = (59+5 + (current_spell_side * SPELL_RIGHT)) y = (8 + current_spell_position_y) }
 					maxWidth = 175
 					maxHeight = 20
 					scripted = yes
 				}
 				instantTextBoxType = {
 					name = `custom_mechanic_spell_cost_{this:id}`
-					position = { x = (59+5 + SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + 29 + current_spell_position_y) }
+					position = { x = (59+5 + (current_spell_side * SPELL_RIGHT)) y = (29 + current_spell_position_y) }
 					format = right
 					maxWidth = 170
 					maxHeight = 20
@@ -110,7 +140,7 @@ new class spell = {
 				}
 				instantTextBoxType = {
 					name = `custom_mechanic_spell_type_{this:id}`
-					position = { x = (59+5+2 + SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + 29 + current_spell_position_y) }
+					position = { x = (59+5+2 + (current_spell_side * SPELL_RIGHT)) y = (29 + current_spell_position_y) }
 					maxWidth = 115
 					maxHeight = 20
 					scripted = yes
@@ -121,19 +151,19 @@ new class spell = {
 			current_spell_page += {
 				iconType = {
 					name = `custom_mechanic_spell_background_{this:id}`
-					position = { x = (SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + current_spell_position_y) }
+					position = { x = (current_spell_side * SPELL_RIGHT) y = (current_spell_position_y) }
 					quadTextureSprite = `"GFX_spell_type_background_{this:type}_right"`
 					scripted = yes
 				}
 				guiButtonType = {
 					name = `custom_mechanic_spell_{this:id}`
-					position = { x = (187 + 7 + SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + 6 + current_spell_position_y) }
+					position = { x = (187 + 7 + (current_spell_side * SPELL_RIGHT)) y = (6 + current_spell_position_y) }
 					quadTextureSprite = `"GFX_spells_{this:id}"`
 					scripted = yes
 				}
 				instantTextBoxType = {
 					name = `custom_mechanic_spell_name_{this:id}`
-					position = { x = (10 + SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + 8 + current_spell_position_y) }
+					position = { x = (10 + (current_spell_side * SPELL_RIGHT)) y = (8 + current_spell_position_y) }
 					format = right
 					maxWidth = 175
 					maxHeight = 20
@@ -141,14 +171,14 @@ new class spell = {
 				}
 				instantTextBoxType = {
 					name = `custom_mechanic_spell_cost_{this:id}`
-					position = { x = (59+5-48 + SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + 29 + current_spell_position_y) }
+					position = { x = (59+5-48 + (current_spell_side * SPELL_RIGHT)) y = (29 + current_spell_position_y) }
 					maxWidth = 55
 					maxHeight = 20
 					scripted = yes
 				}
 				instantTextBoxType = {
 					name = `custom_mechanic_spell_type_{this:id}`
-					position = { x = (59+5+2 + SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + 29 + current_spell_position_y) }
+					position = { x = (59+5+2 + (current_spell_side * SPELL_RIGHT)) y = (29 + current_spell_position_y) }
 					format = right
 					maxWidth = 118
 					maxHeight = 20
@@ -157,87 +187,23 @@ new class spell = {
 			}
 		}
 		
-		calculate_spell_costs += {
-			when [
-				this:type != "diplomatic"
-				this:type != "province"
-				this:type != "siege"
-			] {
-				new script_variable `{this:id}_spell_cost` = {
-					name = "{this:name} Cost"
-				}
-				&`{this:id}_spell_cost` := this:cost
-				&`{this:id}_spell_cost` *= spell_cost_modifier_var
-				when [this:scaled == yes] {
-					&`{this:id}_spell_cost` *= development
-					&`{this:id}_spell_cost` *= 0.01
-				}
-			}
-		}
-		
 		new custom_icon `custom_mechanic_spell_background_{this:id}` = { }
 		new custom_text_box `custom_mechanic_spell_name_{this:id}` = {
-			name = this:name
+			name = "{this:name} "
 		}
 		new custom_text_box `custom_mechanic_spell_type_{this:id}` = {
-			name = `{id_to_name = this:type}`
-			tooltip = `This spell is of the §Y{id_to_name = this:type}§! Type
-
-§YCountry§! type spells affect the entire country, they can be cast from the spells window. Their cost is often multiplied by the development of your country.
-§YDiplomatic§! type spells affect another country, they can be cast from the diplomatic window. Their cost is often multiplied by the development of the target country.
-§YProvince§! type spells affect a single province, they can be cast from the province window.
-§YRitual§! type spells temporarily inhibit your magicka generation, but result in greater effects once completed, they can be cast from the spells window.
-§YSiege§! type spells affect a siege, they can be cast from the siege window.`
+			name = "{this:type} "
+			tooltip = ""
 		}
 		new custom_text_box `custom_mechanic_spell_cost_{this:id}` = {
-			name = `{this:cost}`
-			tooltip = "This spell costs [{this:id}_spell_cost.GetValue]£magicka_icon£ to cast
--------------
-This spell has a base cost of §Y{this:cost}§!. This cost is further modified by:
-	Spell cost modifier: §Y[spell_cost_modifier_percent.GetValue]%§!"
+			name = "{this:base_cost} "
+			tooltip = ""
 		}
-		
 		new custom_button `custom_mechanic_spell_{this:id}` = {
-			tooltip = "{this:name}
--------------
-This spell has a base cost of §Y{this:cost}§!. This cost is further modified by:
-	Spell cost modifier: §Y[spell_cost_modifier_percent.GetValue]%§!"
-			trigger = {
-				this:trigger
-				
-				&magicka >= `{this:id}_spell_cost`
-			}
+			tooltip = "{this:name} "
+			trigger = { }
 			effect = { }
 		}
-		
-		when [
-			this:type != "country"
-			this:type != "ritual"
-		] {
-			custom_buttons:last:trigger := {
-				custom_trigger_tooltip = {
-					new_tooltip = "This is not a §YCountry§! or §YRitual§! type spell, and thus cannot be cast from this menu."
-					always = no
-				}
-			}
-		}
-		when_not {
-			custom_buttons:last:effect +=! {
-				hidden_effect = {
-					&`{this:id}_spell_cost` := this:cost
-					&`{this:id}_spell_cost` *= spell_cost_modifier_var
-					when [this:scaled == yes] {
-						&`{this:id}_spell_cost` *= development
-						&`{this:id}_spell_cost` *= 0.01
-					}
-					&magicka -= `{this:id}_spell_cost`
-				}
-				this:on_cast
-			}
-		}
-		
-		when [this:scaled == yes] { custom_buttons:last:tooltip += "
-	Development: §Y[development.GetValue]%§!" }
 		
 		current_spell_position_y += 57
 		
@@ -257,13 +223,13 @@ new class spell_header = {
 		current_spell_page += {
 			iconType = {
 				name = `custom_mechanic_spell_header_background_{this:id}`
-				position = { x = (65 / 2 + SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + 8 + current_spell_position_y) }
+				position = { x = (65 / 2 + (current_spell_side * SPELL_RIGHT)) y = (8 + current_spell_position_y) }
 				quadTextureSprite = "GFX_banner_both_3"
 				scripted = yes
 			}
 			instantTextBoxType = {
 				name = `custom_mechanic_spell_header_name_{this:id}`
-				position = { x = (SPELL_LEFT + (current_spell_side * SPELL_RIGHT)) y = (SPELL_TOP + 8 + 8 + current_spell_position_y) }
+				position = { x = (current_spell_side * SPELL_RIGHT) y = (8 + 8 + current_spell_position_y) }
 				maxWidth = 250
 				maxHeight = 57
 				format = center
@@ -280,34 +246,50 @@ new class spell_header = {
 	}
 }
 
-new named_int spell_pages = 0
-new effect create_next_spell_page = {
-	args = bool
+new effect set_spell_target_type = {
+	args = spell_type
 	transpile = {
-		when [current_spell_side == yes] {
-			#spell_pages += 1
-			#spell_menu_node += {
-			#	windowType = {
-			#		name = `"spells_page_{spell_pages}"`
-			#		position = { x = 0 y = 0 }
-			#		scripted = yes
-			#	}
-			#}
-			#new custom_window `spells_page_{spell_pages}` = {
-			#	potential =* {
-			#		&open_spell_page == *spell_pages*
-			#	}
-			#}
-			#current_spell_position_y := SPELL_START_LEFT
-			#current_spell_side := no
-			#run_effect = {
-			#	delete = current_spell_page
-			#}
-			#new named_ui_node current_spell_page = spell_menu_node:last
+		when [args != country] {
+			clr_country_flag = spell_target_country
 		}
-		when_not {
-			current_spell_position_y := 0
-			current_spell_side := yes
+		when [args != province] {
+			clr_country_flag = spell_target_province
+			every_owned_province = {
+				remove_province_modifier = spell_target_province_mod
+			}
 		}
+		when [args != diplomatic] {
+			clr_country_flag = spell_target_diplomatic
+		}
+		set_country_flag = `spell_target_{args}`
 	}
 }
+
+new spell_header test = { name = "Test" }
+new spell test_1 = { name = "Test" type = country base_cost = 10 }
+new spell test_2 = { name = "Test" type = country base_cost = 10 }
+new spell test_3 = { name = "Test" type = country base_cost = 10 }
+new spell test_4 = { name = "Test" type = country base_cost = 10 }
+new spell test_5 = { name = "Test" type = country base_cost = 10 }
+new spell test_6 = { name = "Test" type = country base_cost = 10 }
+new spell test_7 = { name = "Test" type = country base_cost = 10 }
+new spell test_8 = { name = "Test" type = country base_cost = 10 }
+new spell test_9 = { name = "Test" type = country base_cost = 10 }
+new spell test_11 = { name = "Test" type = country base_cost = 10 }
+new spell test_12 = { name = "Test" type = country base_cost = 10 }
+new spell test_13 = { name = "Test" type = country base_cost = 10 }
+new spell test_14 = { name = "Test" type = country base_cost = 10 }
+new spell test_15 = { name = "Test" type = country base_cost = 10 }
+new spell test_16 = { name = "Test" type = country base_cost = 10 }
+new spell test_17 = { name = "Test" type = country base_cost = 10 }
+new spell test_18 = { name = "Test" type = country base_cost = 10 }
+new spell test_19 = { name = "Test" type = country base_cost = 10 }
+new spell test_21 = { name = "Test" type = country base_cost = 10 }
+new spell test_22 = { name = "Test" type = country base_cost = 10 }
+new spell test_23 = { name = "Test" type = country base_cost = 10 }
+new spell test_24 = { name = "Test" type = country base_cost = 10 }
+new spell test_25 = { name = "Test" type = country base_cost = 10 }
+new spell test_26 = { name = "Test" type = country base_cost = 10 }
+new spell test_27 = { name = "Test" type = country base_cost = 10 }
+new spell test_28 = { name = "Test" type = country base_cost = 10 }
+new spell test_29 = { name = "Test" type = country base_cost = 10 }
