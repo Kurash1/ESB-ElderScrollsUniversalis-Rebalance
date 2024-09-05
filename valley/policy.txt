@@ -1,0 +1,45 @@
+new class policy = {
+	list = policies
+	args = {
+		string? name
+		string? desc
+		power_type monarch_power
+		named_trigger potential = { }
+		named_trigger allow = { }
+		named_modifier modifier = { }
+		named_effect effect = { }
+		named_effect removed_effect = { }
+		named_trigger ai_will_do = { factor = 1 }
+		idea_group group_1
+		idea_group group_2
+	}
+	simple_transpile = {
+		write_file "common/policies/arc.txt" = {
+			foreach $ in policies {
+				when [exists = $:name] {
+					new localisation `{$:id}` = "{$:name}"
+				}
+				when [exists = $:desc] {
+					new localisation `desc_{$:id}` = "{$:desc}"
+				}
+				$:id = {
+					monarch_power = $:monarch_power
+					potential = {
+						$:potential
+						has_idea_group = $:group_1
+						has_idea_group = $:group_2
+					}
+					allow = {
+						$:allow
+						full_idea_group = $:group_1
+						full_idea_group = $:group_2
+					}
+					$:modifier
+					effect = { $:effect }
+					removed_effect = { $:removed_effect }
+					ai_will_do = { $:ai_will_do }
+				}
+			}
+		}
+	}
+}
