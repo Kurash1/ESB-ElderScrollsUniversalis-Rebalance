@@ -258,7 +258,7 @@ new class spell = {
 			}
 			
 			when [exists = this:scaling_modifier] {
-				scaling_modifiers:`spell_{this}`:set = spell_mag
+				scaling_modifiers:`spell_{this:id}`:set = spell_mag
 			}
 			when [exists = this:on_cast_multiplied] {
 				&temp := spell_mag
