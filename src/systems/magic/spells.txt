@@ -69,7 +69,7 @@ new effect create_next_spell_page = {
 	}
 }
 
-new script_variable mag = {
+new script_variable spell_mag = {
 	tag = "magicka"
 	name = "Spell Magnitude"
 }
@@ -216,10 +216,7 @@ new class spell = {
 			tooltip = "{this:name} "
 			trigger = { }
 			effect = {
-				&mag := 0.8
-				when [exists = this:scaling_modifier] {
-					scaling_modifiers:spell_test_1:set = mag
-				}
+				this:cast = yes
 			}
 		}
 		
@@ -230,6 +227,53 @@ new class spell = {
 		}
 		
 		arc_call_2
+	}
+	calculate_magnitude = {
+		args = bool #no effect
+		transpile = {
+			&spell_mag := 1
+		}
+	}
+	calculate_cost = {
+		args = bool #no effect
+		transpile = {
+			&this_spell_cost := this:base_cost
+		}
+	}
+	can_cast = {
+		args = string #the name of the spell cost variable
+		transpile = {
+			&magicka >= args
+			this:trigger
+		}
+	}
+	cast = {
+		args = bool #whether the spell should reduce magicka
+		transpile = {
+			this:calculate_magnitude = yes
+			when [args] {
+				this:calculate_cost = yes
+				&magicka -= this_spell_cost
+			}
+			
+			when [exists = this:scaling_modifier] {
+				scaling_modifiers:spell_test_1:set = spell_mag
+			}
+			when [exists = this:on_cast_multiplied] {
+				&temp := spell_mag
+				for iter as 15 to 0 {
+					new named_float i = (2 ^ (iter - 1) * 0.001)
+					if [&temp >= i] {
+						&temp -= i
+						this:on_cast_multiplied
+					}
+					delete = i
+				}
+			}
+			when [exists = this:on_cast_single] {
+				this:on_cast_single
+			}
+		}
 	}
 }
 new class spell_header = {
@@ -288,30 +332,10 @@ new spell test_1 = { name = "Test" type = country base_cost = 10
 	scaling_modifier = {
 		advisor_cost = (-1 * i)
 	}
+	on_cast_single = {
+		add_prestige = 50
+	}
+	on_cast_multiplied = {
+		add_treasury = (i * 200)
+	}
 }
-new spell test_2 = { name = "Test" type = country base_cost = 10 }
-new spell test_3 = { name = "Test" type = country base_cost = 10 }
-new spell test_4 = { name = "Test" type = country base_cost = 10 }
-new spell test_5 = { name = "Test" type = country base_cost = 10 }
-new spell test_6 = { name = "Test" type = country base_cost = 10 }
-new spell test_7 = { name = "Test" type = country base_cost = 10 }
-new spell test_8 = { name = "Test" type = country base_cost = 10 }
-new spell test_9 = { name = "Test" type = country base_cost = 10 }
-new spell test_11 = { name = "Test" type = country base_cost = 10 }
-new spell test_12 = { name = "Test" type = country base_cost = 10 }
-new spell test_13 = { name = "Test" type = country base_cost = 10 }
-new spell test_14 = { name = "Test" type = country base_cost = 10 }
-new spell test_15 = { name = "Test" type = country base_cost = 10 }
-new spell test_16 = { name = "Test" type = country base_cost = 10 }
-new spell test_17 = { name = "Test" type = country base_cost = 10 }
-new spell test_18 = { name = "Test" type = country base_cost = 10 }
-new spell test_19 = { name = "Test" type = country base_cost = 10 }
-new spell test_21 = { name = "Test" type = country base_cost = 10 }
-new spell test_22 = { name = "Test" type = country base_cost = 10 }
-new spell test_23 = { name = "Test" type = country base_cost = 10 }
-new spell test_24 = { name = "Test" type = country base_cost = 10 }
-new spell test_25 = { name = "Test" type = country base_cost = 10 }
-new spell test_26 = { name = "Test" type = country base_cost = 10 }
-new spell test_27 = { name = "Test" type = country base_cost = 10 }
-new spell test_28 = { name = "Test" type = country base_cost = 10 }
-new spell test_29 = { name = "Test" type = country base_cost = 10 }

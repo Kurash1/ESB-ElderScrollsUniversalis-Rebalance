@@ -156,10 +156,31 @@ new script_variable magicka = {
 new effect add_magicka = {
 	args = float
 	transpile = {
-		when [args > 0] {
+		when [args >= 0] {
 			new_custom_tooltip = "Gain §G{args}§! Magicka."
 		}
 		when_not {
+			new_custom_tooltip = "Lose §R{args}§! Magicka."
+		}
+		hidden_effect = {
+			variables:monthly_magicka_var:calculate
+			variables:max_magicka_var:calculate
+			
+			&magicka += args
+			
+			if [&magicka > max_magicka_var] {
+				&magicka := max_magicka_var
+			}
+		}
+	}
+}
+new effect add_magicka = {
+	args = script_variable
+	transpile = {
+		if [args >= 0] {
+			new_custom_tooltip = "Gain §G{args}§! Magicka."
+		}
+		else {
 			new_custom_tooltip = "Lose §R{args}§! Magicka."
 		}
 		hidden_effect = {
