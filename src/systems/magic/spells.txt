@@ -99,6 +99,7 @@ new class spell = {
 		
 		float base_cost
 		
+		float? duration #duration of the scaling modifier
 		bool magnitude_is_duration = false
 		# If true then magnitude influences duration, but not the numbers.
 		# If false then magnitude influences the numbers in the modifier.
@@ -116,7 +117,7 @@ new class spell = {
 		
 		when [exists = this:scaling_modifier] {
 			new scaling_modifier `spell_{this:id}` = {
-				name = "{this:name} "
+				name = "{this:name }"
 				modifier = this:scaling_modifier
 				type = "{this:type }"
 			}
@@ -257,7 +258,7 @@ new class spell = {
 			}
 			
 			when [exists = this:scaling_modifier] {
-				scaling_modifiers:spell_test_1:set = spell_mag
+				scaling_modifiers:`spell_{this}`:set = spell_mag
 			}
 			when [exists = this:on_cast_multiplied] {
 				&temp := spell_mag
@@ -328,9 +329,26 @@ new effect set_spell_target_type = {
 }
 
 new spell_header test = { name = "Test" }
-new spell test_1 = { name = "Test" type = country base_cost = 10
+new spell test_1 = {
+	name = "Test"
+	type = country
+	base_cost = 10
 	scaling_modifier = {
 		advisor_cost = (-1 * i)
+	}
+	on_cast_single = {
+		add_prestige = 50
+	}
+	on_cast_multiplied = {
+		add_treasury = (i * 200)
+	}
+}
+new spell test_2 = {
+	name = "Test"
+	type = country
+	base_cost = 10
+	scaling_modifier = {
+		global_tax_modifier = (1 * i)
 	}
 	on_cast_single = {
 		add_prestige = 50
