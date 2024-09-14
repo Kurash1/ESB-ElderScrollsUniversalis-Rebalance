@@ -1,0 +1,72 @@
+new idea_group rift_ideas = {
+	name = "Blue Axe"
+	category = national
+	start = {
+		garrison_size = 0.2
+		infantry_power = 0.10
+	}
+	bonus = {
+		overextension_impact_modifier = -0.1
+	}
+	trigger = {
+		tag = blue_axe
+	}
+	ideas = {
+		{
+			name = "Glacial Vanguard"
+			desc = "Descendants of the mighty Atmoran axe-warriors, the people of Blue-Axe have long stood as the Glacial Vanguard against the encroaching threats of the frozen north. Fierce and unyielding, their warriors are renowned for their expertise in combating the chilling cold and facing the relentless hordes that lurk in the icy wilderness."
+			modifier = {
+				shock_damage = 0.05
+				shock_damage_received = -0.1
+			}
+		}
+		{
+			name = "Sea-Thanes' Dominion"
+			desc = "The rise of the Sea-Thanes has transformed Blue-Axe into a maritime power to be reckoned with. These independent lords of the sea command fleets that dominate the northern waters, securing trade routes and fending off any would-be invaders. Blue-Axe's dominion over the icy waves ensures prosperity and control over vital maritime trade routes."
+			modifier = {
+				cannons_for_hunting_pirates_in_fleet = 1.2
+				global_ship_trade_power = 0.2
+				galley_power = 0.2
+			}
+		}
+		{
+			name = "Rieklings' Bane Legacy"
+			desc = "Rooted in the ancient history of Blue-Axe, the Rieklings' Bane Legacy commemorates the heroic deeds of the Atmoran forebears who purged the northern reaches of Winterhold from the wretched Rieklings. The memory of this cleansing campaign instills a deep-seated determination to resist the resurgence of these malevolent creatures."
+			modifier = {
+				native_uprising_chance = -0.25
+				native_assimilation = 0.25
+			}
+		}
+		{
+			name = "Iceforged Resilience"
+			desc = "Forged in the unforgiving crucible of Winterhold's icy wilderness, the people of Blue-Axe embody the Iceforged Resilience. Enduring harsh climates and weathering the relentless storms, they have developed an unparalleled resilience that allows them to withstand the harshest of winters and emerge stronger, unyielding in the face of adversity."
+			modifier = {
+				land_attrition = -0.20
+			}
+		}
+		{
+			name = "Frostforged Arsenal"
+			desc = "Rooted in the ancient traditions of Atmoran craftsmanship, the people of Blue-Axe have perfected the art of forging weapons and armor from the unforgiving ice itself. The Frostforged Arsenal stands as a testament to their exceptional skill, producing weaponry that not only strikes fear into the hearts of enemies but also grants Blue-Axe warriors a distinct edge on the frozen battlefield."
+			modifier = {
+				movement_speed = 0.10
+				monthly_magicka = 0.2
+			}
+		}
+		{
+			name = "Northern Unity Code"
+			desc = "In the face of external threats and internal challenges, Blue-Axe upholds the Northern Unity Code. This unwavering sense of solidarity among the clans fosters cooperation and mutual support, allowing Blue-Axe to maintain a delicate balance between autonomy and collective strength in the complex political landscape of Winterhold."
+			modifier = {
+				global_unrest = -2
+				stability_cost_modifier = -0.15
+			}
+		}
+		{
+			name = "Throne of the Icy Sovereigns"
+			desc = "Blue-Axe, though not utterly dominant, aspires to claim the Throne of the Icy Sovereigns. This ambition fuels their expansionist spirit and strategic prowess, as they seek to unite the fractured clans of Winterhold under their rule. The Throne represents not only a seat of power but also a symbol of their destiny to shape the future of the northern lands."
+			modifier = {
+				max_absolutism = 20
+				military_tactics = 0.25
+			}
+		}
+	}
+}
