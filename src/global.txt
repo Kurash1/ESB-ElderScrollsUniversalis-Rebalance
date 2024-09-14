@@ -1,6 +1,83 @@
-new define NDefines.NEconomy.LAND_TECH_MERC_MAINTENANCE_IMPACT = 0
+new define NDefines.NGame.START_DATE = `"2568.1.1"`
+new define NDefines.NGame.END_DATE = `"9999.12.31"`
+new define NDefines.NGame.MAX_RANDOM_NEW_WORLD = `"57.1.1"`
+new define NDefines.NGame.GREAT_POWER_FRENZY_START = `"2700.1.1"`
+new define NDefines.NGame.GREAT_POWER_FRENZY_WARMUP_MONTHS = 600
+new define NDefines.NGame.GREAT_POWER_FRENZY_QUICKSTART = 0
 
+new define NDefines.NDiplomacy.MAX_NUM_OF_ELECTORS = 8
+new define NDefines.NDiplomacy.DESIRED_NUM_OF_ELECTORS = 1
+new define NDefines.NDiplomacy.MAX_FREE_CITIES = 15
+new define NDefines.NDiplomacy.MIN_NUM_ELECTORS_FOR_REMOVE_ELECTORATE = 2
+new define NDefines.NDiplomacy.HRE_PRINCE_AUTHORITY_THRESHOLD = 10
+new define NDefines.NDiplomacy.IMPERIAL_AUTHORITY_FROM_PRINCES = 0.075
+new define NDefines.NDiplomacy.HRE_FOREIGN_CONTROL_PENALTY = -0.005
+new define NDefines.NDiplomacy.HRE_HERETIC_PENALTY = 0
+new define NDefines.NDiplomacy.LACK_OF_ELECTORS_HIT = 0
+new define NDefines.NDiplomacy.IMPERIAL_REFORM_COST = 50
+new define NDefines.NDiplomacy.AE_HRE_INTERNAL = 0
+
+new define NDefines.NCountry.ALLOW_FEMALE_GENERALS = 1
+new define NDefines.NCountry.FEMALE_ADVISOR_CHANCE = 50
+new define NDefines.NCountry.MAX_IDEA_GROUPS_FROM_SAME_CATEGORY = 0.34
+new define NDefines.NCountry.FREE_IDEA_GROUP_COST  = 7
+new define NDefines.NCountry.IDEA_TO_TECH = -0
+new define NDefines.NCountry.TECH_TIME_COST = 0
+new define NDefines.NCountry.TECH_AHEAD_OF_TIME = 0.1
+new define NDefines.NCountry.PS_BUY_IDEA = 600
+new define NDefines.NCountry.PS_FACTION_BOOST = 50
+new define NDefines.NCountry.INNOVATIVENESS_FIRST_PICKED_IDEA = 0.0
+new define NDefines.NCountry.INNOVATIVENESS_AHEAD_OF_TIME_BONUS = 0.0
+new define NDefines.NCountry.TIME_TO_REPAIR_GREAT_PROJECT_ONE_PERCENT_IN_DAYS = 30
+new define NDefines.NCountry.GREAT_PROJECT_FULL_STATE_OF_REPAIR = 100
+new define NDefines.NCountry.GREAT_PROJECT_DEGRADATION_PERCENT_PER_MONTH = 0.01
+new define NDefines.NCountry.GREAT_PROJECT_DEGRADATION_PERCENT_THRESHOLD_FOR_ALERT = 5
+new define NDefines.NCountry.GREAT_PROJECT_DEGRADATION_PERCENT_THRESHOLD_FOR_TIER_1 = 25
+new define NDefines.NCountry.GREAT_PROJECT_DEGRADATION_PERCENT_THRESHOLD_FOR_TIER_2 = 50
+new define NDefines.NCountry.GREAT_PROJECT_DEGRADATION_PERCENT_THRESHOLD_FOR_TIER_3 = 75
+new define NDefines.NCountry.GREAT_PROJECT_MANPOWER_REQUIRED_FOR_CONSTRUCTION_BOOST = 10000
+new define NDefines.NCountry.GREAT_PROJECT_MANPOWER_CONSTRUCTION_BOOST_AMOUNT_IN_DAYS = 730
+new define NDefines.NCountry.GREAT_PROJECT_MONEY_REQUIRED_FOR_CONSTRUCTION_BOOST = 250
+new define NDefines.NCountry.GREAT_PROJECT_MONEY_CONSTRUCTION_BOOST_AMOUNT_IN_DAYS = 730
+new define NDefines.NCountry.GREAT_PROJECT_MOVE_COST_PER_DAY = 100
+new define NDefines.NCountry.MONARCH_DEATH = 0
+new define NDefines.NCountry.MONARCH_DEATH_MIN_CHANCE_MODIFIER = 0
+new define NDefines.NCountry.HEIR_DEATH = 0
+new define NDefines.NCountry.CULTURE_MIN_DEVELOPMENT_TO_PROMOTE = 50
+
+new define NDefines.NEconomy.LAND_TECH_MERC_MAINTENANCE_IMPACT = 0
+new define NDefines.NEconomy.MAX_BUILDING_SLOTS = 16
+
+new define NDefines.NMilitary.NAVAL_BASE_ENGAGEMENT_WIDTH = 25
+
+new define NDefines.NAI.GREAT_PROJECT_DESIRE_MOVE_FROM_SUBJECT_MODIFIER = 2
+new define NDefines.NAI.GREAT_PROJECT_DESIRE_LEAVE_IN_SUBJECT_MODIFIER = 0.5
+new define NDefines.NAI.GREAT_PROJECT_DESIRE_UPGRADE_IN_SUBJECT_MODIFIER = 0.5
+new define NDefines.NAI.GREAT_PROJECT_DESIRE_UPGRADE_MODIFIER = 1
+new define NDefines.NAI.GREAT_PROJECT_DESIRE_BUILD_NEW_MODIFIER = 2
+new define NDefines.NAI.GREAT_PROJECT_DESIRE_CAPITAL_MODIFIER = 3
+new define NDefines.NAI.GREAT_PROJECT_DESIRE_CAPITAL_BASE = 10
+new define NDefines.NAI.GREAT_PROJECT_DESIRE_CAPITAL_AREA_MODIFIER = 3
 new define NDefines.NAI.AI_FORT_PER_DEV_RATIO = 25
+new define NDefines.NAI.AI_CONVERT_CULTURES = 1
+
+new define NDefines.NFrontend.CAMERA_LOOKAT_X = 1855.0
+new define NDefines.NFrontend.CAMERA_LOOKAT_Y = 0.0
+new define NDefines.NFrontend.CAMERA_LOOKAT_Z = 1617.0
+new define NDefines.NFrontend.CAMERA_START_X = 1855.0
+new define NDefines.NFrontend.CAMERA_START_Y = 1700.0
+new define NDefines.NFrontend.CAMERA_START_Z = 1217.0
+new define NDefines.NFrontend.FRONTEND_POS_X = 1800.0
+new define NDefines.NFrontend.FRONTEND_POS_Y = 300.0
+new define NDefines.NFrontend.FRONTEND_POS_Z = 1650.0
+new define NDefines.NFrontend.FRONTEND_LOOK_X = 1800.0
+new define NDefines.NFrontend.FRONTEND_LOOK_Y = -400.0
+new define NDefines.NFrontend.FRONTEND_LOOK_Z = 2225.0
+new define NDefines.NFrontend.CAMERA_MIN_HEIGHT = 75
+new define NDefines.NFrontend.CAMERA_MAX_HEIGHT = 2211
+
+new define NDefines.NGovernment.GOVERNMENT_REFORM_BASE_COST = 100
+new define NDefines.NGovernment.GOVERNMENT_REFORM_COST_INCREASE = 0
 
 new named_effect free_merc_company_list = {
 	
@@ -55,9 +132,6 @@ new named_effect fix_new_diplo_actions = {
 new named_int MAP_WIDTH = 4096
 new named_int MAP_HEIGHT = 2816
 
-new script_variable temp = {
-	name = "Temporary Variable"
-}
 new script_variable temp_2 = {
 	name = "Temporary Variable"
 }
@@ -88,7 +162,6 @@ new named_effect monuments_for_plebs = {
 	}
 }
 
-new define NDefines.NEconomy.MAX_BUILDING_SLOTS = 16
 new localisation empty_line_tt = "	"
 new localisation  HAS_CAPITAL_FORT = "Has a non-influencing fort."
 new localisation IDEA_TAKEN_EFFECT = "$EFFECT$"
@@ -220,13 +293,12 @@ new bookmark old_kingdom = {
 	desc = ""
 	date = 2500.1.1
 	countries = {
-		honnith 
-		forelhost 
-		fallowfire 
-		skjoralmor 
-		solitude 
-		volunruud 
-		windhelm 
+		honnith
+		forelhost
+		fallowfire
+		skjoralmor
+		solitude
+		volunruud
 		jorrvaskr
 	}
 	easy_countries = {

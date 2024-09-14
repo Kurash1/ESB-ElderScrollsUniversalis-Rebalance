@@ -10,16 +10,11 @@ new script_variable weight = {
 }
 new named_bool PICK_RANDOM_COUNTRY_LOGGING = yes
 new effect pick_random_country = {
-	default = {
-		event_target = choice
-		trigger = { }
-		weight = { &weight := 1 }
-	}
 	args = {
-		event_target = string
-		trigger = named_trigger
-		weight = named_effect
-		tooltip = string?
+		string event_target = choice
+		named_trigger trigger = { }
+		named_effect weight = { &weight := 1 }
+		string? tooltip
 	}
 	transpile = {
 		when [exists = args:tooltip] {		

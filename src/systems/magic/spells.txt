@@ -69,6 +69,13 @@ new effect create_next_spell_page = {
 	}
 }
 
+new script_variable mag = {
+	tag = "magicka"
+	name = "Spell Magnitude"
+}
+new script_variable temp = {
+	name = "Temporary"
+}
 new enum spell_type = {
 	country
 	province
@@ -97,17 +104,23 @@ new class spell = {
 		# If false then magnitude influences the numbers in the modifier.
 		modifier? scaling_modifier
 		# For scaling modifiers that you want to apply to the target
-		# It gets passed the magnitude of the scaling as 'mag'
+		# It gets passed the magnitude of the scaling as 'i'
 		named_effect? on_cast_single
 		# The effect for casting the spell.
 		# Run only once, you can use the runtime variable 'spell_mag'
-		effect? on_cast_repeat_100
-		effect? on_cast_repeat_10
-		effect? on_cast_repeat_1
-		# Repeated for every x% of spell magnitude
+		effect? on_cast_multiplied
+		# Effect is run multiple times with a variable 'i' that determines the scaling
 	}
 	on_create = {
 		arc_call_1
+		
+		when [exists = this:scaling_modifier] {
+			new scaling_modifier `spell_{this:id}` = {
+				name = "{this:name} "
+				modifier = this:scaling_modifier
+				type = "{this:type }"
+			}
+		}
 		
 		when [current_spell_side == no] {
 			current_spell_page += {
@@ -202,7 +215,12 @@ new class spell = {
 		new custom_button `custom_mechanic_spell_{this:id}` = {
 			tooltip = "{this:name} "
 			trigger = { }
-			effect = { }
+			effect = {
+				&mag := 0.8
+				when [exists = this:scaling_modifier] {
+					scaling_modifiers:spell_test_1:set = mag
+				}
+			}
 		}
 		
 		current_spell_position_y += 57
@@ -266,7 +284,11 @@ new effect set_spell_target_type = {
 }
 
 new spell_header test = { name = "Test" }
-new spell test_1 = { name = "Test" type = country base_cost = 10 }
+new spell test_1 = { name = "Test" type = country base_cost = 10
+	scaling_modifier = {
+		advisor_cost = (-1 * i)
+	}
+}
 new spell test_2 = { name = "Test" type = country base_cost = 10 }
 new spell test_3 = { name = "Test" type = country base_cost = 10 }
 new spell test_4 = { name = "Test" type = country base_cost = 10 }

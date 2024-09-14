@@ -598,6 +598,7 @@ new province greymoor = {
 	color = {
 		119 113 121
 	}
+	base_development = 10
 	history = {
 		center_of_trade = 1
 		religion = nordic_pantheon
@@ -761,6 +762,7 @@ new province western_watchtower = {
 	color = {
 		223 111 188
 	}
+	base_development = 7
 	history = {
 		religion = nordic_pantheon
 		culture = whiterunish

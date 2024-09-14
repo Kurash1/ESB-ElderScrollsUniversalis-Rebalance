@@ -113,9 +113,6 @@ new building cleansing = {
 #	}
 #	effect = {
 #		if [
-#			NOT = {
-#				has_construction = any
-#			}
 #			OR = {
 #				custom_trigger_tooltip = {
 #					new_tooltip = "Have any modifier that grants cleansing"
@@ -124,10 +121,17 @@ new building cleansing = {
 #				cleansing_triggers
 #			}
 #		] {
-#			add_building_construction = {
-#				building = cleansing
-#				speed = 1
-#				cost = 1
+#			hidden_effect = {
+#				add_nationalism = -100
+#			}
+#			
+#			decolonize = THIS
+#			new_custom_tooltip = "Create a Frontier in §Y[This.GetName]§!."
+#			hidden_effect = {
+#				save_event_target_as = cleansing_target
+#				FROM = {
+#					country_event = cleansing.1
+#				}
 #			}
 #			
 #			new_custom_tooltip = "On completion:"

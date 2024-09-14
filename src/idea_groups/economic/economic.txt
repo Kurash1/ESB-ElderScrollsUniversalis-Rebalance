@@ -7,6 +7,7 @@ new idea_group economic_ideas = {
 			desc = "Allows us to increase our tax revenues by adopting a more bureaucratic administrative system governed by state officials."
 			modifier = {
 				tax_line = 1
+				global_tax_modifier = 0.1
 			}
 		}
 		{

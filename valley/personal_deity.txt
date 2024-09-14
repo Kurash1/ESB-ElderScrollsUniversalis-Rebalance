@@ -1,0 +1,41 @@
+new class personal_deity = {
+	list = personal_deities
+	args = {
+		string name
+		string desc
+		int sprite
+		named_modifier modifiers
+		named_trigger potential = { }
+		named_trigger trigger = { }
+		named_effect effect = { }
+		named_effect removed_effect = { }
+		named_trigger ai_will_do = { factor = 1 }
+	}
+	simple_transpile = {
+		write_file "common/personal_deities/arc.txt" = {
+			foreach $ in personal_deities {
+				new localisation `{$}` = "{$:name}"
+				new localisation `{$}_desc` = "{$:desc}"
+				$ = {
+					sprite = $:sprite
+					potential = {
+						$:potential
+					}
+					trigger = {
+						$:trigger
+					}
+					effect = {
+						$:effect
+					}
+					removed_effect = {
+						$:removed_effect
+					}
+					ai_will_do = {
+						$:ai_will_do
+					}
+					$:modifiers
+				}
+			}
+		}
+	}
+}

@@ -1124,10 +1124,8 @@ new province vraseth = {
     }
 	terrain = highlands
 	area = vraseth
-	history = {
-		history_owner = osh_ornim
-		religion = ten_iron_oaths
-		culture = iron_orc
+	history += {
+		history_owner = sky_kingdom
 		history_trade_goods = r_metals
 	}
 }
@@ -1146,10 +1144,8 @@ new province ilthags_undertower = {
     }
 	terrain = highlands
 	area = vraseth
-	history = {
-		history_owner = osh_ornim
-		religion = ten_iron_oaths
-		culture = iron_orc
+	history += {
+		history_owner = sky_kingdom
 		history_trade_goods = stone
 	}
 }
@@ -1168,10 +1164,8 @@ new province the_howling_sepulchers = {
     }
 	terrain = highlands
 	area = vraseth
-	history = {
-		history_owner = osh_ornim
-		religion = ten_iron_oaths
-		culture = iron_orc
+	history += {
+		history_owner = sky_kingdom
 		history_trade_goods = stone
 	}
 }
