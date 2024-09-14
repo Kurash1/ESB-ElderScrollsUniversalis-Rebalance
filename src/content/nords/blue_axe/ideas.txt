@@ -1,4 +1,4 @@
-new idea_group rift_ideas = {
+new idea_group blue_axe_ideas = {
 	name = "Blue Axe"
 	category = national
 	start = {
