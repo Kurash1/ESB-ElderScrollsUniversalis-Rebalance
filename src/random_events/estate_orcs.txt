@@ -19,6 +19,7 @@ bi_yearly_events += {
 	100 = orc_estate_events.18
 	100 = orc_estate_events.19
 	100 = orc_estate_events.20
+	100 = orc_estate_events.21
 }
 new event_modifier berserker_on_the_loose = {
 	name = "Berserker on the Loose"
@@ -605,6 +606,78 @@ new country_event orc_estate_events.20 = {
 			name = "We will deal with it"
 			effect = {
 				add_mil_power = -50
+			}
+		}
+	}
+}
+new country_event orc_estate_events.21 = {
+	inherit = random_event
+	title = "Old Orc Challenger"
+	desc = "An aged orc has beeen making quite a stir as of late, in search of an honorable death he has begun challenging travellers to a duel, the cause of the stir is the fact that he still lives and the death toll is only growing, what would you like to do?"
+	picture = loose_berserker_eventPicture
+	immediate = {
+		hidden_effect = {
+			random_owned_province [culture = stronghold_orc] {
+			}
+		}
+	}
+	trigger = {
+		has_estate = estate_orcs
+		has_estate_privilege = orcs:roaming_orcs
+	}
+	options = {
+		{
+			name = "I will face the Orc myself!"
+		{
+			effect = 
+				{ country_event = orc_estate_events.22 }
+			}
+		}
+		{
+			name = "Send forth my greatest champion!"
+			effect = {
+				random_list = {
+					1 = { country_event = orc_estate_events.22 }
+					1 = { country_event = orc_estate_events.23 }
+				}
+			}
+		}
+		{
+			name = "Let the old Orc be."
+			effect = {
+				local_unrest = 3
+				local_monthly_devastation = 0.1
+				duration = 1825
+			}
+		}
+	}
+}
+new country_event orc_estate_events.22 = {
+	inherit = random_event
+	title = "Our Champion Wins!"
+	desc = "Our champion was succesful in defeating the old Orc in honorable combat laying him to rest, garnering themselves a bit of renown and by extension you."
+	picture = loose_berserker_eventPicture
+	options = {
+		{
+			name = "Rest well."
+			effect = {
+				add_mil_power = 50
+				add_prestige = 5
+			}
+		}
+	}
+}
+new country_event orc_estate_events.23 = {
+	inherit = random_event
+	title = "Our Champion Fails!"
+	desc = "Our champion was unsuccesful in defeating the old Orc this has reflected poorly on us some worry we are unable to keep our own lands safe."
+	picture = loose_berserker_eventPicture
+	options = {
+		{
+			name = "Curses!"
+			effect = {
+				add_mil_power = -25
+				add_prestige = -5
 			}
 		}
 	}
