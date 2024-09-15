@@ -617,8 +617,7 @@ new country_event orc_estate_events.21 = {
 	picture = loose_berserker_eventPicture
 	immediate = {
 		hidden_effect = {
-			random_owned_province [culture = stronghold_orc] {
-			}
+			random_owned_province->save_event_target_as = old_orc_province
 		}
 	}
 	trigger = {
@@ -628,14 +627,14 @@ new country_event orc_estate_events.21 = {
 	options = {
 		{
 			name = "I will face the Orc myself!"
-		{
-			effect = 
-				{ country_event = orc_estate_events.22 }
+			effect = {
+				country_event = orc_estate_events.22
 			}
 		}
 		{
 			name = "Send forth my greatest champion!"
 			effect = {
+				add_years_of_income = -0.1
 				random_list = {
 					1 = { country_event = orc_estate_events.22 }
 					1 = { country_event = orc_estate_events.23 }
@@ -643,11 +642,16 @@ new country_event orc_estate_events.21 = {
 			}
 		}
 		{
-			name = "Let the old Orc be."
+			name = "Let the old Orc be." 
 			effect = {
-				local_unrest = 3
-				local_monthly_devastation = 0.1
-				duration = 1825
+				event_target:old_orc_province->quick_province_modifier = {
+					name = "Old Orc Challenger"
+					duration = 1825
+					modifier = {
+						local_unrest = 3
+						local_monthly_devastation = 0.1
+					}
+				}
 			}
 		}
 	}
