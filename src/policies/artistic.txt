@@ -1,0 +1,113 @@
+new policy illusionary_theater = {
+	name = "Illusionary theater"
+	desc = "Our artists utilise illusions in the theater to enhance the experience of the viewer."
+	monarch_power = DIP
+	group_1 = artistic_ideas
+	group_2 = illusion_ideas
+	modifier = {
+		prestige = 0.5
+		monthly_splendor = 1
+	}
+}
+new policy ornamentalism = {
+	name = "Ornamentalism"
+	desc = "The list of ornaments is sheer endless our buildings however show many of them at once."
+	monarch_power = DIP
+	group_1 = artistic_ideas
+	group_2 = masonry_ideas
+	modifier = {
+		prestige = 0.5
+		prestige_decay = -0.5
+	}
+}
+new policy book_illumination = {
+	name = "Book Illumination"
+	desc = "Our monks and nuns spend hours upon hours in the scriptoria transcribing and translating ancient texts in a finest manner."
+	monarch_power = ADM
+	group_1 = artistic_ideas
+	group_2 = monastic_ideas
+	modifier = {
+		idea_cost = -0.05
+		all_power_cost -0.025
+	}
+}
+new policy aestheticism = {
+	name = "Aestheticism"
+	desc = "The philosophy that ponders with the question what is beautyful and why things are beautyful in the first place."
+	monarch_power = ADM
+	group_1 = artistic_ideas
+	group_2 = philosophical_ideas
+	modifier = {
+		global_unrest = -1
+		global_prosperity_growth = 0.1
+	}
+}
+new policy religious_art = {
+	name = "Religious Art"
+	desc = "Art can be understood by even the illiterate and can therefore bring the original ideas of our religion closer to everyone."
+	monarch_power = ADM
+	group_1 = artistic_ideas
+	group_2 = religious_ideas
+	modifier = {
+		religious_unity = 0.15
+		global_heretic_missionary_strength = 0.03
+	}
+}
+new policy art_second_to_none = {
+	name = "Art Second to None"
+	desc = "Our art is so gorgeous that nobody surpasses it."
+	monarch_power = ADM
+	group_1 = artistic_ideas
+	group_2 = quality_ideas
+	modifier = {
+		prestige = 1
+		legitimacy = 1
+		republican_tradition = 0.25
+		devotion = 0.5
+		horde_unity = 0.2
+		meritocracy = 0.2
+	}
+}
+new policy art_history = {
+	name = "Art History"
+	desc = "The science of studying art, it's history and the inherent values of art."
+	monarch_power = ADM
+	group_1 = artistic_ideas
+	group_2 = scholastic_ideas
+	modifier = {
+		possible_dip_policy = 1
+		free_dip_policy = 1
+	}
+}
+new owned_province_modifier artistic_policies_smiths =  {
+	name = "Artisinal Smiths"
+	trigger_tooltip = "producing, Common Ores, Rare Ores, Gold, Silver."
+	tradegoods = { c_metals r_metals gold silver }
+	province = {
+		trade_goods_size_modifier = 0.1
+	}
+}
+new policy artisinal_smiths = {
+	name = "Artisinal Smiths"
+	desc "Elaborately designed grates, fences and so on are created by artisinal smiths."
+	monarch_power = ADM
+	group_1 = artistic_ideas
+	group_2 = smithing_ideas
+	effect = {
+		add_owned_province_modifier = artistic_policies_smiths
+	}
+	remove_effect = {
+		remove_owned_province_modifier = artistic_policies_smiths 
+	}
+}
+new policy artistic_society = {
+	name = "Arstistic Society"
+	desc = "Our society revels in the consumption and creation of arts of all kind."
+	monarch_power = ADM 
+	group_1 = artistic_ideas
+	group_2 = society_ideas
+	modifier = {
+		global_unrest = -2
+		global_prosperity_growth = 0.15
+	}
+}
