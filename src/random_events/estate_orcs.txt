@@ -716,8 +716,8 @@ new country_event orc_estate_events.24 = {
 }
 new country_event orc_estate_events.25 = {
 	inherit = random_event
-	title = "You Died"
-	desc = "Unfortunately, we were unsuccesful in defeating the old Orc this has resulted in our death."
+	title = "We have Died."
+	desc = "Unfortunately, we were unsuccesful in defeating the Old Orc, this has resulted in our death."
 	picture = loose_berserker_eventPicture
 	goto = old_orc_province
 	options = {
