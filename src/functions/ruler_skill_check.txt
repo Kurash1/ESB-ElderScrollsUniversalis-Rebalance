@@ -1,0 +1,44 @@
+new effect ruler_skill_check = {
+	args = {
+		string type
+		int difficulty
+		effect modifiers = { }
+		effect on_success
+		effect on_fail
+	}
+	transpile = {
+		random_list = {
+			100 = {
+				modifier = { 
+					factor = 1.5
+					args:type = 1 
+				}
+				modifier = { 
+					factor = 1.6
+					args:type = 2    
+				}
+				modifier = { 
+					factor = 1.7
+					args:type = 3       
+				}
+				modifier = {     
+					factor = 1.8
+					args:type = 4
+				}
+				modifier = {    
+					factor = 1.9
+					args:type = 5
+				}
+				modifier = {      
+					factor = 2
+					args:type = 6
+				}
+				args:modifiers
+				args:on_success
+			} 
+			args:difficulty = {
+				args:on_fail
+			}	
+		}
+	}
+}
