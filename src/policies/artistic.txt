@@ -7,8 +7,7 @@ new policy illusionary_theater = {
 	modifier = {
 		prestige = 0.5
 		monthly_splendor = 1
-	}
-}
+		}
 new policy ornamentalism = {
 	name = "Ornamentalism"
 	desc = "The list of ornaments is sheer endless our buildings however show many of them at once."
@@ -89,14 +88,14 @@ new owned_province_modifier artistic_policies_smiths =  {
 }
 new policy artisinal_smiths = {
 	name = "Artisinal Smiths"
-	desc "Elaborately designed grates, fences and so on are created by artisinal smiths."
+	desc = "Elaborately designed grates, fences and so on are created by artisinal smiths."
 	monarch_power = ADM
 	group_1 = artistic_ideas
 	group_2 = smithing_ideas
 	effect = {
 		add_owned_province_modifier = artistic_policies_smiths
 	}
-	remove_effect = {
+	removed_effect = {
 		remove_owned_province_modifier = artistic_policies_smiths 
 	}
 }
