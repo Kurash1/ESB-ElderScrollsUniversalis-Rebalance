@@ -1,0 +1,56 @@
+new policy permanent_capitals = {
+	name = "Permanent Capitals"
+	desc = "Our capital is now at a permanent location we will no longer travel around the country to hold court."
+	monarch_power = ADM
+	group_1 = centralization_ideas
+	group_2 = court_ideas
+	modifier = {
+		move_capital_cost_modifier = 0.2
+		governing_cost = -0.15
+		governing_capacity_modifer = 0.15
+	}
+}
+new policy federalization = {
+	name = "Federalization"
+	desc = "By blending the benefits of both centralization and decentralization we achieved a new type of government. This government lends a great chunk of responsibility to the singular states in return they get a say in the politics of the country as a whole as well. All in all the country itself decentralized and the states themselves centralized."
+	monarch_power = ADM
+	group_1 = centralization_ideas
+	group_2 = decentralization_ideas
+	modifier = {
+		governing_capacity_modifer = 0.1
+		state_governing_cost = -0.1
+	}
+}
+#58 lacks info https://discord.com/channels/1011657111366799391/1261671779445903360/1261739806388654263
+new policy residential_palace = {
+	name = "Residential Palace"
+	desc = "A residential palace in the capital will serve as our seat of government."
+	monarch_power = ADM
+	group_1 = centralization_ideas
+	group_2 = monarchy_ideas
+	modifier = {
+		legitimacy = 1
+		meritocracy = 0.2
+		max_absolutism = 15
+	}
+}
+new policy state_church = {
+	name = "State Church"
+	desc = "The church is now organised under the state and no longer a separate entity."
+	monarch_power = ADM
+	group_1 = centralization_ideas
+	group_2 = religious_ideas
+	modifier = {
+		clergy_influence_modifier = 0.2
+		religious_unity = 0.15
+	}
+}
+new policy government_offices = {
+	name = "Government Offices"
+	desc = "People now have a permanent place to go to for their bureaucratic needs."
+	monarch_power = ADM
+	modifier = {
+		global_unrest = -1.5
+		global_autonomy = -0.1
+	}
+}

@@ -110,3 +110,23 @@ new policy artistic_society = {
 		global_prosperity_growth = 0.15
 	}
 }
+new policy the_art_trade = {
+	name = "The Art Trade"
+	desc = "Art is a major trade factor for us."
+	monarch_power = DIP
+	group_1 = artistic_ideas
+	group_2 = trade_ideas
+	modifier = {
+		global_trade_power = 0.15
+		trade_efficiency = 0.1
+	}
+}
+new policy elaborate_furniture = {
+	name = "Elaborate Furniture"
+	desc = "Our furniture inspires awe in all who see it."
+	monarch_power = ADM
+	modifier = {
+		production_efficiency = 0.1
+	}
+}
+#https://discord.com/channels/1011657111366799391/1261671779445903360/1261739561424523385
